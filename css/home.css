@@ -13,3 +13,11 @@
     display: block;
 } 
 
+.picture{
+
+    position: center;
+    top: 11px;
+    right: 10px;
+    left: 10px;
+    display: block;
+} 
