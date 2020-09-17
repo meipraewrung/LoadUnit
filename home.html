@@ -71,8 +71,8 @@
     <!-- Page Content -->
     <div class="rounded col-md-10 " id="page-content-wrapper ">
 
-      <div class="container-fluid">
-        <video controls autoplay>
+      <div class="container-fluid"> 
+        <video class="vid" loop autoplay muted controls id="vid">
           <source src="Image/College of computing.mp4" type="video/mp4">   
         </video>
     </div>
@@ -99,6 +99,8 @@
       }
     });
   }
+  document.getElementById('vid').play();
+
 </script>
 
 </html>

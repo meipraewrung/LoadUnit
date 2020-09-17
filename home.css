@@ -3,4 +3,13 @@
 }
 .list-group{
     color:#ffffff;
-}
+} 
+.vid{
+
+    position: center;
+    top: 11px;
+    right: 10px;
+    left: 10px;
+    display: block;
+} 
+
