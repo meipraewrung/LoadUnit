@@ -17,7 +17,6 @@
     integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
     crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
- 
   <title>Load Unit</title>
 
 
@@ -29,7 +28,7 @@
     <nav class="navbar navbar-expand-md bg-default navbar-dark" style="background-color: #33c0ca;">
       <a class="navbar-brand " href="#"> <img src="Image/PSU-logo-Original-228x300.png" class="logo"
           style="margin-left: 50px;" width="70" height="60"></a>
-      <h3 style="color:#ffffff;margin-left: 400px;">Load Uninit Planning and Management System</h3>
+      <h3 style="color:#ffffff;margin-left:center;">Load Uninit Planning and Management System</h3>
       <h6 style="color:#ffffff;text-align:right; margin-right: 10px; font-size:13px;">Prince of Songkla University
         Phuket Campus</h6>
 
@@ -52,14 +51,19 @@
         <a href="#" type="button" class="dropdown-btn list-group-item list-group-item-action bg-light "
           data-toggle="collapse" data-target="#products" aria-haspopup="true">หลักสูตร <span class="caret"></span></a>
         <ul class="sub-menu collapse" id="products">
-          <a href="#" class="dropdown-btn list-group-item list-group-item-action bg-light ">General</a>
-          <a href="#" class="dropdown-btn list-group-item list-group-item-action bg-light ">Buttons</a>
+          <a href="#" class="dropdown-btn list-group-item list-group-item-action bg-light ">เล่มหลักสูตร</a>
+          <a href="#" class="dropdown-btn list-group-item list-group-item-action bg-light ">เเผ่นเปิดรายวิชา</a>
 
         </ul>
 
         <a href="#" class="list-group-item list-group-item-action bg-light">วิชาตกค้าง</a>
         <a href="#" class="list-group-item list-group-item-action bg-light">Load Unit</a>
-        <a href="#" class="list-group-item list-group-item-action bg-light">จัดตารางสอน-สอบ</a>
+        <a href="#" type="button" class="dropdown-btn list-group-item list-group-item-action bg-light "
+        data-toggle="collapse" data-target="#products" aria-haspopup="true">จัดตารางสอน-สอบ<span class="caret"></span></a>
+      <ul class="sub-menu collapse" id="products">
+        <a href="#" class="dropdown-btn list-group-item list-group-item-action bg-light ">กรอกข้อมูลตารางสอนขสอบ</a>
+        <a href="#" class="dropdown-btn list-group-item list-group-item-action bg-light ">ตรวจสอบApprove</a>
+      </ul>
       </div>
     </div>
     <!-- /#sidebar-wrapper -->
@@ -67,10 +71,10 @@
     <!-- Page Content -->
     <div class="rounded col-md-10 " id="page-content-wrapper ">
 
-      <div class="container-fluid">
-        <h1 class="mt-4">Simple Sidebar</h1>
-        <img src="/Image/College of computing.jpg" alt="" sizes="" srcset="">
-      </div>
+      <div class="container-fluid"> 
+        <video class="vid" loop autoplay muted controls id="vid">
+          <source src="Image/College of computing.mp4" type="video/mp4">   
+        </video>
     </div>
     <!-- /#page-content-wrapper -->
 
@@ -80,4 +84,5 @@
 
 </body>
 <script src="js/dropdown.js"></script>
+
 </html>
