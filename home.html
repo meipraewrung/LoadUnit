@@ -29,7 +29,7 @@
     <nav class="navbar navbar-expand-md bg-default navbar-dark" style="background-color: #33c0ca;">
       <a class="navbar-brand " href="#"> <img src="Image/PSU-logo-Original-228x300.png" class="logo"
           style="margin-left: 50px;" width="70" height="60"></a>
-      <h3 style="color:#ffffff;margin-left:center;">Load Uninit Planning and Management System</h3>
+      <h3 style="color:#ffffff;margin-left: 400px;">Load Uninit Planning and Management System</h3>
       <h6 style="color:#ffffff;text-align:right; margin-right: 10px; font-size:13px;">Prince of Songkla University
         Phuket Campus</h6>
 
@@ -52,19 +52,14 @@
         <a href="#" type="button" class="dropdown-btn list-group-item list-group-item-action bg-light "
           data-toggle="collapse" data-target="#products" aria-haspopup="true">หลักสูตร <span class="caret"></span></a>
         <ul class="sub-menu collapse" id="products">
-          <a href="#" class="dropdown-btn list-group-item list-group-item-action bg-light ">เล่มหลักสูตร</a>
-          <a href="#" class="dropdown-btn list-group-item list-group-item-action bg-light ">เเผ่นเปิดรายวิชา</a>
+          <a href="#" class="dropdown-btn list-group-item list-group-item-action bg-light ">General</a>
+          <a href="#" class="dropdown-btn list-group-item list-group-item-action bg-light ">Buttons</a>
 
         </ul>
 
         <a href="#" class="list-group-item list-group-item-action bg-light">วิชาตกค้าง</a>
         <a href="#" class="list-group-item list-group-item-action bg-light">Load Unit</a>
-        <a href="#" type="button" class="dropdown-btn list-group-item list-group-item-action bg-light "
-        data-toggle="collapse" data-target="#products" aria-haspopup="true">จัดตารางสอน-สอบ<span class="caret"></span></a>
-      <ul class="sub-menu collapse" id="products">
-        <a href="#" class="dropdown-btn list-group-item list-group-item-action bg-light ">กรอกข้อมูลตารางสอนขสอบ</a>
-        <a href="#" class="dropdown-btn list-group-item list-group-item-action bg-light ">ตรวจสอบApprove</a>
-      </ul>
+        <a href="#" class="list-group-item list-group-item-action bg-light">จัดตารางสอน-สอบ</a>
       </div>
     </div>
     <!-- /#sidebar-wrapper -->
@@ -72,10 +67,10 @@
     <!-- Page Content -->
     <div class="rounded col-md-10 " id="page-content-wrapper ">
 
-      <div class="container-fluid"> 
-        <video class="vid" loop autoplay muted controls id="vid">
-          <source src="Image/College of computing.mp4" type="video/mp4">   
-        </video>
+      <div class="container-fluid">
+        <h1 class="mt-4">Simple Sidebar</h1>
+        <img src="/Image/College of computing.jpg" alt="" sizes="" srcset="">
+      </div>
     </div>
     <!-- /#page-content-wrapper -->
 
@@ -84,5 +79,26 @@
 
 
 </body>
+<<<<<<< HEAD
 <script src="dropdown.js"></script>
+=======
+<script>
+  /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+  var dropdown = document.getElementsByClassName("dropdown-btn");
+  var i;
+
+  for (i = 0; i < dropdown.length; i++) {
+    dropdown[i].addEventListener("click", function () {
+      this.classList.toggle("active");
+      var dropdownContent = this.nextElementSibling;
+      if (dropdownContent.style.display === "block") {
+        dropdownContent.style.display = "none";
+      } else {
+        dropdownContent.style.display = "block";
+      }
+    });
+  }
+</script>
+
+>>>>>>> ae1259eb0354eadd5e8ea4a4ae48acb46b0ee43a
 </html>
