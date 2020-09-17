@@ -11,7 +11,7 @@
 
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <title>Document</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">    <title>Load Unit</title>
     
 
 
@@ -37,9 +37,17 @@
           <!-- <div class="sidebar-heading">Start Bootstrap </div> -->
           <div class="list-group list-group-flush" style="background-color: #b52324;">
             <br>
+            <ul id="menu-content" class="menu-content collapse out"></ul>
             <a href="#" class="list-group-item list-group-item-action bg-light">HOME</a>
-           
-            <a href="#" type="button" class="list-group-item list-group-item-action bg-light " data-toggle="dropdown"data-display="static" aria-haspopup="true" >หลักสูตร <span class="caret"></span></a>    
+
+              <a href="#" type="button" class="dropdown-btn list-group-item list-group-item-action bg-light " data-toggle="collapse"data-target="#products" aria-haspopup="true" >หลักสูตร <span class="caret"></span></a>    
+            <ul class="sub-menu collapse" id="products">
+                <li class="active"><a href="#">หลักสูตร</a></li>
+                <li><a href="#">General</a></li>
+                <li><a href="#">Buttons</a></li>
+
+            </ul>
+ 
             <a href="#" class="list-group-item list-group-item-action bg-light">วิชาตกค้าง</a>
             <a href="#" class="list-group-item list-group-item-action bg-light">Load Unit</a>
             <a href="#" class="list-group-item list-group-item-action bg-light">จัดตารางสอน-สอบ</a>
@@ -62,4 +70,21 @@
 
       
 </body>
+<script>
+  /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+  var dropdown = document.getElementsByClassName("dropdown-btn");
+  var i;
+  
+  for (i = 0; i < dropdown.length; i++) {
+    dropdown[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+    dropdownContent.style.display = "none";
+    } else {
+    dropdownContent.style.display = "block";
+    }
+    });
+  }
+  </script>
 </html>
