@@ -1,18 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+    integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">    <title>Load Unit</title>
-    
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+    integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Load Unit</title>
+
 
 
 </head>
@@ -20,71 +26,74 @@
 <body>
   <div id="app">
     <nav class="navbar navbar-expand-md bg-default navbar-dark" style="background-color: #33c0ca;">
-        <a class="navbar-brand " href="#">   <img src="Image/PSU-logo-Original-228x300.png" class="logo"  style="margin-left: 50px;" width="70" height="60"></a>
-        <h3 style="color:#ffffff;margin-left: 400px;">Load Uninit Planning and Management System</h3>
-          <h6 style="color:#ffffff;text-align:right; margin-right: 10px; font-size:13px;">Prince of Songkla University Phuket Campus</h6>
-      
+      <a class="navbar-brand " href="#"> <img src="Image/PSU-logo-Original-228x300.png" class="logo"
+          style="margin-left: 50px;" width="70" height="60"></a>
+      <h3 style="color:#ffffff;margin-left: 400px;">Load Uninit Planning and Management System</h3>
+      <h6 style="color:#ffffff;text-align:right; margin-right: 10px; font-size:13px;">Prince of Songkla University
+        Phuket Campus</h6>
+
     </nav>
-    
+
   </div>
 
-      <div class="d-flex" id="wrapper">
-        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
-          
+  <div class="d-flex" id="wrapper">
+    <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+    </ul>
+    <!-- Sidebar -->
+    <div class="bg-light border-right col-md-2" id="sidebar-wrapper" style="background-color: #b52324;">
+      <!-- <div class="sidebar-heading">Start Bootstrap </div> -->
+      <div class="list-group list-group-flush" style="background-color: #b52324;">
+        <br>
+        <ul id="menu-content" class="menu-content collapse out"></ul>
+        <a href="#" class="list-group-item list-group-item-action bg-light">HOME</a>
+
+        <a href="#" type="button" class="dropdown-btn list-group-item list-group-item-action bg-light "
+          data-toggle="collapse" data-target="#products" aria-haspopup="true">หลักสูตร <span class="caret"></span></a>
+        <ul class="sub-menu collapse" id="products">
+          <a href="#" class="dropdown-btn list-group-item list-group-item-action bg-light ">General</a>
+          <a href="#" class="dropdown-btn list-group-item list-group-item-action bg-light ">Buttons</a>
+
         </ul>
-        <!-- Sidebar -->
-        <div class="bg-light border-right col-md-2" id="sidebar-wrapper" style="background-color: #b52324;">
-          <!-- <div class="sidebar-heading">Start Bootstrap </div> -->
-          <div class="list-group list-group-flush" style="background-color: #b52324;">
-            <br>
-            <ul id="menu-content" class="menu-content collapse out"></ul>
-            <a href="#" class="list-group-item list-group-item-action bg-light">HOME</a>
 
-              <a href="#" type="button" class="dropdown-btn list-group-item list-group-item-action bg-light " data-toggle="collapse"data-target="#products" aria-haspopup="true" >หลักสูตร <span class="caret"></span></a>    
-            <ul class="sub-menu collapse" id="products">
-                <li class="active"><a href="#">หลักสูตร</a></li>
-                <li><a href="#">General</a></li>
-                <li><a href="#">Buttons</a></li>
-
-            </ul>
- 
-            <a href="#" class="list-group-item list-group-item-action bg-light">วิชาตกค้าง</a>
-            <a href="#" class="list-group-item list-group-item-action bg-light">Load Unit</a>
-            <a href="#" class="list-group-item list-group-item-action bg-light">จัดตารางสอน-สอบ</a>
-          </div>
-        </div>
-        <!-- /#sidebar-wrapper -->
-    
-        <!-- Page Content -->
-        <div class="rounded col-md-10 " id="page-content-wrapper ">
-    
-          <div class="container-fluid">
-            <h1 class="mt-4">Simple Sidebar</h1>
-            <img src="/Image/College of computing.jpg" alt="" sizes="" srcset="">
-          </div>
-        </div>
-        <!-- /#page-content-wrapper -->
-    
+        <a href="#" class="list-group-item list-group-item-action bg-light">วิชาตกค้าง</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light">Load Unit</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light">จัดตารางสอน-สอบ</a>
       </div>
+    </div>
+    <!-- /#sidebar-wrapper -->
+
+    <!-- Page Content -->
+    <div class="rounded col-md-10 " id="page-content-wrapper ">
+
+      <div class="container-fluid">
+        <h1 class="mt-4">Simple Sidebar</h1>
+        <img src="/Image/College of computing.jpg" alt="" sizes="" srcset="">
+      </div>
+    </div>
+    <!-- /#page-content-wrapper -->
+
+  </div>
 
 
-      
+
 </body>
 <script>
   /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
   var dropdown = document.getElementsByClassName("dropdown-btn");
   var i;
-  
+
   for (i = 0; i < dropdown.length; i++) {
-    dropdown[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var dropdownContent = this.nextElementSibling;
-    if (dropdownContent.style.display === "block") {
-    dropdownContent.style.display = "none";
-    } else {
-    dropdownContent.style.display = "block";
-    }
+    dropdown[i].addEventListener("click", function () {
+      this.classList.toggle("active");
+      var dropdownContent = this.nextElementSibling;
+      if (dropdownContent.style.display === "block") {
+        dropdownContent.style.display = "none";
+      } else {
+        dropdownContent.style.display = "block";
+      }
     });
   }
-  </script>
+</script>
+
 </html>
