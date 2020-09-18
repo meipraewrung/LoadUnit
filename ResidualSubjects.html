@@ -16,9 +16,9 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
         integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
         crossorigin="anonymous"></script>
-    <script src="/css/loadUnit.css"></script>
+    <script src="/css/home.css"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="css/loadUnit.css"></script>
+    <script src="css/home.css"></script>
     <title>Load Unit</title>
 
 
@@ -76,10 +76,42 @@
         <!-- /#sidebar-wrapper -->
 
         <!-- Page Content -->
-        <div class="rounded col-md-offset-2 " id="page-content-wrapper " style="border: 4px solid #b8b8be;
+        <div class="rounded col-md-offset-2" id="page-content-wrapper " style="border: 4px solid #b8b8be;
          background: #e7e4e2; width: 80%; height:auto; text-align: center;">
-            <div class="form-group col-md-offset-7" id="form-check form-check-inline">
+            <div class="form-group " id="form-check form-check-inline">
                 <br>
+                <div class="col-md-4">
+                    <label >ประเภทของรายวิชา</label >
+                    <select class="custom-select custom-select-lg mb-3">
+                        <option selected>หมวดวิชาเฉพาะ วิชาแกน</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+
+                </div>
+                <div class="col-md-5">
+                    <label >ภาคการศึกษา/ปีการศึกษา</label >
+                    <select class="custom-select custom-select-lg mb-3">
+                        <option selected>1/2563</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+
+                </div>
+                <div class="col-md-1">
+                    <button type="button" class="btn btn-primary">แสดง</button>
+
+                </div>
+                <div class="col-md-2">
+                    <button type="button" class="btn btn-success">Export</button>
+
+                </div>
+
+            </div>
+            <div class="form-group col-md-offset-2" id="form-check form-check-inline">
+                <br><br>
                 <div class="col-md-5">
                     <input type="text" class="form-control col-md-1" name="hostname2" placeholder="ค้นหารายละเอียด"
                         value="" />
@@ -88,68 +120,50 @@
                 <div class="col-md-2">
                     <button type="button" class="btn btn-info">ค้นหา</button>
 
-                 </div>
-                 <div class="col-md-2">
-                    <button type="button" class="btn btn-success">Export</button>
-
-                 </div>
-
-            </div>
-                <div class="container-fluid">
-
-                    <table class="table table-dark">
-                        <thead>
-                            <tr>
-                                <th scope="col">ลำดับ</th>
-                                <th scope="col">ชื่อผู้สอน</th>
-                                <th scope="col">หมวด(กลุ่ม)</th>
-                                <th scope="col">รหัสวิชา</th>                                <th scope="col">หน่วยกิต</th>
-                                <th scope="col">รายชื่อวิชา</th>
-                                <th scope="col">หน่วยกิต</th>
-                                <th scope="col">วิชาบังคับ</th>
-                                <th scope="col">Sec</th>
-                                <th scope="col">สาขา</th>
-                                <th scope="col">จำนวนที่รับนศ.</th>
-                                <th scope="col">Lecture(ชม.)</th>
-                                <th scope="col">Lab(ชม.)</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr align="center">
-                                <th scope="row">1</th>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">2</th>
-                                <td>Jacob</td>
-                                <td>Thornton</td>
-                                <td>@fat</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">3</th>
-                                <td>Larry</td>
-                                <td>the Bird</td>
-                                <td>@twitter</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <div class="form-group col-md-offset-1" id="form-check form-check-inline">
-                        <br>
-                        <div class="col-md-5">
-                            <button type="button" class="btn btn-warning">Edit</button>
-    
-                        </div>
-                         <div class="col-md-2">
-                            <button type="button" class="btn btn-success">Save</button>
-        
-                         </div>
-        
-                    </div>
                 </div>
 
             </div>
+            <div class="container-fluid">
+
+                <table class="table table-dark">
+                    <thead>
+                        <tr>
+                            <th scope="col">ที่อยู่อีเมล</th>
+                            <th scope="col">ชื่อ-นามสกุล</th>
+                            <th scope="col">รหัสนศ.</th>
+                            <th scope="col">สาขา</th>
+                            <th scope="col">ชั้นปี</th>
+                            <th scope="col">รหัสวิชา</th>
+                            <th scope="col">รายชื่อวิชา</th>
+                            <th scope="col">ประเภทรายวิชา</th>
+                            <th scope="col">ภาคการศึกษา</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr >
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>Larry</td>
+                            <td>the Bird</td>
+                            <td>@twitter</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+
+        </div>
 
 
 
