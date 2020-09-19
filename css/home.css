@@ -1,0 +1,9 @@
+.picture{
+    width: 1000px;
+    height:500px;
+    position: center;
+    top: 11px;
+    right: 10px;
+    left: 10px;
+    display: block;
+}
