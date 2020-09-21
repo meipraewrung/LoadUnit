@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <script src="css/HeaderMenu.css"></script>
+
+    <title>Load Unit</title>
+
+
+
+</head>
+
+<body>
+    <div id="app">
+        <nav class="navbar navbar-expand-md bg-default navbar-dark" style="background-color: #33c0ca;">
+            <a class="navbar-brand " href="#"> <img src="images/PSU-logo-Original-228x300.png" class="logo"
+                    style="margin-left: 50px;" width="70" height="60"></a>
+            <h3 style="color:#ffffff;margin-left:center;">Load Uninit Planning and Management System</h3>
+            <h6 style="color:#ffffff;text-align:right; margin-right: 10px; font-size:13px;">Prince of Songkla University
+                Phuket Campus</h6>
+
+        </nav>
+
+    </div>
+
+    <div class="d-flex" id="wrapper">
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+        </ul>
+        <!-- Sidebar -->
+        <div class="bg-light border-right col-md-2" id="sidebar-wrapper" style="background-color: #b52324;">
+            <!-- <div class="sidebar-heading">Start Bootstrap </div> -->
+            <div class="list-group list-group-flush" style="background-color: #b52324;">
+                <br>
+                <ul id="menu-content" class="menu-content collapse out"></ul>
+                <a href="home.html" class="list-group-item list-group-item-action bg-light">HOME</a>
+
+                <a href="#" type="button" class="dropdown-btn list-group-item list-group-item-action bg-light "
+                    data-toggle="collapse" data-target="#products" aria-haspopup="true">หลักสูตร <span
+                        class="caret"></span></a>
+                <ul class="sub-menu collapse" id="products">
+                    <a href="#" class="dropdown-btn list-group-item list-group-item-action bg-light ">เล่มหลักสูตร</a>
+                    <a href="#"
+                        class="dropdown-btn list-group-item list-group-item-action bg-light ">เเผ่นเปิดรายวิชา</a>
+
+                </ul>
+
+                <a href="#" class="list-group-item list-group-item-action bg-light">วิชาตกค้าง</a>
+                <a href="#" class="list-group-item list-group-item-action bg-light">Load Unit</a>
+                <a href="#" type="button" class="dropdown-btn list-group-item list-group-item-action bg-light "
+                    data-toggle="collapse" data-target="#products" aria-haspopup="true">จัดตารางสอน-สอบ<span
+                        class="caret"></span></a>
+                <ul class="sub-menu collapse" id="products">
+                    <a href="#"
+                        class="dropdown-btn list-group-item list-group-item-action bg-light ">กรอกข้อมูลตารางสอนขสอบ</a>
+                    <a href="#" class="dropdown-btn list-group-item list-group-item-action bg-light ">ตรวจสอบApprove</a>
+                </ul>
+                <a href="login.html" class="list-group-item list-group-item-action bg-light">ออกจากระบบ</a>
+            </div>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div class="rounded col-md-offset-2" id="page-content-wrapper " style="border: 4px solid #b8b8be;
+         background: #e7e4e2; width: 80%; height:auto; text-align: center;">
+            <br>
+
+            <div class="btn-group" data-toggle="buttons">
+                <label class="btn btn-danger active">
+                    <input type="radio" name="options[]" checked="checked" value="1"> ปริญญาตรี (BACHRLOR DEGREE PROGRAM)
+                </label>
+                <label class="btn btn-danger">
+                    <input type="radio" name="options[]" value="2"> ปริญญาโท (MASTER DEGREE PROGRAM)
+                </label>
+            </div>
+            <div class="form-group " id="form-check form-check-inline">
+                <br>
+                <div class="col-md-2">
+                    <label>สาขา</label>
+                    <select class="custom-select custom-select-lg mb-3">
+                        <option selected>SE</option>
+                        <option value="1">IT</option>
+                        <option value="2">E-biz</option>
+                        <option value="3">Coe</option>
+                        <option value="3">DE</option>
+                    </select>
+
+                </div>
+                <div class="col-md-6">
+                    <label>เล่มหลักสูตร</label>
+                    <select class="custom-select custom-select-lg mb-3">
+                        <option selected>หลักสูตรวิทยาบัณฑิต หลักสูตรปรับปรุง พ.ศ.2554(55-60)</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                    </select>
+
+                </div>
+                <div class="col-md-2">
+                    <label>ชั้นปี</label>
+                    <select class="custom-select custom-select-lg mb-3">
+                        <option selected value="4">4</option>
+                        <option value="3">3</option>
+                        <option value="2">2</option>
+                        <option value="1">1</option>
+                    </select>
+
+                </div>
+            </div>
+            <div class="form-group col-md-offset-2" id="form-check form-check-inline">
+                <div class="col-md-4">
+                    <label>ภาคการศึกษา/ปีการศึกษา</label>
+                    <select class="custom-select custom-select-lg mb-3">
+                        <option selected>1/2563</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                    </select>
+
+                </div>
+                <div class="col-md-1">
+                    <button type="button" class="btn btn-primary">แสดง</button>
+
+                </div>
+                <br>
+            </div>
+
+            <div class="form-group col-md-offset-2" id="form-check form-check-inline">
+                <br>
+                <div class="col-md-5">
+                    <input type="text" class="form-control col-md-1" name="hostname2" placeholder="ค้นหารายละเอียด"
+                        value="" />
+
+                </div>
+                <div class="col-md-1">
+                    <button type="button" class="btn btn-info">ค้นหา</button>
+
+                </div>
+                <div class="col-md-1">
+                    <button type="button" class="btn btn-success">Export</button>
+
+                </div>
+                <br>
+            </div>
+            <div class="container-fluid">
+
+                <table class="table table-dark">
+                    <thead>
+                        <tr>
+                            <th scope="col">หมวด</th>
+                            <th scope="col">กลุ่ม</th>
+                            <th scope="col">บังคับ/เลือก</th>
+                            <th scope="col">สาขา</th>
+                            <th scope="col">รายชื่อวิชา</th>
+                            <th scope="col">หน่วยกิต</th>
+                            <th scope="col">ผู้สอน</th>
+                            <th scope="col"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                            <td>cat</td>
+                            <td>2</td>
+                            <td>อ.ป้อม</td>
+                            <td>  <a href="#" class="btn btn-primary a-btn-slide-text">
+                                <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                                <span><strong>Edit</strong></span>            
+                            </a>
+                            <a href="#" class="btn btn-primary a-btn-slide-text">
+                                <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                                 <span><strong>Delete</strong></span>            
+                             </a></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>Larry</td>
+                            <td>the Bird</td>
+                            <td>@twitter</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+            <div class="form-group col-md-offset-3" id="form-check form-check-inline">
+                <br>
+
+                <div class="col-md-1">
+                    <button type="button" class="btn btn-success">Save</button>
+                </div>
+                <div class="col-md-offset-1">
+                    <button type="button" class="btn btn-info">เพิ่มรายวิชา</button>
+                </div>
+                <br>
+            </div>
+        </div>
+
+
+
+
+</body>
+<script src="js/dropdown.js"></script>
+
+</html>
