@@ -1,7 +1,7 @@
 /*==================================================================
 [ Form ]*/
 
-.fromTE-form {
+.formTE-form {
     width: 100%;
     /* display: -webkit-box;
     display: -webkit-flex;
@@ -15,7 +15,7 @@
     background-color: rgb(216, 212, 212);
 }
 
-.fromTableTE-form{
+.formTableTE-form{
     width: 100%;
     flex-wrap: wrap;
     justify-content: space-between;
