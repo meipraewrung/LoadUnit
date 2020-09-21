@@ -1,0 +1,28 @@
+/*==================================================================
+[ Form ]*/
+
+.fromTE-form {
+    width: 100%;
+    /* display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex; */
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 33px 88px 33px 68px;
+    height:auto;
+    background-color: rgb(216, 212, 212);
+}
+
+.fromTableTE-form{
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 23px 78px 23px 78px;
+    height:auto;
+    background-color: rgb(255, 255, 255);
+}
+
+/*------------------------------------------------------------------
+[ Input ]*/
