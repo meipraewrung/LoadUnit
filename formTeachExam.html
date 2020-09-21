@@ -5,21 +5,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-  <!-- Optional theme -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
-    integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
-  <!-- Latest compiled and minified JavaScript -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-    integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-    crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <link rel="stylesheet" type="text/css" href="css/formTeachExam.css">
-  
+  <script src="js/dropdownVedio.js"></script>
   <title>Load Unit</title>
 </head>
 
@@ -190,38 +180,50 @@
             </div><!--  -->
             <br><br>
             <!--  -->
-            <div class="col-md-5">
-              <div class="col-md-4">
+            <div class="col-md-2">
                 <label>จำนวนนักศึกษา</label>
+            </div>
+            <!---  -->
+            <!-- <div class="col-md-5"> -->
+              <div class="form-group col-md-4">
+                <label class="col-md-3">ต่ำสุด</label>
+                <input class="col-md-2" size="3" type="number">
+                <br> <br> <br>
+                <label class="col-md-3">สูงสุด</label>
+                <input class="col-md-2" type="number" name="">
               </div>
-              <div class="col-md-8">
-                <label>ต่ำสุด</label>
-                <input type="text" name="">
-                <br>
-                <label>สูงสุด</label>
-                <input type="text" name="">
-              </div>
-            </div><!---  -->
+            <!-- </div> -->
             <!--  -->
-            <div class="col-md-7">
-              <div class="col-md-2">
+            <!-- <div class="col-md-6"> -->
+              <div class="col-md-1">
                 <label>อาจารย์</label>
               </div>
-              <div class="col-md-5">
+              <div class="form-group col-md-4">
                 <input type="checkbox" name="" value="">ประจำ
                 <input type="text" name="">
-                <br>
+                <br><br>
                 <input type="checkbox" name="" value="">พิเศษ
                 <input type="text" name="">
-                <br>
+                <br><br>
                 <input type="checkbox" name="" value="">ประสานงาน
                 <input type="text" name="">
-              </div>
+              <!-- </div> -->
             </div><!---  -->
+              
             <!--  -->
             <div class="col-md-4"></div>
             <div class="col-md-4">
             </div>
+            <div class="form-group " id="form-check form-check-inline">
+              <br>
+
+              <div class="col-md-1">
+                  <button type="button" class="btn btn-success">Save</button>
+              </div>
+              <div class="col-md-offset-1">
+                  <button type="button" class="btn btn-info">เพิ่มรายวิชา</button>
+              </div>
+          </div>
             <div class="col-md-4"></div><!---  -->
           </div>
         </div><!---  -->
@@ -266,8 +268,8 @@
             <!--  -->
             <div class="col-md-4"></div>
             <div class="col-md-8">
-              <label>ห้องปฏิบัติการ</label>
-              <select class="">
+              <label class="col-md-3">ห้องปฏิบัติการ</label>
+              <select class="col-md-5">
                 <option value="1"></option>
                 <option value="2"></option>
                 <option value="3"></option>

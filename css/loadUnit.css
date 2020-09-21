@@ -1,4 +1,4 @@
-div.box{
+/* div.box{
     padding: 5%;
     border: 3px solid #3c3c3d; 
     background: #727b85 none repeat scroll 0% 0%; 
@@ -6,4 +6,18 @@ div.box{
     height:90%; 
     text-align: center;
     margin: 0.5em 0.5em 0.5em em;
+} */
+.fromTE-form {
+    width: 100%;
+    /* display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex; */
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 30px 50px 30px 50px;
+    height:auto;
 }
+
+
