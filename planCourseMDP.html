@@ -19,7 +19,7 @@
     <!-- แมบเมนู -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="css/HeaderMenu.css"></script>
-    <title>วางเเผนเปิดรายวิชา ปริญญาตรี วิทยาลัยการคอมพิวเตอร์</title>
+    <title>เล่มหลักสูตร ปริญญาโท วิทยาลัยการคอมพิวเตอร์</title>
 </head>
 
 <body>
@@ -69,7 +69,6 @@
         </div>
         <!-- /#sidebar-wrapper -->
 
-
         <!-- Page Content -->
         <div class="container rounded col-md-10">
             <!-- fromAll -->
@@ -79,14 +78,14 @@
                 <br>
 
                 <div class="btn-group col-md-offset-2" data-toggle="buttons">
-                    <label class="btn btn-danger active">
-                        <a href="openCourse.html">
+                    <label class="btn btn-danger">
+                        <a href="planCourse.html">
                             <input type="radio" name="options[]" checked="checked" value="1"> ปริญญาตรี (BACHRLOR DEGREE
                         PROGRAM)
                         </a>
                     </label>
-                    <label class="btn btn-danger">
-                        <a href="openCourseMDP.html">
+                    <label class="btn btn-danger active">
+                        <a href="planCourseMDP.html">
                             <input type="radio" name="options[]" value="2"> ปริญญาโท (MASTER DEGREE PROGRAM)
                         </a>
                     </label>
@@ -96,20 +95,19 @@
                     <div class="col-md-3">
                         <label>สาขา</label>
                         <select class="custom-select custom-select-lg mb-3">
-                            <option value="1">Information Technology</option>
+                            <option value="1" selected>Information Technology</option>
                             <option value="2">Electronic Business</option>
-                            <option value="3" selected>Software Engineering</option>
+                            <option value="3">Software Engineering</option>
                             <option value="4">Engineering Computer</option>
                             <option value="5">Computing</option>
                             <option value="6">Digital Business</option>
                             <option value="7">Digital Engineering</option>
                         </select>
-
                     </div>
                     <div class="col-md-6">
                         <label>เล่มหลักสูตร</label>
                         <select class="custom-select custom-select-lg mb-3">
-                            <option selected>หลักสูตรวิทยาศาสตรบัณฑิต หลักสูตรปรับปรุง พ.ศ.2557(59-61)</option>
+                            <option selected>หลักสูตรวิทยาศาสตรมหาบัณฑิต หลักสูตรใหม่ พ.ศ.2557 (ก่อน 62)</option>
                         </select>
 
                     </div>
@@ -159,15 +157,17 @@
                     <br>
                 </div>
                 <div class="container-fluid">
+
                     <table class="table table-dark">
-                        <!-- col1 -->   <col width="7%">
-                        <!-- col2 -->   <col width="10%">
-                        <!-- col3 -->   <col width="5%">
-                        <!-- col4 -->   <col width="5%">
-                        <!-- col5 -->   <col width="10%">
-                        <!-- col6 -->   <col width="5%">
-                        <!-- col7 -->   <col width="10%">
-                        <!-- col8 -->   <col width="15%">
+                        <colgroup>
+                            <!-- col1 -->   <col width="5%">
+                            <!-- col2 -->   <col width="10%">
+                            <!-- col3 -->   <col width="5%">
+                            <!-- col4 -->   <col width="5%">
+                            <!-- col5 -->   <col width="15%">
+                            <!-- col6 -->   <col width="5%">
+                            <!-- col7 -->   <col width="10%">
+                        </colgroup>
                         <thead>
                             <tr>
                                 <th scope="col">หมวด</th>
@@ -177,63 +177,32 @@
                                 <th scope="col">รายชื่อวิชา</th>
                                 <th scope="col">หน่วยกิต</th>
                                 <th scope="col">ผู้สอน</th>
-                                <th scope="col"></th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>วิชาเฉพาะ</td>
-                                <td>วิชาแกน</td>
+                                <td>วิชาบังคับ</td>
+                                <td>แผน ก2 และแผน ข</td>
                                 <td>บังคับ</td>
-                                <td>977-120</td>
-                                <td>Mathematics คณิตศาสตร์</td>
+                                <td>976-501</td>
+                                <td>Management Information System ระบบสารสนเทศเพื่อการจัดการ</td>
                                 <td>3(3-0-6)</td>
-                                <td>วันจิตรา โต๊ะหวันหลง</td>
-                                <td> 
-                                    <a href="#" class="btn btn-primary a-btn-slide-text">
-                                        <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
-                                        <span><strong>Edit</strong></span>
-                                    </a>
-                                    <a href="#" class="btn btn-primary a-btn-slide-text">
-                                        <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
-                                        <span><strong>Delete</strong></span>
-                                    </a>
-                                </td>
+                                <td></td>
                             </tr>
                             <tr>
-                                <td>วิชาเฉพาะ</td>
-                                <td>วิชาเฉพาะด้าน กลุ่มเทคโนโลยีและวิธีการทางซอฟต์แวร์</td>
+                                <td>วิชาบังคับ</td>
+                                <td>แผน ก2 และแผน ข</td>
                                 <td>บังคับ</td>
-                                <td>976-140</td>
-                                <td>Software and Computer Programming ซอฟต์แวร์และการโปรแกรมคอมพิวเตอร์</td>
-                                <td>3(2-2-5)</td>
-                                <td>กิตย์ศิริ ช่อเจี้ยง</td>
-                                <td> 
-                                    <a href="#" class="btn btn-primary a-btn-slide-text">
-                                        <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
-                                        <span><strong>Edit</strong></span>
-                                    </a>
-                                    <a href="#" class="btn btn-primary a-btn-slide-text">
-                                        <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
-                                        <span><strong>Delete</strong></span>
-                                    </a>
-                                </td>
+                                <td>976-502</td>
+                                <td>Research Methodology in Information Technology ระเบียบวิธีวิจัยทางเทคโนโลยีสารสนเทศ</td>
+                                <td>3(3-0-6)</td>
+                                <td></td>
                             </tr>
                         </tbody>
                     </table>
 
                 </div>
-                <div class="form-group col-md-offset-3" id="form-check form-check-inline">
-                    <br>
 
-                    <div class="col-md-1">
-                        <button type="button" class="btn btn-success">Save</button>
-                    </div>
-                    <div class="col-md-offset-2">
-                        <button type="button" class="btn btn-info">เพิ่มรายวิชา</button>
-                    </div>
-                    <br>
-                </div>
             </div>
 
 
