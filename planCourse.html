@@ -19,7 +19,7 @@
     <!-- แมบเมนู -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="css/HeaderMenu.css"></script>
-    <title>เล่มหลักสูตร</title>
+    <title>เล่มหลักสูตร ปริญญาตรี วิทยาลัยการคอมพิวเตอร์</title>
 </head>
 
 <body>
@@ -42,29 +42,31 @@
         <div class="bg-light border-right col-md-2" id="sidebar-wrapper" style="background-color: #b52324;">
             <!-- <div class="sidebar-heading">Start Bootstrap </div> -->
             <div class="list-group list-group-flush" style="background-color: #b52324;">
-              <br>
-              <ul id="menu-content" class="menu-content collapse out"></ul>
-              <a href="home.html" class="list-group-item list-group-item-action bg-light">HOME</a>
-              <a href="#" type="button" class="dropdown-btn list-group-item list-group-item-action bg-light "
-                data-toggle="collapse" data-target="#products" aria-haspopup="true">หลักสูตร<span class="caret"></span></a>
-              <ul class="sub-menu collapse" id="products">
-                <a href="planCourse.html"
-                  class="dropdown-btn list-group-item list-group-item-action bg-light ">เล่มหลักสูตร</a>
-                <a href="openCourse.html"
-                  class="dropdown-btn list-group-item list-group-item-action bg-light ">วางเเผนเปิดรายวิชา</a>
-              </ul>
-              <a href="ResidualSubjects.html" class="list-group-item list-group-item-action bg-light">รายวิชาตกค้าง</a>
-              <a href="loadUnit.html" class="list-group-item list-group-item-action bg-light">Load Unit</a>
-              <a href="#" type="button" class="dropdown-btn list-group-item list-group-item-action bg-light "
-                data-toggle="collapse" data-target="#products" aria-haspopup="true">จัดตารางสอน-สอบ<span
-                  class="caret"></span></a>
-              <ul class="sub-menu collapse" id="products">
-                <a href="formTeachExam.html"
-                  class="dropdown-btn list-group-item list-group-item-action bg-light ">แบบฟอร์มจัดตารางสอน-สอบ</a>
-                <a href="approve.html"
-                  class="dropdown-btn list-group-item list-group-item-action bg-light ">การตรวจสอบApprove</a>
-              </ul>
-              <a href="login.html" class="list-group-item list-group-item-action bg-light">ออกจากระบบ</a>
+                <br>
+                <ul id="menu-content" class="menu-content collapse out"></ul>
+                <a href="home.html" class="list-group-item list-group-item-action bg-light">HOME</a>
+                <a href="#" type="button" class="dropdown-btn list-group-item list-group-item-action bg-light "
+                    data-toggle="collapse" data-target="#products" aria-haspopup="true">หลักสูตร<span
+                        class="caret"></span></a>
+                <ul class="sub-menu collapse" id="products">
+                    <a href="planCourse.html"
+                        class="dropdown-btn list-group-item list-group-item-action bg-light ">เล่มหลักสูตร</a>
+                    <a href="openCourse.html"
+                        class="dropdown-btn list-group-item list-group-item-action bg-light ">วางเเผนเปิดรายวิชา</a>
+                </ul>
+                <a href="ResidualSubjects.html"
+                    class="list-group-item list-group-item-action bg-light">รายวิชาตกค้าง</a>
+                <a href="loadUnit.html" class="list-group-item list-group-item-action bg-light">Load Unit</a>
+                <a href="#" type="button" class="dropdown-btn list-group-item list-group-item-action bg-light "
+                    data-toggle="collapse" data-target="#products" aria-haspopup="true">จัดตารางสอน-สอบ<span
+                        class="caret"></span></a>
+                <ul class="sub-menu collapse" id="products">
+                    <a href="formTeachExam.html"
+                        class="dropdown-btn list-group-item list-group-item-action bg-light ">แบบฟอร์มจัดตารางสอน-สอบ</a>
+                    <a href="approve.html"
+                        class="dropdown-btn list-group-item list-group-item-action bg-light ">การตรวจสอบApprove</a>
+                </ul>
+                <a href="login.html" class="list-group-item list-group-item-action bg-light">ออกจากระบบ</a>
             </div>
         </div>
         <!-- /#sidebar-wrapper -->
@@ -79,55 +81,56 @@
 
                 <div class="btn-group col-md-offset-2" data-toggle="buttons">
                     <label class="btn btn-danger active">
-                        <input type="radio" name="options[]" checked="checked" value="1"> ปริญญาตรี (BACHRLOR DEGREE
-                        PROGRAM)
+                        <a href="planCourse.html">
+                            <input type="radio" name="options[]" checked="checked" value="1"> ปริญญาตรี (BACHRLOR DEGREE
+                            PROGRAM)
+                        </a>
                     </label>
                     <label class="btn btn-danger">
-                        <input type="radio" name="options[]" value="2"> ปริญญาโท (MASTER DEGREE PROGRAM)
+                        <a href="planCourseMDP.html">
+                            <input type="radio" name="options[]" value="2"> ปริญญาโท (MASTER DEGREE PROGRAM)
+                        </a>
                     </label>
                 </div>
                 <div class="form-group " id="form-check form-check-inline">
                     <br>
-                    <div class="col-md-2">
+                    <div class="col-md-3">
                         <label>สาขา</label>
                         <select class="custom-select custom-select-lg mb-3">
-                            <option selected>SE</option>
-                            <option value="1">IT</option>
-                            <option value="2">E-biz</option>
-                            <option value="3">Coe</option>
-                            <option value="3">DE</option>
+                            <option value="1">Information Technology</option>
+                            <option value="2">Electronic Business</option>
+                            <option value="3" selected>Software Engineering</option>
+                            <option value="4">Engineering Computer</option>
+                            <option value="5">Computing</option>
+                            <option value="6">Digital Business</option>
+                            <option value="7">Digital Engineering</option>
                         </select>
-
                     </div>
                     <div class="col-md-6">
                         <label>เล่มหลักสูตร</label>
                         <select class="custom-select custom-select-lg mb-3">
-                            <option selected>หลักสูตรวิทยาบัณฑิต หลักสูตรปรับปรุง พ.ศ.2554(55-60)</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
+                            <option selected>หลักสูตรวิทยาศาสตรบัณฑิต หลักสูตรปรับปรุง พ.ศ.2557(59-61)</option>
                         </select>
 
                     </div>
                     <div class="col-md-2">
-                        <label>ชั้นปี</label>
+                        <label>รหัสนักศึกษา</label>
                         <select class="custom-select custom-select-lg mb-3">
-                            <option selected value="4">4</option>
-                            <option value="3">3</option>
-                            <option value="2">2</option>
-                            <option value="1">1</option>
+                            <option value="1">57</option>
+                            <option value="2">58</option>
+                            <option value="3">59</option>
+                            <option value="4" selected>60</option>
+                            <option value="5">61</option>
+                            <option value="6">62</option>
+                            <option value="7">63</option>
                         </select>
-
                     </div>
                 </div>
-                <div class="form-group col-md-offset-2" id="form-check form-check-inline">
+                <div class="form-group col-md-offset-3" id="form-check form-check-inline">
                     <div class="col-md-4">
                         <label>ภาคการศึกษา/ปีการศึกษา</label>
                         <select class="custom-select custom-select-lg mb-3">
-                            <option selected>1/2563</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
+                            <option selected>1/2560</option>
                         </select>
 
                     </div>
@@ -163,7 +166,7 @@
                                 <th scope="col">หมวด</th>
                                 <th scope="col">กลุ่ม</th>
                                 <th scope="col">บังคับ/เลือก</th>
-                                <th scope="col">สาขา</th>
+                                <th scope="col">รหัสวิชา</th>
                                 <th scope="col">รายชื่อวิชา</th>
                                 <th scope="col">หน่วยกิต</th>
                                 <th scope="col">ผู้สอน</th>
@@ -171,22 +174,22 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <th scope="row">1</th>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
+                                <td>วิชาเฉพาะ</td>
+                                <td>วิชาแกน</td>
+                                <td>บังคับ</td>
+                                <td>977-120</td>
+                                <td>Mathematics คณิตศาสตร์</td>
+                                <td>3(3-0-6)</td>
+                                <td>วันจิตรา โต๊ะหวันหลง</td>
                             </tr>
                             <tr>
-                                <th scope="row">2</th>
-                                <td>Jacob</td>
-                                <td>Thornton</td>
-                                <td>@fat</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">3</th>
-                                <td>Larry</td>
-                                <td>the Bird</td>
-                                <td>@twitter</td>
+                                <td>วิชาเฉพาะ</td>
+                                <td>วิชาเฉพาะด้าน กลุ่มเทคโนโลยีและวิธีการทางซอฟต์แวร์</td>
+                                <td>บังคับ</td>
+                                <td>976-140</td>
+                                <td>Software and Computer Programming ซอฟต์แวร์และการโปรแกรมคอมพิวเตอร์</td>
+                                <td>3(2-2-5)</td>
+                                <td>กิตย์ศิริ ช่อเจี้ยง</td>
                             </tr>
                         </tbody>
                     </table>
