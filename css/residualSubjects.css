@@ -1,9 +1,13 @@
-div.box{
-    padding: 5%;
-    border: 3px solid #3c3c3d; 
-    background: #727b85 none repeat scroll 0% 0%; 
-    width: 90%; 
-    height:90%; 
-    text-align: center;
-    margin: 0.5em 0.5em 0.5em em;
+.formTable-form {
+    width: 100%;
+    /* display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex; */
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 30px 50px 40px 50px;
+    height:auto;
+    background-color:  rgb(216, 212, 212);
 }
