@@ -57,13 +57,22 @@
                 <div class="container-fluid">
                     <ul class="navbar-mobile__list list-unstyled">
 
-        <!-- Page Content -->
-        <div class="container rounded col-md-10">
-            <!-- header Page  -->
-            <div class="form-group">
-                <center>
-                    <h2>การตรวจสอบรายวิชาที่อนุมัติเปิดสอน</h2>
-                </center>
+                        <li>
+                            <a href="home.html">
+                                <i class="fas fa-home"></i>หน้าหลัก</a>
+                        </li>
+                        <li class="has-sub">
+                            <a class="js-arrow" href="#">
+                                <i class="fas fa-graduation-cap"></i>หลักสูตรการศึกษา</a>
+                            <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
+                                <li>
+                                    <a href="planCourse.html">เล่มหลักสูตร</a>
+                                </li>
+                                <li>
+                                    <a href="openCourse.html">วางเเผนการเปิดรายวิชา</a>
+                                </li>
+                            </ul>
+                        </li>
 
                         <li>
                             <a href="ResidualSubjects.html">
@@ -105,11 +114,142 @@
                     <img src="images/icon/logo.png" alt="Cool Admin" />
                 </a>
             </div>
-            <!-- fromAll -->
-            <!-- <div class="rounded col-md-offset-2 " id="page-content-wrapper " style="border: 4px solid #b8b8be;
-         background: #e7e4e2; width: 80%; height:auto; text-align: center;"> -->
-            <div class="form-group fromTE-form" style="background: #e7e4e2;">
-                <div class="form-group col-md-offset-7" id="form-check form-check-inline">
+            <div class="menu-sidebar__content js-scrollbar1">
+                <nav class="navbar-sidebar">
+                    <ul class="list-unstyled navbar__list">
+
+                        <li>
+                            <a href="home.html">
+                                <i class="fas fa-home"></i>หน้าหลัก</a>
+                        </li>
+                        <li class="has-sub">
+                            <a class="js-arrow" href="#">
+                                <i class="fas fa-graduation-cap"></i>หลักสูตรการศึกษา</a>
+                            <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
+                                <li>
+                                    <a href="planCourse.html">เล่มหลักสูตร</a>
+                                </li>
+                                <li>
+                                    <a href="openCourse.html">วางเเผนการเปิดรายวิชา</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="ResidualSubjects.html">
+                                <i class="fab fa-wpforms"></i>รายวิชาตกค้าง</a>
+                        </li>
+                        <li>
+                            <a href="loadUnit.html">
+                                <i class="fas fa-table"></i>Load Unit</a>
+                        </li>
+
+                        <li class="has-sub">
+                            <a class="js-arrow" href="#">
+                                <i class="fas fa-address-card"></i>จัดตารางสอน-สอบ</a>
+                            <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
+                                <li>
+                                    <a href="formTeachExam.html">แบบฟอร์มจัดตารางสอน-สอบ</a>
+                                </li>
+                                <li>
+                                    <a href="approve.html">การตรวจสอบApprove</a>
+                                </li>
+
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="login.html">
+                                <i class="fas fa-sign-out-alt"></i>ออกจากระบบ</a>
+                        </li>
+                    </ul>
+                    </li>
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+        <!-- END MENU SIDEBAR-->
+
+        <!-- PAGE CONTAINER-->
+        <div class="page-container">
+            <!-- HEADER DESKTOP-->
+            <header class="header-desktop">
+                <div class="section__content section__content--p30">
+                    <div class="container-fluid">
+                        <div class="header-wrap">
+                            <form class="form-header" action="" method="POST">
+                                <input class="au-input au-input--xl" type="text" name="search"
+                                    placeholder="Search for datas &amp; reports..." />
+                                <button class="au-btn--submit" type="submit">
+                                    <i class="zmdi zmdi-search"></i>
+                                </button>
+                            </form>
+                            <div class="header-button">
+
+
+                                <div class="account-wrap">
+                                    <div class="account-item clearfix js-item-menu">
+                                        <div class="image">
+                                            <img src="images/icon/avatar-01.jpg" alt="Adisak Intana" />
+                                        </div>
+                                        <div class="content">
+                                            <a class="js-acc-btn" href="#">Adisak Intana</a>
+                                        </div>
+                                        <div class="account-dropdown js-dropdown">
+                                            <div class="info clearfix">
+                                                <div class="image">
+                                                    <a href="#">
+                                                        <img src="images/icon/avatar-01.jpg" alt="Adisak Intana" />
+                                                    </a>
+                                                </div>
+                                                <div class="content">
+                                                    <h5 class="name">
+                                                        <a href="#">Adisak Intana</a>
+                                                    </h5>
+                                                    <span class="email">adisak.i@phuket.psu.ac.th</span>
+                                                </div>
+                                            </div>
+                                            <div class="account-dropdown__body">
+                                                <div class="account-dropdown__item">
+                                                    <a href="#">
+                                                        <i class="zmdi zmdi-account"></i>Account</a>
+                                                </div>
+                                                <div class="account-dropdown__item">
+                                                    <a href="#">
+                                                        <i class="zmdi zmdi-settings"></i>Setting</a>
+                                                </div>
+                                                <div class="account-dropdown__item">
+                                                    <a href="#">
+                                                        <i class="zmdi zmdi-money-box"></i>Billing</a>
+                                                </div>
+                                            </div>
+                                            <div class="account-dropdown__footer">
+                                                <a href="#">
+                                                    <i class="zmdi zmdi-power"></i>Logout</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <!-- HEADER DESKTOP-->
+
+            <!-- MAIN CONTENT-->
+            <!-- Page Content -->
+            <div class="container rounded col-md-10">
+                <!-- header Page  -->
+                <div class="form-group fromTE-form">
+                    <center>
+                        <h1>การตรวจสอบรายวิชาที่อนุมัติเปิดสอน</h1>
+                    </center>
+
+                </div>
+                <!-- fromAll -->
+                <!-- <div class="rounded col-md-offset-2 " id="page-content-wrapper " style="border: 4px solid #b8b8be;
+ background: #e7e4e2; width: 80%; height:auto; text-align: center;"> -->
+                <div class="form-group fromTE-form" style="background: #e7e4e2;">
                     <br>
                     <div class="btn-group col-md-offset-3" data-toggle="buttons">
                         <!-- <label class="container"> -->
@@ -120,10 +260,8 @@
                     <div class="form-group col-md-offset-7" id="form-check form-check-inline">
                         <br>
                         <div class="col-md-7">
-                            <input type="text" class="form-control col-md-6" name="hostname2"
+                            <input type="text" class="form-control col-md-7" name="hostname2"
                                 placeholder="ค้นหารายละเอียด" value="" />
-                                <button  type="button" class="btn btn-info">ค้นหา</button>
-
                         </div>
                         <div class="col-md-offset-1">
                             <button  type="button" class="btn btn-info">ค้นหา</button>
@@ -208,7 +346,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="copyright">
-                    <p>Copyright © 2020 Load Unit Planing Management System <a>
+                    <p>Copyright © 2020 Load Unit Planing Management System <a
                             href="https://www.computing.psu.ac.th/th/">Collage Of computing</a>.</p>
                 </div>
             </div>
