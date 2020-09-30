@@ -2,230 +2,437 @@
 <html lang="en">
 
 <head>
+    <!-- Required meta tags-->
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="au theme template">
+    <meta name="author" content="Hau Nguyen">
+    <meta name="keywords" content="au theme template">
 
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
-        integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <!-- Title Page-->
+    <title>เล่มหลักสูตร</title>
 
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-        crossorigin="anonymous"></script>
-    <!-- แมบเมนู -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="css/HeaderMenu.css"></script>
-    <title>เล่มหลักสูตร ปริญญาตรี วิทยาลัยการคอมพิวเตอร์</title>
+    <!-- Fontfaces CSS-->
+    <link href="css/font-face.css" rel="stylesheet" media="all">
+    <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <link href="vendor/font-awesome-5/css/fontawesome-all.min.css" rel="stylesheet" media="all">
+    <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+
+    <!-- Bootstrap CSS-->
+    <link href="vendor/bootstrap-4.1/bootstrap.min.css" rel="stylesheet" media="all">
+
+    <!-- Vendor CSS-->
+    <link href="vendor/animsition/animsition.min.css" rel="stylesheet" media="all">
+    <link href="vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet" media="all">
+    <link href="vendor/wow/animate.css" rel="stylesheet" media="all">
+    <link href="vendor/css-hamburgers/hamburgers.min.css" rel="stylesheet" media="all">
+    <link href="vendor/slick/slick.css" rel="stylesheet" media="all">
+    <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href="vendor/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" media="all">
+
+    <!-- Main CSS-->
+    <link href="css/theme.css" rel="stylesheet" media="all">
+
 </head>
 
-<body>
-    <div id="app">
-        <nav class="navbar navbar-expand-md bg-default navbar-dark" style="background-color: #33c0ca;">
-            <a class="navbar-brand " href="#"> <img src="images/PSU-logo-Original-228x300.png" class="logo"
-                    style="margin-left: 50px;" width="70" height="60"></a>
-            <h3 style="color:#ffffff;margin-left:center;">Load Uninit Planning and Management System</h3>
-            <h6 style="color:#ffffff;text-align:right; margin-right: 10px; font-size:13px;">Prince of Songkla University
-                Phuket Campus</h6>
+<body class="animsition">
+    <div class="page-wrapper">
+        <!-- HEADER MOBILE-->
+        <header class="header-mobile d-block d-lg-none">
+            <div class="header-mobile__bar">
+                <div class="container-fluid">
+                    <div class="header-mobile-inner">
+                        <a class="logo" href="index.html">
+                            <img src="images/icon/logo.png" alt="CoolAdmin" />
+                        </a>
+                        <button class="hamburger hamburger--slider" type="button">
+                            <span class="hamburger-box">
+                                <span class="hamburger-inner"></span>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <nav class="navbar-mobile">
+                <div class="container-fluid">
+                    <ul class="navbar-mobile__list list-unstyled">
 
-        </nav>
-    </div>
+                        <li>
+                            <a href="home.html">
+                                <i class="fas fa-home"></i>หน้าหลัก</a>
+                        </li>
+                        <li class="has-sub">
+                            <a class="js-arrow" href="#">
+                                <i class="fas fa-graduation-cap"></i>หลักสูตรการศึกษา</a>
+                            <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
+                                <li>
+                                    <a href="planCourse.html">เล่มหลักสูตร</a>
+                                </li>
+                                <li>
+                                    <a href="openCourse.html">วางเเผนการเปิดรายวิชา</a>
+                                </li>
+                            </ul>
+                        </li>
 
-    <div class="d-flex" id="wrapper">
-        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+                        <li>
+                            <a href="ResidualSubjects.html">
+                                <i class="fab fa-wpforms"></i>รายวิชาตกค้าง</a>
+                        </li>
+                        <li>
+                            <a href="loadUnit.html">
+                                <i class="fas fa-table"></i>Load Unit</a>
+                        </li>
 
-        </ul>
-        <!-- Sidebar -->
-        <div class="bg-light border-right col-md-2" id="sidebar-wrapper" style="background-color: #b52324;">
-            <!-- <div class="sidebar-heading">Start Bootstrap </div> -->
-            <div class="list-group list-group-flush" style="background-color: #b52324;">
-                <br>
-                <ul id="menu-content" class="menu-content collapse out"></ul>
-                <a href="home.html" class="list-group-item list-group-item-action bg-light">HOME</a>
-                <a href="#" type="button" class="dropdown-btn list-group-item list-group-item-action bg-light "
-                    data-toggle="collapse" data-target="#products" aria-haspopup="true">หลักสูตร<span
-                        class="caret"></span></a>
-                <ul class="sub-menu collapse" id="products">
-                    <a href="planCourse.html"
-                        class="dropdown-btn list-group-item list-group-item-action bg-light ">เล่มหลักสูตร</a>
-                    <a href="openCourse.html"
-                        class="dropdown-btn list-group-item list-group-item-action bg-light ">วางเเผนเปิดรายวิชา</a>
-                </ul>
-                <a href="ResidualSubjects.html"
-                    class="list-group-item list-group-item-action bg-light">รายวิชาตกค้าง</a>
-                <a href="loadUnit.html" class="list-group-item list-group-item-action bg-light">Load Unit</a>
-                <a href="#" type="button" class="dropdown-btn list-group-item list-group-item-action bg-light "
-                    data-toggle="collapse" data-target="#products" aria-haspopup="true">จัดตารางสอน-สอบ<span
-                        class="caret"></span></a>
-                <ul class="sub-menu collapse" id="products">
-                    <a href="formTeachExam.html"
-                        class="dropdown-btn list-group-item list-group-item-action bg-light ">แบบฟอร์มจัดตารางสอน-สอบ</a>
-                    <a href="approve.html"
-                        class="dropdown-btn list-group-item list-group-item-action bg-light ">การตรวจสอบApprove</a>
-                </ul>
-                <a href="login.html" class="list-group-item list-group-item-action bg-light">ออกจากระบบ</a>
+                        <li class="has-sub">
+                            <a class="js-arrow" href="#">
+                                <i class="fas fa-address-card"></i>จัดตารางสอน-สอบ</a>
+                            <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
+                                <li>
+                                    <a href="formTeachExam.html">แบบฟอร์มจัดตารางสอน-สอบ</a>
+                                </li>
+                                <li>
+                                    <a href="approve.html">การตรวจสอบApprove</a>
+                                </li>
+
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="login.html">
+                                <i class="fas fa-sign-out-alt"></i>ออกจากระบบ</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- END HEADER MOBILE-->
+
+        <!-- MENU SIDEBAR-->
+        <aside class="menu-sidebar d-none d-lg-block">
+            <div class="logo">
+                <a href="#">
+                    <img src="images/icon/logo.png" alt="Cool Admin" />
+                </a>
+            </div>
+            <div class="menu-sidebar__content js-scrollbar1">
+                <nav class="navbar-sidebar">
+                    <ul class="list-unstyled navbar__list">
+
+                        <li>
+                            <a href="home.html">
+                                <i class="fas fa-home"></i>หน้าหลัก</a>
+                        </li>
+                        <li class="has-sub">
+                            <a class="js-arrow" href="#">
+                                <i class="fas fa-graduation-cap"></i>หลักสูตรการศึกษา</a>
+                            <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
+                                <li>
+                                    <a href="planCourse.html">เล่มหลักสูตร</a>
+                                </li>
+                                <li>
+                                    <a href="openCourse.html">วางเเผนการเปิดรายวิชา</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="ResidualSubjects.html">
+                                <i class="fab fa-wpforms"></i>รายวิชาตกค้าง</a>
+                        </li>
+                        <li>
+                            <a href="loadUnit.html">
+                                <i class="fas fa-table"></i>Load Unit</a>
+                        </li>
+
+                        <li class="has-sub">
+                            <a class="js-arrow" href="#">
+                                <i class="fas fa-address-card"></i>จัดตารางสอน-สอบ</a>
+                            <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
+                                <li>
+                                    <a href="formTeachExam.html">แบบฟอร์มจัดตารางสอน-สอบ</a>
+                                </li>
+                                <li>
+                                    <a href="approve.html">การตรวจสอบApprove</a>
+                                </li>
+
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="login.html">
+                                <i class="fas fa-sign-out-alt"></i>ออกจากระบบ</a>
+                        </li>
+                    </ul>
+                    </li>
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+        <!-- END MENU SIDEBAR-->
+
+        <!-- PAGE CONTAINER-->
+        <div class="page-container">
+            <!-- HEADER DESKTOP-->
+            <header class="header-desktop">
+                <div class="section__content section__content--p30">
+                    <div class="container-fluid">
+                        <div class="header-wrap">
+                            <form class="form-header" action="" method="POST">
+                                <input class="au-input au-input--xl" type="text" name="search"
+                                    placeholder="Search for datas &amp; reports..." />
+                                <button class="au-btn--submit" type="submit">
+                                    <i class="zmdi zmdi-search"></i>
+                                </button>
+                            </form>
+                            <div class="header-button">
+
+
+                                <div class="account-wrap">
+                                    <div class="account-item clearfix js-item-menu">
+                                        <div class="image">
+                                            <img src="images/icon/avatar-01.jpg" alt="Adisak Intana" />
+                                        </div>
+                                        <div class="content">
+                                            <a class="js-acc-btn" href="#">Adisak Intana</a>
+                                        </div>
+                                        <div class="account-dropdown js-dropdown">
+                                            <div class="info clearfix">
+                                                <div class="image">
+                                                    <a href="#">
+                                                        <img src="images/icon/avatar-01.jpg" alt="Adisak Intana" />
+                                                    </a>
+                                                </div>
+                                                <div class="content">
+                                                    <h5 class="name">
+                                                        <a href="#">Adisak Intana</a>
+                                                    </h5>
+                                                    <span class="email">adisak.i@phuket.psu.ac.th</span>
+                                                </div>
+                                            </div>
+                                            <div class="account-dropdown__body">
+                                                <div class="account-dropdown__item">
+                                                    <a href="#">
+                                                        <i class="zmdi zmdi-account"></i>Account</a>
+                                                </div>
+                                                <div class="account-dropdown__item">
+                                                    <a href="#">
+                                                        <i class="zmdi zmdi-settings"></i>Setting</a>
+                                                </div>
+                                                <div class="account-dropdown__item">
+                                                    <a href="#">
+                                                        <i class="zmdi zmdi-money-box"></i>Billing</a>
+                                                </div>
+                                            </div>
+                                            <div class="account-dropdown__footer">
+                                                <a href="#">
+                                                    <i class="zmdi zmdi-power"></i>Logout</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <!-- HEADER DESKTOP-->
+
+            <!-- MAIN CONTENT-->
+
+            <!-- Page Content -->
+            <div class="container rounded col-md-10">
+                <!-- header Page  -->
+                <div class="form-group fromTE-form">
+                    <center>
+                        <h1>เเผนการเปิดรายวิชาในเเต่ละภาคการศึกษา</h1>
+                    </center>
+
+
+                </div>
+                <!-- fromAll -->
+                <!-- <div class="rounded col-md-offset-2 " id="page-content-wrapper " style="border: 4px solid #b8b8be;
+         background: #e7e4e2; width: 80%; height:auto; text-align: center;"> -->
+                <div class="form-group fromTE-form" style="background: #e7e4e2;">
+                    <br>
+
+                    <div class="btn-group col-md-offset-2" data-toggle="buttons">
+                        <label class="btn btn-danger active">
+                            <a href="planCourse.html">
+                                <input type="radio" name="options[]" checked="checked" value="1"> ปริญญาตรี (BACHRLOR
+                                DEGREE
+                                PROGRAM)
+                            </a>
+                        </label>
+                        <label class="btn btn-danger">
+                            <a href="planCourseMDP.html">
+                                <input type="radio" name="options[]" value="2"> ปริญญาโท (MASTER DEGREE PROGRAM)
+                            </a>
+                        </label>
+                    </div>
+                    <div class="form-group " id="form-check form-check-inline">
+                        <br>
+                        <div class="col-md-3">
+                            <label>สาขา</label>
+                            <select class="custom-select custom-select-lg mb-3">
+                                <option value="1">Information Technology</option>
+                                <option value="2">Electronic Business</option>
+                                <option value="3" selected>Software Engineering</option>
+                                <option value="4">Engineering Computer</option>
+                                <option value="5">Computing</option>
+                                <option value="6">Digital Business</option>
+                                <option value="7">Digital Engineering</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label>เล่มหลักสูตร</label>
+                            <select class="custom-select custom-select-lg mb-3">
+                                <option selected>หลักสูตรวิทยาศาสตรบัณฑิต หลักสูตรปรับปรุง พ.ศ.2557(59-61)</option>
+                            </select>
+
+                        </div>
+                        <div class="col-md-2">
+                            <label>รหัสนักศึกษา</label>
+                            <select class="custom-select custom-select-lg mb-3">
+                                <option value="1">57</option>
+                                <option value="2">58</option>
+                                <option value="3">59</option>
+                                <option value="4" selected>60</option>
+                                <option value="5">61</option>
+                                <option value="6">62</option>
+                                <option value="7">63</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group col-md-offset-3" id="form-check form-check-inline">
+                        <div class="col-md-4">
+                            <label>ภาคการศึกษา/ปีการศึกษา</label>
+                            <select class="custom-select custom-select-lg mb-3">
+                                <option selected>1/2560</option>
+                            </select>
+
+                        </div>
+                        <div class="col-md-1">
+                            <button type="button" class="btn btn-primary">แสดง</button>
+
+                        </div>
+                        <br>
+                    </div>
+
+                    <div class="form-group col-md-offset-2" id="form-check form-check-inline">
+                        <br>
+                        <div class="col-md-5">
+                            <input type="text" class="form-control col-md-1" name="hostname2"
+                                placeholder="ค้นหารายละเอียด" value="" />
+
+                        </div>
+                        <div class="col-md-1">
+                            <button type="button" class="btn btn-info">ค้นหา</button>
+
+                        </div>
+                        <div class="col-md-1">
+                            <button type="button" class="btn btn-success">Export</button>
+
+                        </div>
+                        <br>
+                    </div>
+                    <div class="container-fluid">
+
+                        <table class="table table-dark">
+                            <colgroup>
+                                <!-- col1 -->
+                                <col width="5%">
+                                <!-- col2 -->
+                                <col width="10%">
+                                <!-- col3 -->
+                                <col width="5%">
+                                <!-- col4 -->
+                                <col width="5%">
+                                <!-- col5 -->
+                                <col width="15%">
+                                <!-- col6 -->
+                                <col width="5%">
+                                <!-- col7 -->
+                                <col width="10%">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col">หมวด</th>
+                                    <th scope="col">กลุ่ม</th>
+                                    <th scope="col">บังคับ/เลือก</th>
+                                    <th scope="col">รหัสวิชา</th>
+                                    <th scope="col">รายชื่อวิชา</th>
+                                    <th scope="col">หน่วยกิต</th>
+                                    <th scope="col">ผู้สอน</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>วิชาเฉพาะ</td>
+                                    <td>วิชาแกน</td>
+                                    <td>บังคับ</td>
+                                    <td>977-120</td>
+                                    <td>Mathematics คณิตศาสตร์</td>
+                                    <td>3(3-0-6)</td>
+                                    <td>วันจิตรา โต๊ะหวันหลง</td>
+                                </tr>
+                                <tr>
+                                    <td>วิชาเฉพาะ</td>
+                                    <td>วิชาเฉพาะด้าน กลุ่มเทคโนโลยีและวิธีการทางซอฟต์แวร์</td>
+                                    <td>บังคับ</td>
+                                    <td>976-140</td>
+                                    <td>Software and Computer Programming ซอฟต์แวร์และการโปรแกรมคอมพิวเตอร์</td>
+                                    <td>3(2-2-5)</td>
+                                    <td>กิตย์ศิริ ช่อเจี้ยง</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="copyright">
+                        <p>Copyright © 2020 Load Unit Planing Management System <a
+                                href="https://www.computing.psu.ac.th/th/">Collage Of computing</a>.</p>
+                    </div>
+                </div>
             </div>
         </div>
-        <!-- /#sidebar-wrapper -->
+    </div>
+    </div>
+    <!-- END MAIN CONTENT-->
+    <!-- END PAGE CONTAINER-->
+    </div>
 
-        <!-- Page Content -->
-        <div class="container rounded col-md-10">
-            <!-- header Page  -->
-            <div class="form-group fromTE-form">
-                <center>
-                    <h1>เเผนการเปิดรายวิชาในเเต่ละภาคการศึกษา</h1>
-                </center>
+    </div>
 
+    <!-- Jquery JS-->
+    <script src="vendor/jquery-3.2.1.min.js"></script>
+    <!-- Bootstrap JS-->
+    <script src="vendor/bootstrap-4.1/popper.min.js"></script>
+    <script src="vendor/bootstrap-4.1/bootstrap.min.js"></script>
+    <!-- Vendor JS       -->
+    <script src="vendor/slick/slick.min.js">
+    </script>
+    <script src="vendor/wow/wow.min.js"></script>
+    <script src="vendor/animsition/animsition.min.js"></script>
+    <script src="vendor/bootstrap-progressbar/bootstrap-progressbar.min.js">
+    </script>
+    <script src="vendor/counter-up/jquery.waypoints.min.js"></script>
+    <script src="vendor/counter-up/jquery.counterup.min.js">
+    </script>
+    <script src="vendor/circle-progress/circle-progress.min.js"></script>
+    <script src="vendor/perfect-scrollbar/perfect-scrollbar.js"></script>
+    <script src="vendor/chartjs/Chart.bundle.min.js"></script>
+    <script src="vendor/select2/select2.min.js">
+    </script>
 
-            </div>
-            <!-- fromAll -->
-            <!-- <div class="rounded col-md-offset-2 " id="page-content-wrapper " style="border: 4px solid #b8b8be;
-         background: #e7e4e2; width: 80%; height:auto; text-align: center;"> -->
-            <div class="form-group fromTE-form" style="background: #e7e4e2;">
-                <br>
-
-                <div class="btn-group col-md-offset-2" data-toggle="buttons">
-                    <label class="btn btn-danger active">
-                        <a href="planCourse.html">
-                            <input type="radio" name="options[]" checked="checked" value="1"> ปริญญาตรี (BACHRLOR DEGREE
-                            PROGRAM)
-                        </a>
-                    </label>
-                    <label class="btn btn-danger">
-                        <a href="planCourseMDP.html">
-                            <input type="radio" name="options[]" value="2"> ปริญญาโท (MASTER DEGREE PROGRAM)
-                        </a>
-                    </label>
-                </div>
-                <div class="form-group " id="form-check form-check-inline">
-                    <br>
-                    <div class="col-md-3">
-                        <label>สาขา</label>
-                        <select class="custom-select custom-select-lg mb-3">
-                            <option value="1">Information Technology</option>
-                            <option value="2">Electronic Business</option>
-                            <option value="3" selected>Software Engineering</option>
-                            <option value="4">Engineering Computer</option>
-                            <option value="5">Computing</option>
-                            <option value="6">Digital Business</option>
-                            <option value="7">Digital Engineering</option>
-                        </select>
-                    </div>
-                    <div class="col-md-6">
-                        <label>เล่มหลักสูตร</label>
-                        <select class="custom-select custom-select-lg mb-3">
-                            <option selected>หลักสูตรวิทยาศาสตรบัณฑิต หลักสูตรปรับปรุง พ.ศ.2557(59-61)</option>
-                        </select>
-
-                    </div>
-                    <div class="col-md-2">
-                        <label>รหัสนักศึกษา</label>
-                        <select class="custom-select custom-select-lg mb-3">
-                            <option value="1">57</option>
-                            <option value="2">58</option>
-                            <option value="3">59</option>
-                            <option value="4" selected>60</option>
-                            <option value="5">61</option>
-                            <option value="6">62</option>
-                            <option value="7">63</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="form-group col-md-offset-3" id="form-check form-check-inline">
-                    <div class="col-md-4">
-                        <label>ภาคการศึกษา/ปีการศึกษา</label>
-                        <select class="custom-select custom-select-lg mb-3">
-                            <option selected>1/2560</option>
-                        </select>
-
-                    </div>
-                    <div class="col-md-1">
-                        <button type="button" class="btn btn-primary">แสดง</button>
-
-                    </div>
-                    <br>
-                </div>
-
-                <div class="form-group col-md-offset-2" id="form-check form-check-inline">
-                    <br>
-                    <div class="col-md-5">
-                        <input type="text" class="form-control col-md-1" name="hostname2" placeholder="ค้นหารายละเอียด"
-                            value="" />
-
-                    </div>
-                    <div class="col-md-1">
-                        <button type="button" class="btn btn-info">ค้นหา</button>
-
-                    </div>
-                    <div class="col-md-1">
-                        <button type="button" class="btn btn-success">Export</button>
-
-                    </div>
-                    <br>
-                </div>
-                <div class="container-fluid">
-
-                    <table class="table table-dark">
-                        <colgroup>
-                            <!-- col1 -->
-                            <col width="5%">
-                            <!-- col2 -->
-                            <col width="10%">
-                            <!-- col3 -->
-                            <col width="5%">
-                            <!-- col4 -->
-                            <col width="5%">
-                            <!-- col5 -->
-                            <col width="15%">
-                            <!-- col6 -->
-                            <col width="5%">
-                            <!-- col7 -->
-                            <col width="10%">
-                        </colgroup>
-                        <thead>
-                            <tr>
-                                <th scope="col">หมวด</th>
-                                <th scope="col">กลุ่ม</th>
-                                <th scope="col">บังคับ/เลือก</th>
-                                <th scope="col">รหัสวิชา</th>
-                                <th scope="col">รายชื่อวิชา</th>
-                                <th scope="col">หน่วยกิต</th>
-                                <th scope="col">ผู้สอน</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>วิชาเฉพาะ</td>
-                                <td>วิชาแกน</td>
-                                <td>บังคับ</td>
-                                <td>977-120</td>
-                                <td>Mathematics คณิตศาสตร์</td>
-                                <td>3(3-0-6)</td>
-                                <td>วันจิตรา โต๊ะหวันหลง</td>
-                            </tr>
-                            <tr>
-                                <td>วิชาเฉพาะ</td>
-                                <td>วิชาเฉพาะด้าน กลุ่มเทคโนโลยีและวิธีการทางซอฟต์แวร์</td>
-                                <td>บังคับ</td>
-                                <td>976-140</td>
-                                <td>Software and Computer Programming ซอฟต์แวร์และการโปรแกรมคอมพิวเตอร์</td>
-                                <td>3(2-2-5)</td>
-                                <td>กิตย์ศิริ ช่อเจี้ยง</td>
-                            </tr>
-                        </tbody>
-                    </table>
-
-                </div>
-
-            </div>
-
-
-
+    <!-- Main JS-->
+    <script src="js/main.js"></script>
 
 </body>
-<script src="js/dropdownVedio.js"></script>
 
 </html>
+<!-- end document-->
