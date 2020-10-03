@@ -1,3 +1,11 @@
+<?php
+  session_start();
+  require('db.php');
+
+  $username = $_SESSION['staff_nameSur'];
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -58,7 +66,7 @@
           <ul class="navbar-mobile__list list-unstyled">
 
             <li>
-              <a href="home.html">
+              <a href="home.php">
                 <i class="fas fa-home"></i>หน้าหลัก</a>
             </li>
             <li class="has-sub">
@@ -66,20 +74,20 @@
                 <i class="fas fa-graduation-cap"></i>หลักสูตรการศึกษา</a>
               <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
                 <li>
-                  <a href="planCourse.html">เล่มหลักสูตร</a>
+                  <a href="planCourse.php">เล่มหลักสูตร</a>
                 </li>
                 <li>
-                  <a href="openCourse.html">วางเเผนการเปิดรายวิชา</a>
+                  <a href="openCourse.php">วางเเผนการเปิดรายวิชา</a>
                 </li>
               </ul>
             </li>
 
             <li>
-              <a href="ResidualSubjects.html">
+              <a href="residualSubjects.php">
                 <i class="fab fa-wpforms"></i>รายวิชาตกค้าง</a>
             </li>
             <li>
-              <a href="loadUnit.html">
+              <a href="loadUnit.php">
                 <i class="fas fa-table"></i>Load Unit</a>
             </li>
 
@@ -88,16 +96,16 @@
                 <i class="fas fa-address-card"></i>จัดตารางสอน-สอบ</a>
               <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
                 <li>
-                  <a href="formTeachExam.html">แบบฟอร์มจัดตารางสอน-สอบ</a>
+                  <a href="formTeachExam.php">แบบฟอร์มจัดตารางสอน-สอบ</a>
                 </li>
                 <li>
-                  <a href="approve.html">การตรวจสอบApprove</a>
+                  <a href="approve.php">การตรวจสอบApprove</a>
                 </li>
 
               </ul>
             </li>
             <li>
-              <a href="login.html">
+              <a href="login.php">
                 <i class="fas fa-sign-out-alt"></i>ออกจากระบบ</a>
             </li>
 
@@ -119,7 +127,7 @@
           <ul class="list-unstyled navbar__list">
 
             <li>
-              <a href="home.html">
+              <a href="home.php">
                 <i class="fas fa-home"></i>หน้าหลัก</a>
             </li>
             <li class="has-sub">
@@ -127,38 +135,36 @@
                 <i class="fas fa-graduation-cap"></i>หลักสูตรการศึกษา</a>
               <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
                 <li>
-                  <a href="planCourse.html">เล่มหลักสูตร</a>
+                  <a href="planCourse.php">เล่มหลักสูตร</a>
                 </li>
                 <li>
-                  <a href="openCourse.html">วางเเผนการเปิดรายวิชา</a>
+                  <a href="openCourse.php">วางเเผนการเปิดรายวิชา</a>
                 </li>
               </ul>
             </li>
 
             <li>
-              <a href="ResidualSubjects.html">
+              <a href="residualSubjects.php">
                 <i class="fab fa-wpforms"></i>รายวิชาตกค้าง</a>
             </li>
             <li>
-              <a href="loadUnit.html">
+              <a href="loadUnit.php">
                 <i class="fas fa-table"></i>Load Unit</a>
             </li>
-
             <li class="has-sub">
               <a class="js-arrow" href="#">
                 <i class="fas fa-address-card"></i>จัดตารางสอน-สอบ</a>
               <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
                 <li>
-                  <a href="formTeachExam.html">แบบฟอร์มจัดตารางสอน-สอบ</a>
+                  <a href="formTeachExam.php">แบบฟอร์มจัดตารางสอน-สอบ</a>
                 </li>
                 <li>
-                  <a href="approve.html">การตรวจสอบApprove</a>
+                  <a href="approve.php">การตรวจสอบApprove</a>
                 </li>
-
               </ul>
             </li>
             <li>
-              <a href="login.html">
+              <a href="login.php">
                 <i class="fas fa-sign-out-alt"></i>ออกจากระบบ</a>
             </li>
           </ul>
@@ -170,29 +176,7 @@
     <!-- END MENU SIDEBAR-->
 
     <!-- PAGE CONTAINER-->
-    <div class="page-container" style="padding-left:20px;">
-      <!-- HEADER DESKTOP-->
-      <header class="header-desktop">
-        <div class="section__content section__content--p30">
-          <div class="container-fluid">
-            <div class="header-wrap">
-              <div class="header-button">
-                <div class="account-wrap">
-
-                  <div class="content">
-                    <i class="fas fa-user"></i>
-                    <a class="js-acc-btn" href="#" style="color: black;">Adisak Intana</a>
-
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </header>
-      <!-- HEADER DESKTOP-->
-
-
+    <div class="page-container" style="padding-left:25px;">
       <!-- PAGE CONTAINER-->
       <div class="page-container">
         <!-- HEADER DESKTOP-->
@@ -201,16 +185,14 @@
             <div class="container-fluid">
               <div class="header-wrap">
                 <form class="form-header" action="" method="POST">
-
-
                 </form>
                 <div class="header-button">
                   <div class="account-wrap">
-
                     <div class="content">
                       <i class="fas fa-user"></i>
-                      <a class="js-acc-btn" href="#" style="color: black;">Adisak Intana</a>
-
+                      <a class="js-acc-btn" href="#" style="color: black;">
+                        <?php echo $username; ?>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -219,7 +201,6 @@
           </div>
         </header>
         <!-- HEADER DESKTOP-->
-
 
         <!-- MAIN CONTENT-->
         <br> <br><br><br>
@@ -678,14 +659,12 @@
         <div class="row">
           <div class="col-md-12">
             <div class="copyright">
-              <p>Copyright © 2020 Load Unit Planing Management System <a
-                  href="https://www.computing.psu.ac.th/th/">Collage Of
+              <p>Copyright © 2020 Load Unit Planing Management System <a href="https://www.computing.psu.ac.th/th/">Collage Of
                   computing</a>.</p>
             </div>
           </div>
         </div>
       </div>
-    </div>
   </div>
   <!-- END MAIN CONTENT-->
   <!-- END PAGE CONTAINER-->

@@ -1,3 +1,11 @@
+<?php
+  session_start();
+  require('db.php');
+
+  $username = $_SESSION['staff_nameSur'];
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,7 +18,7 @@
   <meta name="keywords" content="au theme template">
 
   <!-- Title Page-->
-  <title>วางเเผนการเปิดรายวิชา</title>
+  <title>Load Unit</title>
 
   <!-- Fontfaces CSS-->
   <link href="css/font-face.css" rel="stylesheet" media="all">
@@ -58,7 +66,7 @@
           <ul class="navbar-mobile__list list-unstyled">
 
             <li>
-              <a href="home.html">
+              <a href="home.php">
                 <i class="fas fa-home"></i>หน้าหลัก</a>
             </li>
             <li class="has-sub">
@@ -66,20 +74,20 @@
                 <i class="fas fa-graduation-cap"></i>หลักสูตรการศึกษา</a>
               <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
                 <li>
-                  <a href="planCourse.html">เล่มหลักสูตร</a>
+                  <a href="planCourse.php">เล่มหลักสูตร</a>
                 </li>
                 <li>
-                  <a href="openCourse.html">วางเเผนการเปิดรายวิชา</a>
+                  <a href="openCourse.php">วางเเผนการเปิดรายวิชา</a>
                 </li>
               </ul>
             </li>
 
             <li>
-              <a href="ResidualSubjects.html">
+              <a href="residualSubjects.php">
                 <i class="fab fa-wpforms"></i>รายวิชาตกค้าง</a>
             </li>
             <li>
-              <a href="loadUnit.html">
+              <a href="loadUnit.php">
                 <i class="fas fa-table"></i>Load Unit</a>
             </li>
 
@@ -88,16 +96,16 @@
                 <i class="fas fa-address-card"></i>จัดตารางสอน-สอบ</a>
               <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
                 <li>
-                  <a href="formTeachExam.html">แบบฟอร์มจัดตารางสอน-สอบ</a>
+                  <a href="formTeachExam.php">แบบฟอร์มจัดตารางสอน-สอบ</a>
                 </li>
                 <li>
-                  <a href="approve.html">การตรวจสอบApprove</a>
+                  <a href="approve.php">การตรวจสอบApprove</a>
                 </li>
 
               </ul>
             </li>
             <li>
-              <a href="login.html">
+              <a href="login.php">
                 <i class="fas fa-sign-out-alt"></i>ออกจากระบบ</a>
             </li>
 
@@ -119,7 +127,7 @@
           <ul class="list-unstyled navbar__list">
 
             <li>
-              <a href="home.html">
+              <a href="home.php">
                 <i class="fas fa-home"></i>หน้าหลัก</a>
             </li>
             <li class="has-sub">
@@ -127,38 +135,36 @@
                 <i class="fas fa-graduation-cap"></i>หลักสูตรการศึกษา</a>
               <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
                 <li>
-                  <a href="planCourse.html">เล่มหลักสูตร</a>
+                  <a href="planCourse.php">เล่มหลักสูตร</a>
                 </li>
                 <li>
-                  <a href="openCourse.html">วางเเผนการเปิดรายวิชา</a>
+                  <a href="openCourse.php">วางเเผนการเปิดรายวิชา</a>
                 </li>
               </ul>
             </li>
 
             <li>
-              <a href="ResidualSubjects.html">
+              <a href="residualSubjects.php">
                 <i class="fab fa-wpforms"></i>รายวิชาตกค้าง</a>
             </li>
             <li>
-              <a href="loadUnit.html">
+              <a href="loadUnit.php">
                 <i class="fas fa-table"></i>Load Unit</a>
             </li>
-
             <li class="has-sub">
               <a class="js-arrow" href="#">
                 <i class="fas fa-address-card"></i>จัดตารางสอน-สอบ</a>
               <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
                 <li>
-                  <a href="formTeachExam.html">แบบฟอร์มจัดตารางสอน-สอบ</a>
+                  <a href="formTeachExam.php">แบบฟอร์มจัดตารางสอน-สอบ</a>
                 </li>
                 <li>
-                  <a href="approve.html">การตรวจสอบApprove</a>
+                  <a href="approve.php">การตรวจสอบApprove</a>
                 </li>
-
               </ul>
             </li>
             <li>
-              <a href="login.html">
+              <a href="login.php">
                 <i class="fas fa-sign-out-alt"></i>ออกจากระบบ</a>
             </li>
           </ul>
@@ -200,16 +206,14 @@
             <div class="container-fluid">
               <div class="header-wrap">
                 <form class="form-header" action="" method="POST">
-
-
                 </form>
                 <div class="header-button">
                   <div class="account-wrap">
-
                     <div class="content">
                       <i class="fas fa-user"></i>
-                      <a class="js-acc-btn" href="#" style="color: black;">Adisak Intana</a>
-
+                      <a class="js-acc-btn" href="#" style="color: black;">
+                        <?php echo $username; ?>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -235,30 +239,28 @@
           <div class="form-group fromTE-form" style="background: #e7e4e2;">
             <br><br>
             <div class=" btn-group-toggle  offset-md-2">
-              <label class="btn btn-danger active">
-                <input type="radio" name="options" id="option1" autocomplete="off" checked>
-                <a href="openCourse.html" style="color:  #ffffff"> ปริญญาตรี (BACHRLOR DEGREE PROGRAM)
+              <label class="btn btn-danger ">
+                <input type="radio" name="options" id="option1" autocomplete="off">
+                <a href="openCourse.php" style="color:  #ffffff"> ปริญญาตรี (BACHRLOR DEGREE PROGRAM)
                 </a>
               </label>
-              <label class="btn btn-danger">
+              <label class="btn btn-danger active">
 
-                <input type="radio" name="options" id="option2" autocomplete="off">
-                <a href="openCourseMDP.html" style="color:  #ffffff">
+                <input type="radio" name="options" id="option2" autocomplete="off" checked>
+                <a href="openCourseMDP.php" style="color:  #ffffff">
                   ปริญญาโท (MASTER DEGREE PROGRAM)
                 </a>
               </label>
             </div>
-
             <div class="row col-md-10 offset-md-1">
               <br>
               <div class="major">
                 <br>
-
                 <label class="col-md-3">สาขา</label>
                 <select class="custom-select custom-select-sm mb-2 col-md-8">
-                  <option value="1">Information Technology</option>
+                  <option value="1" selected>Information Technology</option>
                   <option value="2">Electronic Business</option>
-                  <option value="3" selected>Software Engineering</option>
+                  <option value="3">Software Engineering</option>
                   <option value="4">Engineering Computer</option>
                   <option value="5">Computing</option>
                   <option value="6">Digital Business</option>
@@ -269,7 +271,7 @@
                 <br>
                 <label class="col-md-3">เล่มหลักสูตร</label>
                 <select class="custom-select custom-select-sm  col-md-8">
-                  <option selected>หลักสูตรวิทยาศาสตรบัณฑิต หลักสูตรปรับปรุง พ.ศ.2557(59-61)</option>
+                  <option selected>หลักสูตรวิทยาศาสตรมหาบัณฑิต หลักสูตรใหม่ พ.ศ.2557 (ก่อน 62)</option>
                 </select>
               </div>
             </div>
@@ -296,7 +298,6 @@
             </div>
           </div>
         </div>
-
         <!-- search -->
         <div class="row">
 
@@ -317,15 +318,15 @@
           <table class="table table-dark">
             <colgroup>
               <!-- col1 -->
-              <col width="7%">
+              <col width="5%">
               <!-- col2 -->
-              <col width="15%">
-              <!-- col3 -->
               <col width="10%">
+              <!-- col3 -->
+              <col width="5%">
               <!-- col4 -->
-              <col width="7%">
+              <col width="5%">
               <!-- col5 -->
-              <col width="20%">
+              <col width="10%">
               <!-- col6 -->
               <col width="5%">
               <!-- col7 -->
@@ -347,13 +348,13 @@
             </thead>
             <tbody>
               <tr>
-                <td>วิชาเฉพาะ</td>
-                <td>วิชาแกน</td>
+                <td>วิชาบังคับ</td>
+                <td>แผน ก2 และแผน ข</td>
                 <td>บังคับ</td>
-                <td>977-120</td>
-                <td>Mathematics คณิตศาสตร์</td>
+                <td>976-501</td>
+                <td>Management Information System ระบบสารสนเทศเพื่อการจัดการ</td>
                 <td>3(3-0-6)</td>
-                <td>วันจิตรา โต๊ะหวันหลง</td>
+                <td></td>
                 <td>
                   <a href="#" class="btn btn-primary a-btn-slide-text">
                     <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
@@ -366,13 +367,15 @@
                 </td>
               </tr>
               <tr>
-                <td>วิชาเฉพาะ</td>
-                <td>วิชาเฉพาะด้าน กลุ่มเทคโนโลยีและวิธีการทางซอฟต์แวร์</td>
+                <td>วิชาบังคับ</td>
+                <td>แผน ก2 และแผน ข</td>
                 <td>บังคับ</td>
-                <td>976-140</td>
-                <td>Software and Computer Programming ซอฟต์แวร์และการโปรแกรมคอมพิวเตอร์</td>
-                <td>3(2-2-5)</td>
-                <td>กิตย์ศิริ ช่อเจี้ยง</td>
+                <td>976-502</td>
+                <td>Research Methodology in Information Technology
+                  ระเบียบวิธีวิจัยทางเทคโนโลยีสารสนเทศ
+                </td>
+                <td>3(3-0-6)</td>
+                <td></td>
                 <td>
                   <a href="#" class="btn btn-primary a-btn-slide-text">
                     <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>

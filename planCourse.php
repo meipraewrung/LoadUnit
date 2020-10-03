@@ -1,3 +1,11 @@
+<?php
+  session_start();
+  require('db.php');
+
+  $username = $_SESSION['staff_nameSur'];
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,7 +18,7 @@
   <meta name="keywords" content="au theme template">
 
   <!-- Title Page-->
-  <title>รายวิชาตกค้าง</title>
+  <title>เล่มหลักสูตร</title>
 
   <!-- Fontfaces CSS-->
   <link href="css/font-face.css" rel="stylesheet" media="all">
@@ -58,7 +66,7 @@
           <ul class="navbar-mobile__list list-unstyled">
 
             <li>
-              <a href="home.html">
+              <a href="home.php">
                 <i class="fas fa-home"></i>หน้าหลัก</a>
             </li>
             <li class="has-sub">
@@ -66,20 +74,20 @@
                 <i class="fas fa-graduation-cap"></i>หลักสูตรการศึกษา</a>
               <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
                 <li>
-                  <a href="planCourse.html">เล่มหลักสูตร</a>
+                  <a href="planCourse.php">เล่มหลักสูตร</a>
                 </li>
                 <li>
-                  <a href="openCourse.html">วางเเผนการเปิดรายวิชา</a>
+                  <a href="openCourse.php">วางเเผนการเปิดรายวิชา</a>
                 </li>
               </ul>
             </li>
 
             <li>
-              <a href="ResidualSubjects.html">
+              <a href="residualSubjects.php">
                 <i class="fab fa-wpforms"></i>รายวิชาตกค้าง</a>
             </li>
             <li>
-              <a href="loadUnit.html">
+              <a href="loadUnit.php">
                 <i class="fas fa-table"></i>Load Unit</a>
             </li>
 
@@ -88,16 +96,16 @@
                 <i class="fas fa-address-card"></i>จัดตารางสอน-สอบ</a>
               <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
                 <li>
-                  <a href="formTeachExam.html">แบบฟอร์มจัดตารางสอน-สอบ</a>
+                  <a href="formTeachExam.php">แบบฟอร์มจัดตารางสอน-สอบ</a>
                 </li>
                 <li>
-                  <a href="approve.html">การตรวจสอบApprove</a>
+                  <a href="approve.php">การตรวจสอบApprove</a>
                 </li>
 
               </ul>
             </li>
             <li>
-              <a href="login.html">
+              <a href="login.php">
                 <i class="fas fa-sign-out-alt"></i>ออกจากระบบ</a>
             </li>
 
@@ -119,7 +127,7 @@
           <ul class="list-unstyled navbar__list">
 
             <li>
-              <a href="home.html">
+              <a href="home.php">
                 <i class="fas fa-home"></i>หน้าหลัก</a>
             </li>
             <li class="has-sub">
@@ -127,38 +135,36 @@
                 <i class="fas fa-graduation-cap"></i>หลักสูตรการศึกษา</a>
               <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
                 <li>
-                  <a href="planCourse.html">เล่มหลักสูตร</a>
+                  <a href="planCourse.php">เล่มหลักสูตร</a>
                 </li>
                 <li>
-                  <a href="openCourse.html">วางเเผนการเปิดรายวิชา</a>
+                  <a href="openCourse.php">วางเเผนการเปิดรายวิชา</a>
                 </li>
               </ul>
             </li>
 
             <li>
-              <a href="ResidualSubjects.html">
+              <a href="residualSubjects.php">
                 <i class="fab fa-wpforms"></i>รายวิชาตกค้าง</a>
             </li>
             <li>
-              <a href="loadUnit.html">
+              <a href="loadUnit.php">
                 <i class="fas fa-table"></i>Load Unit</a>
             </li>
-
             <li class="has-sub">
               <a class="js-arrow" href="#">
                 <i class="fas fa-address-card"></i>จัดตารางสอน-สอบ</a>
               <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
                 <li>
-                  <a href="formTeachExam.html">แบบฟอร์มจัดตารางสอน-สอบ</a>
+                  <a href="formTeachExam.php">แบบฟอร์มจัดตารางสอน-สอบ</a>
                 </li>
                 <li>
-                  <a href="approve.html">การตรวจสอบApprove</a>
+                  <a href="approve.php">การตรวจสอบApprove</a>
                 </li>
-
               </ul>
             </li>
             <li>
-              <a href="login.html">
+              <a href="login.php">
                 <i class="fas fa-sign-out-alt"></i>ออกจากระบบ</a>
             </li>
           </ul>
@@ -177,16 +183,14 @@
           <div class="container-fluid">
             <div class="header-wrap">
               <form class="form-header" action="" method="POST">
-
-
               </form>
               <div class="header-button">
                 <div class="account-wrap">
-
-                    <div class="content">
-                      <i class="fas fa-user"></i>
-                      <a class="js-acc-btn" href="#" style="color: black;">Adisak Intana</a>
-
+                  <div class="content">
+                    <i class="fas fa-user"></i>
+                    <a class="js-acc-btn" href="#" style="color: black;">
+                      <?php echo $username; ?>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -197,13 +201,13 @@
       <!-- HEADER DESKTOP-->
 
       <!-- MAIN CONTENT-->
-      <br> <br><br><br>
+
       <!-- Page Content -->
       <div class="container rounded col-md-10">
         <!-- header Page  -->
         <div class="form-group fromTE-form">
           <center>
-            <h1>ข้อมูลรายวิชาตกค้าง</h1>
+            <h1>เเผนการเปิดรายวิชาในเเต่ละภาคการศึกษา</h1>
           </center>
 
 
@@ -211,123 +215,143 @@
         <!-- fromAll -->
         <!-- <div class="rounded col-md-offset-2 " id="page-content-wrapper " style="border: 4px solid #b8b8be;
          background: #e7e4e2; width: 80%; height:auto; text-align: center;"> -->
-
         <div class="form-group fromTE-form" style="background: #e7e4e2;">
-          <br> 
-          <!--</div>
-        <div class="form-group formTable-form">
-          <div class="form-group " id="form-check form-check-inline">
-            <br>
-            <div class="col-md-4">-->
+          <br><br>
+          <div class=" btn-group-toggle  offset-md-2">
+            <label class="btn btn-danger active">
+              <input type="radio" name="options" id="option1" autocomplete="off" checked>
+              <a href="planCourse.php" style="color:  #ffffff"> ปริญญาตรี (BACHRLOR DEGREE PROGRAM)
+              </a>
+            </label>
+            <label class="btn btn-danger">
 
-          <div class="row col-md-12 ">
+              <input type="radio" name="options" id="option2" autocomplete="off">
+              <a href="planCourseMDP.php" style="color:  #ffffff">
+                ปริญญาโท (MASTER DEGREE PROGRAM)
+              </a>
+            </label>
+          </div>
+          <div class="row col-md-10 offset-md-1">
             <br>
-            <label class="col-md-2">ประเภทของรายวิชา</label>
-            <select class="custom-select custom-select-sm mb-2 col-md-3">
-              <option selected>หมวดวิชาเฉพาะ วิชาแกน</option>
+            <div class="major">
+              <br>
+
+              <label class="col-md-3">สาขา</label>
+              <select class="custom-select custom-select-sm mb-2 col-md-8">
+                <option value="1">Information Technology</option>
+                <option value="2">Electronic Business</option>
+                <option value="3" selected>Software Engineering</option>
+                <option value="4">Engineering Computer</option>
+                <option value="5">Computing</option>
+                <option value="6">Digital Business</option>
+                <option value="7">Digital Engineering</option>
+              </select>
+            </div>
+            <div class="cousrse">
+              <br>
+              <label class="col-md-3">เล่มหลักสูตร</label>
+              <select class="custom-select custom-select-sm  col-md-8">
+                <option selected>หลักสูตรวิทยาศาสตรบัณฑิต หลักสูตรปรับปรุง พ.ศ.2557(59-61)</option>
+              </select>
+
+            </div>
+
+          </div>
+
+          <div class="row col-md-12 offset-md-1">
+
+            <label class="col-md-2">รหัสนักศึกษา</label>
+            <select class="custom-select custom-select-sm col-md-1">
+              <option value="1">57</option>
+              <option value="2">58</option>
+              <option value="3">59</option>
+              <option value="4" selected>60</option>
+              <option value="5">61</option>
+              <option value="6">62</option>
+              <option value="7">63</option>
             </select>
 
-            <label class="col-md-2">ภาคการศึกษา/ปีการศึกษา</label>
+            <label class="col-md-3">ภาคการศึกษา/ปีการศึกษา</label>
             <select class="custom-select custom-select-sm col-md-2">
               <option selected>1/2560</option>
               <option>2/2560</option>
               <option>1/2561</option>
               <option>2/2561</option>
             </select> &nbsp;&nbsp;&nbsp;
-            <button type="button" class="btn btn-primary">แสดง</button>&nbsp;&nbsp;
+            <button type="button" class="btn btn-primary">แสดง</button>
+          </div>
+        </div>
+
+        <!-- search -->
+        <div class="row">
+
+          <div class="col-md-5 offset-md-1">
+            <input type="text" class="form-control" name="hostname2" placeholder="ค้นหารายละเอียด" value="" />
+          </div>
+          <div class="col-sm-2">
+            <button type="button" class="btn btn-info">ค้นหา</button>
+          </div>
+          <div class="col-sm-3 ">
             <button type="button" class="btn btn-success">Export</button>
-
-
           </div>
-          <!-- search -->
-          <br>
-          <div class="row">
+        </div>
+        <!-- End search -->
+        <br>
+        <!-- table -->
+        <div class="container-fluid">
 
-            <div class="col-md-5 offset-md-1">
-              <input type="text" class="form-control" name="hostname2" placeholder="ค้นหารายละเอียด" value="" />
-            </div>
-            <div class="col-sm-2">
-              <button type="button" class="btn btn-info">ค้นหา</button>
-            </div>
-
-          </div>
-          <!-- End search -->
-          <br>
-          <div class="container-fluid">
-            <table class="table table-dark">
-              <colgroup>
-                <!-- col1 -->
-                <col width="5%">
-                <!-- col2 -->
-                <col width="15%">
-                <!-- col3 -->
-                <col width="5%">
-                <!-- col4 -->
-                <col width="5%">
-                <!-- col5 -->
-                <col width="5%">
-                <!-- col6 -->
-                <col width="7%">
-                <!-- col7 -->
-                <col width="20%">
-                <!-- col8 -->
-                <col width="15%">
-                <!-- col9 -->
-                <col width="10%">
-              </colgroup>
-              <thead>
-                <tr>
-                  <th scope="col">ที่อยู่อีเมล</th>
-                  <th scope="col">ชื่อ-นามสกุล</th>
-                  <th scope="col">รหัสน.ศ.</th>
-                  <th scope="col">สาขา</th>
-                  <th scope="col">ชั้นปี</th>
-                  <th scope="col">รหัสวิชา</th>
-                  <th scope="col">รายชื่อวิชา</th>
-                  <th scope="col">ประเภทรายวิชา</th>
-                  <th scope="col">ภาคการศึกษา</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>s6030213020@phuket.psu.ac.th</td>
-                  <td>จุฬาลักษณ์ ธรรมเพชร</td>
-                  <td>6030213020</td>
-                  <td>Software Engineering</td>
-                  <td>2</td>
-                  <td>976-140</td>
-                  <td>Software and Computer Programming ซอฟต์แวร์และการโปรแกรมคอมพิวเตอร์</td>
-                  <td>วิชาเฉพาะ วิชาเฉพาะด้าน กลุ่มเทคโนโลยีและวิธีการทางซอฟต์แวร์</td>
-                  <td>1/2561</td>
-                </tr>
-                <tr>
-                  <td>s6030213045@phuket.psu.ac.th</td>
-                  <td>แพรวรุ่ง ปัญญานุกิจ</td>
-                  <td>6030213045</td>
-                  <td>Software Engineering</td>
-                  <td>2</td>
-                  <td>976-140</td>
-                  <td>Software and Computer Programming ซอฟต์แวร์และการโปรแกรมคอมพิวเตอร์</td>
-                  <td>วิชาเฉพาะ วิชาเฉพาะด้าน กลุ่มเทคโนโลยีและวิธีการทางซอฟต์แวร์</td>
-                  <td>1/2561</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <br>
-          <!-- Stat button -->
-          <div class="form-group col-md-8 offset-md-5" id="form-check form-check-inline">
-            <br>
-            <div class="col-md-5">
-              <button type="button" class="btn btn-success">
-                <span class="" aria-hidden="true"></span>Import</button>
-              <button type="button" class="btn btn-danger">
-                <span class="" aria-hidden="true"></span>Delete</button>
-            </div>
-          </div><!-- End button -->
-
+          <table class="table table-dark">
+            <colgroup>
+              <!-- col1 -->
+              <col width="5%">
+              <!-- col2 -->
+              <col width="10%">
+              <!-- col3 -->
+              <col width="5%">
+              <!-- col4 -->
+              <col width="5%">
+              <!-- col5 -->
+              <col width="15%">
+              <!-- col6 -->
+              <col width="5%">
+              <!-- col7 -->
+              <col width="10%">
+            </colgroup>
+            <thead>
+              <tr>
+                <th scope="col">หมวด</th>
+                <th scope="col">กลุ่ม</th>
+                <th scope="col">บังคับ/เลือก</th>
+                <th scope="col">รหัสวิชา</th>
+                <th scope="col">รายชื่อวิชา</th>
+                <th scope="col">หน่วยกิต</th>
+                <th scope="col">ผู้สอน</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>วิชาเฉพาะ</td>
+                <td>วิชาแกน</td>
+                <td>บังคับ</td>
+                <td>977-120</td>
+                <td>Mathematics คณิตศาสตร์</td>
+                <td>3(3-0-6)</td>
+                <td>วันจิตรา โต๊ะหวันหลง</td>
+              </tr>
+              <tr>
+                <td>วิชาเฉพาะ</td>
+                <td>วิชาเฉพาะด้าน กลุ่มเทคโนโลยีและวิธีการทางซอฟต์แวร์</td>
+                <td>บังคับ</td>
+                <td>976-140</td>
+                <td>Software and Computer Programming ซอฟต์แวร์และการโปรแกรมคอมพิวเตอร์</td>
+                <td>3(2-2-5)</td>
+                <td>กิตย์ศิริ ช่อเจี้ยง</td>
+              </tr>
+            </tbody>
+          </table>
 
         </div>
+
       </div>
 
     </div>
