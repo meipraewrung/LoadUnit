@@ -4,6 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<!--===============================================================================================-->
 	<link rel="icon" type="image/png" href="images/icons/favicon.ico" />
 	<!--===============================================================================================-->
@@ -42,36 +43,53 @@
 						</video>
 					</div>
 				</div>
-				<form class="login100-form validate-form">
-					<div class="wrap-input100 validate-input m-b-26" data-validate="Username is required">
-						<span class="label-input100">Username</span>
-						<input class="input100" type="text" name="username" placeholder="Enter username">
+
+				<?php
+					require('db.php');
+					session_start(); 
+					if(isset($_POST['submit'])) {
+
+						// Checking is user existing in the database or not
+						$query = "SELECT * FROM staff WHERE staff_email='".$_POST['email']."' AND staff_password='".$_POST['password']."'";
+						$result = mysqli_query($connect, $query) or die(mysql_error());
+						
+						if(mysqli_num_rows($result)==1) {
+							$row = mysqli_fetch_array($result);
+							$_SESSION['staff_email'] = $row['staff_email'];
+							$_SESSION['staff_password'] = $row['staff_password'];
+							$_SESSION['staff_nameSur'] = $row['staff_nameSur'];
+							// Redirect user to home.php
+							header("Location: home.php");
+						} else {
+							echo 	"<center><div class='form'>
+										<h1>Username/Password is incorrect.</h1>
+										<br> Click here to <a href='login.php'>SignIn</a>
+									</div></center>";
+						}
+					} else {
+				?>
+
+				<form class="login100-form validate-form" method="POST" name="login_form">
+					<div class="wrap-input100 validate-input m-b-26" data-validate="Please enter email.">
+						<span class="label-input100">E-mail</span>
+						<input class="input100" type="text" name="email" placeholder="Enter email">
 						<span class="focus-input100"></span>
 					</div>
-					<div class="wrap-input100 validate-input m-b-18" data-validate="Password is required">
+					<div class="wrap-input100 validate-input m-b-18" data-validate="Please enter password.">
 						<span class="label-input100">Password</span>
-						<input class="input100" type="password" name="pass" placeholder="Enter password">
+						<input class="input100" type="password" name="password" placeholder="Enter password">
 						<span class="focus-input100"></span>
-					</div>
-					<div class="flex-sb-m w-full p-b-30">
-						<div class="contact100-form-checkbox">
-							<input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
-							<label class="label-checkbox100" for="ckb1">
-								Remember me
-							</label>
-						</div>
-						<div>
-							<a href="#" class="txt1">
-								Forgot Password?
-							</a>
-						</div>
 					</div>
 					<div class="container-login100-form-btn">
-						<button class="login100-form-btn">
+						<button class="login100-form-btn" name="submit" >
 							<b>Sign In</b>
 						</button>
 					</div>
 				</form>
+
+				<?php 
+					}
+				?>
 			</div>
 		</div>
 	</div>
@@ -90,8 +108,6 @@
 	<script src="vendor/daterangepicker/daterangepicker.js"></script>
 	<!--===============================================================================================-->
 	<script src="vendor/countdowntime/countdowntime.js"></script>
-	<!--===============================================================================================-->
-	<script src="js/login.js"></script>
 
 </body>
 
