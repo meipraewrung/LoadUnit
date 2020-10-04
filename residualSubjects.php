@@ -231,8 +231,8 @@
               <option selected>หมวดวิชาเฉพาะ วิชาแกน</option>
             </select>
 
-            <label class="col-md-2">ภาคการศึกษา/ปีการศึกษา</label>
-            <select class="custom-select custom-select-sm col-md-2">
+            <label class="col-md-3">ภาคการศึกษา/ปีการศึกษา</label>
+            <select class="custom-select custom-select-sm col-md-1">
               <option selected>1/2560</option>
               <option>2/2560</option>
               <option>1/2561</option>

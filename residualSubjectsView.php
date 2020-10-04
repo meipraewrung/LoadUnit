@@ -18,7 +18,7 @@
   <meta name="keywords" content="au theme template">
 
   <!-- Title Page-->
-  <title>Load Unit</title>
+  <title>รายวิชาตกค้าง</title>
 
   <!-- Fontfaces CSS-->
   <link href="css/font-face.css" rel="stylesheet" media="all">
@@ -200,56 +200,63 @@
       </header>
       <!-- HEADER DESKTOP-->
 
+      <!-- MAIN CONTENT-->
+      <br> <br><br><br>
       <!-- Page Content -->
       <div class="container rounded col-md-10">
         <!-- header Page  -->
         <div class="form-group fromTE-form">
           <center>
-            <h2>รายวิชาตกค้าง</h2>
+            <h1>ข้อมูลรายวิชาตกค้าง</h1>
           </center>
+
+
         </div>
         <!-- fromAll -->
         <!-- <div class="rounded col-md-offset-2 " id="page-content-wrapper " style="border: 4px solid #b8b8be;
          background: #e7e4e2; width: 80%; height:auto; text-align: center;"> -->
+
+        <div class="form-group fromTE-form" style="background: #e7e4e2;">
+          <br>
+          <!--</div>
         <div class="form-group formTable-form">
           <div class="form-group " id="form-check form-check-inline">
             <br>
-            <div class="col-md-4">
-              <label>ประเภทของรายวิชา</label>
-              <select class="custom-select custom-select-lg mb-3">
-                <option selected>หมวดวิชาเฉพาะ วิชาแกน</option>
-              </select>
+            <div class="col-md-4">-->
 
-            </div>
-            <div class="col-md-5">
-              <label>ภาคการศึกษา/ปีการศึกษา</label>
-              <select class="custom-select custom-select-lg mb-3">
-                <option selected>1/2561</option>
-              </select>
+          <div class="row col-md-12 ">
+            <br>
+            <label class="col-md-2">ประเภทของรายวิชา</label>
+            <select class="custom-select custom-select-sm mb-2 col-md-3">
+              <option selected>หมวดวิชาเฉพาะ วิชาแกน</option>
+            </select>
 
-            </div>
-            <div class="col-md-1">
-              <button type="button" class="btn btn-primary">แสดง</button>
+            <label class="col-md-3">ภาคการศึกษา/ปีการศึกษา</label>
+            <select class="custom-select custom-select-sm col-md-1">
+              <option selected>1/2560</option>
+              <option>2/2560</option>
+              <option>1/2561</option>
+              <option>2/2561</option>
+            </select> &nbsp;&nbsp;&nbsp;
+            <button type="button" class="btn btn-primary">แสดง</button>&nbsp;&nbsp;
+            <button type="button" class="btn btn-success">Export</button>
 
-            </div>
-            <div class="col-md-2">
-              <button type="button" class="btn btn-success">Export</button>
-
-            </div>
 
           </div>
-          <div class="form-group col-md-offset-2" id="form-check form-check-inline">
-            <br><br>
-            <div class="col-md-5">
-              <input type="text" class="form-control col-md-1" name="hostname2" placeholder="ค้นหารายละเอียด" value="" />
+          <!-- search -->
+          <br>
+          <div class="row">
 
+            <div class="col-md-5 offset-md-1">
+              <input type="text" class="form-control" name="hostname2" placeholder="ค้นหารายละเอียด" value="" />
             </div>
-            <div class="col-md-2">
+            <div class="col-sm-2">
               <button type="button" class="btn btn-info">ค้นหา</button>
-
             </div>
 
           </div>
+          <!-- End search -->
+          <br>
           <div class="container-fluid">
             <table class="table table-dark">
               <colgroup>
@@ -311,17 +318,28 @@
               </tbody>
             </table>
           </div>
+          <br>
+          <!-- Stat button -->
+          <div class="form-group col-md-8 offset-md-5" id="form-check form-check-inline">
+            <br>
+            <div class="col-md-5">
+              <button type="button" class="btn btn-success">
+                <span class="" aria-hidden="true"></span>Import</button>
+              <button type="button" class="btn btn-danger">
+                <span class="" aria-hidden="true"></span>Delete</button>
+            </div>
+          </div><!-- End button -->
+
+
         </div>
       </div>
-
-
-
 
     </div>
     <div class="row">
       <div class="col-md-12">
         <div class="copyright">
-          <p>Copyright © 2020 Load Unit Planing Management System <a href="https://www.computing.psu.ac.th/th/">Collage Of computing</a>.</p>
+          <p>Copyright © 2020 Load Unit Planing Management System <a href="https://www.computing.psu.ac.th/th/">Collage
+              Of computing</a>.</p>
         </div>
       </div>
     </div>

@@ -177,27 +177,6 @@
 
     <!-- PAGE CONTAINER-->
     <div class="page-container" style="padding-left:20px;">
-      <!-- HEADER DESKTOP-->
-      <header class="header-desktop">
-        <div class="section__content section__content--p30">
-          <div class="container-fluid">
-            <div class="header-wrap">
-              <div class="header-button">
-                <div class="account-wrap">
-
-                  <div class="content">
-                    <i class="fas fa-user"></i>
-                    <a class="js-acc-btn" href="#" style="color: black;">Adisak Intana</a>
-
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </header>
-      <!-- HEADER DESKTOP-->
-
       <!-- PAGE CONTAINER-->
       <div class="page-container">
         <!-- HEADER DESKTOP-->
