@@ -46,14 +46,14 @@
 
 				<?php
 					require('db.php');
-					session_start(); 
-					if(isset($_POST['submit'])) {
+					session_start();
+					if (isset($_POST['submit'])) {
 
 						// Checking is user existing in the database or not
-						$query = "SELECT * FROM staff WHERE staff_email='".$_POST['email']."' AND staff_password='".$_POST['password']."'";
+						$query = "SELECT * FROM staff WHERE staff_email='" . $_POST['email'] . "' AND staff_password='" . $_POST['password'] . "'";
 						$result = mysqli_query($connect, $query) or die(mysql_error());
-						
-						if(mysqli_num_rows($result)==1) {
+
+						if (mysqli_num_rows($result) == 1) {
 							$row = mysqli_fetch_array($result);
 							$_SESSION['staff_email'] = $row['staff_email'];
 							$_SESSION['staff_password'] = $row['staff_password'];
@@ -62,32 +62,32 @@
 							header("Location: home.php");
 						} else {
 							echo 	"<center><div class='form'>
-										<h1>Username/Password is incorrect.</h1>
-										<br> Click here to <a href='login.php'>SignIn</a>
-									</div></center>";
+											<h1>Username/Password is incorrect.</h1>
+											<br> Click here to <a href='login.php'>SignIn</a>
+										</div></center>";
 						}
 					} else {
 				?>
 
-				<form class="login100-form validate-form" method="POST" name="login_form">
-					<div class="wrap-input100 validate-input m-b-26" data-validate="Please enter email.">
-						<span class="label-input100">E-mail</span>
-						<input class="input100" type="text" name="email" placeholder="Enter email">
-						<span class="focus-input100"></span>
-					</div>
-					<div class="wrap-input100 validate-input m-b-18" data-validate="Please enter password.">
-						<span class="label-input100">Password</span>
-						<input class="input100" type="password" name="password" placeholder="Enter password">
-						<span class="focus-input100"></span>
-					</div>
-					<div class="container-login100-form-btn">
-						<button class="login100-form-btn" name="submit" >
-							<b>Sign In</b>
-						</button>
-					</div>
-				</form>
+					<form class="login100-form validate-form" method="POST" name="login_form">
+						<div class="wrap-input100 validate-input m-b-26" data-validate="Please enter email.">
+							<span class="label-input100">E-mail</span>
+							<input class="input100" type="text" name="email" placeholder="Enter email">
+							<span class="focus-input100"></span>
+						</div>
+						<div class="wrap-input100 validate-input m-b-18" data-validate="Please enter password.">
+							<span class="label-input100">Password</span>
+							<input class="input100" type="password" name="password" placeholder="Enter password">
+							<span class="focus-input100"></span>
+						</div>
+						<div class="container-login100-form-btn">
+							<button class="login100-form-btn" name="submit">
+								<b>Sign In</b>
+							</button>
+						</div>
+					</form>
 
-				<?php 
+				<?php
 					}
 				?>
 			</div>
@@ -108,7 +108,6 @@
 	<script src="vendor/daterangepicker/daterangepicker.js"></script>
 	<!--===============================================================================================-->
 	<script src="vendor/countdowntime/countdowntime.js"></script>
-
 </body>
 
 </html>
