@@ -203,13 +203,14 @@
         <!-- HEADER DESKTOP-->
 
         <!-- MAIN CONTENT-->
-
+        <br> <br><br><br>
         <!-- Page Content -->
         <div class="container rounded col-md-10">
           <!-- header Page  -->
           <div class="form-group fromTE-form">
             <center>
               <h1>ข้อมูลรายวิชาตามเล่มหลักสูตร</h1>
+              <h4>ปริญญาโท (MASTER DEGREE PROGRAM)</h4>
             </center>
           </div>
           <!-- fromAll -->

@@ -175,6 +175,8 @@
     </aside>
     <!-- END MENU SIDEBAR-->
 
+    <!-- MAIN CONTENT-->
+    <br> <br><br><br>
     <!-- PAGE CONTAINER-->
     <div class="page-container">
       <!-- HEADER DESKTOP-->
