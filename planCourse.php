@@ -1,11 +1,3 @@
-<?php
-  session_start();
-  require('db.php');
-
-  $username = $_SESSION['staff_nameSur'];
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -44,6 +36,16 @@
 </head>
 
 <body class="animsition">
+
+  <?php
+    session_start();
+    require('db.php');
+
+    if (isset($_SESSION['staff_nameSur'])) {
+
+    $username = $_SESSION['staff_nameSur'];
+  ?>
+
   <div class="page-wrapper">
     <!-- HEADER MOBILE-->
     <header class="header-mobile d-block d-lg-none">
@@ -207,11 +209,9 @@
         <!-- header Page  -->
         <div class="form-group fromTE-form">
           <center>
-            <h1>เเผนการเปิดรายวิชาในเเต่ละภาคการศึกษา</h1>
+            <h1>ข้อมูลรายวิชาตามเล่มหลักสูตร</h1>
             <h4>ปริญญาตรี (BACHRLOR DEGREE PROGRAM)</h4>
           </center>
-
-
         </div>
         <!-- fromAll -->
         <!-- <div class="rounded col-md-offset-2 " id="page-content-wrapper " style="border: 4px solid #b8b8be;
@@ -300,7 +300,6 @@
         <br>
         <!-- table -->
         <div class="container-fluid">
-
           <table class="table table-dark">
             <colgroup>
               <!-- col1 -->
@@ -329,32 +328,37 @@
                 <th scope="col">ผู้สอน</th>
               </tr>
             </thead>
+
+            <?php
+              $query = "SELECT * FROM planCourse";
+					  	$result = mysqli_query($connect, $query) or die(mysql_error());
+
+						  while ($row = mysqli_fetch_assoc($result)) {
+            ?>
+
             <tbody>
               <tr>
-                <td>วิชาเฉพาะ</td>
-                <td>วิชาแกน</td>
-                <td>บังคับ</td>
-                <td>977-120</td>
-                <td>Mathematics คณิตศาสตร์</td>
-                <td>3(3-0-6)</td>
-                <td>วันจิตรา โต๊ะหวันหลง</td>
-              </tr>
-              <tr>
-                <td>วิชาเฉพาะ</td>
-                <td>วิชาเฉพาะด้าน กลุ่มเทคโนโลยีและวิธีการทางซอฟต์แวร์</td>
-                <td>บังคับ</td>
-                <td>976-140</td>
-                <td>Software and Computer Programming ซอฟต์แวร์และการโปรแกรมคอมพิวเตอร์</td>
-                <td>3(2-2-5)</td>
-                <td>กิตย์ศิริ ช่อเจี้ยง</td>
+
+                <?php 
+                  echo "<td>".$row['planCourse_category']."<td>"; 
+                  echo "<td>".$row['planCourse_group']."<td>"; 
+                  echo "<td>".$row['planCourse_forceSelect']."<td>"; 
+                  echo "<td>".$row['planCourse_courseCode']."<td>"; 
+                  echo "<td>".$row['planCourse_listSubjects']."<td>"; 
+                  echo "<td>".$row['planCourse_credit']."<td>"; 
+                  echo "<td>".$row['course_instructor']."<td>"; 
+                ?>
+
               </tr>
             </tbody>
+            <?php
+              }
+            ?>
+
           </table>
 
         </div>
-
       </div>
-
     </div>
     <div class="row">
       <div class="col-md-12">
@@ -365,13 +369,13 @@
       </div>
     </div>
   </div>
-  </div>
-  </div>
+
+  <?php
+    }
+  ?>
+  
   <!-- END MAIN CONTENT-->
   <!-- END PAGE CONTAINER-->
-  </div>
-
-  </div>
 
   <!-- Jquery JS-->
   <script src="vendor/jquery-3.2.1.min.js"></script>
