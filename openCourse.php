@@ -329,46 +329,32 @@
                 <th scope="col"></th>
               </tr>
             </thead>
+            <?php
+              $query = "SELECT * FROM openCourse";
+					  	$result = mysqli_query($connect, $query) or die(mysql_error());
+
+						  while ($row = mysqli_fetch_assoc($result)) {
+            ?>
             <tbody>
-              <tr>
-                <td>วิชาเฉพาะ</td>
-                <td>วิชาแกน</td>
-                <td>บังคับ</td>
-                <td>977-120</td>
-                <td>Mathematics คณิตศาสตร์</td>
-                <td>3(3-0-6)</td>
-                <td>วันจิตรา โต๊ะหวันหลง</td>
-                <td>
-                  <a href="#" class="btn btn-primary a-btn-slide-text">
-                    <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
-                    <span><strong>Edit</strong></span>
-                  </a>
-                  <a href="#" class="btn btn-primary a-btn-slide-text">
-                    <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
-                    <span><strong>Delete</strong></span>
-                  </a>
-                </td>
-              </tr>
-              <tr>
-                <td>วิชาเฉพาะ</td>
-                <td>วิชาเฉพาะด้าน กลุ่มเทคโนโลยีและวิธีการทางซอฟต์แวร์</td>
-                <td>บังคับ</td>
-                <td>976-140</td>
-                <td>Software and Computer Programming ซอฟต์แวร์และการโปรแกรมคอมพิวเตอร์</td>
-                <td>3(2-2-5)</td>
-                <td>กิตย์ศิริ ช่อเจี้ยง</td>
-                <td>
-                  <a href="#" class="btn btn-primary a-btn-slide-text">
-                    <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
-                    <span><strong>Edit</strong></span>
-                  </a>
-                  <a href="#" class="btn btn-primary a-btn-slide-text">
-                    <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
-                    <span><strong>Delete</strong></span>
-                  </a>
-                </td>
-              </tr>
+            <tr>
+
+            <?php 
+              echo "<td>".$row['openCourse_category']."<td>"; 
+              echo "<td>".$row['openCourse_group']."<td>"; 
+              echo "<td>".$row['openCourse_forceSelect']."<td>"; 
+              echo "<td>".$row['openCourse_courseCodee']."<td>"; 
+              echo "<td>".$row['openCourse_listSubjects']."<td>"; 
+              echo "<td>".$row['openCourse_credit']."<td>"; 
+              echo "<td>".$row['openCourse_instructor']."<td>"; 
+            ?>
+
+            </tr>
+                
             </tbody>
+            <?php
+              }
+            ?>
+
           </table>
 
         </div>
