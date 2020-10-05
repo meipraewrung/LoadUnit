@@ -200,6 +200,8 @@
       </header>
       <!-- HEADER DESKTOP-->
 
+      <!-- MAIN CONTENT-->
+      <br> <br><br><br>
       <!-- Page Content -->
       <div class="container rounded col-md-10">
         <!-- header Page  -->
