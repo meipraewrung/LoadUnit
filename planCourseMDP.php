@@ -1,11 +1,3 @@
-<?php
-  session_start();
-  require('db.php');
-
-  $username = $_SESSION['staff_nameSur'];
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -44,6 +36,14 @@
 </head>
 
 <body class="animsition">
+  <?php
+    session_start();
+    require('db.php');
+
+    if (isset($_SESSION['staff_nameSur'])) {
+
+    $username = $_SESSION['staff_nameSur'];
+  ?>
   <div class="page-wrapper">
     <!-- HEADER MOBILE-->
     <header class="header-mobile d-block d-lg-none">
@@ -199,9 +199,7 @@
         </div>
       </header>
       <!-- HEADER DESKTOP-->
-
-      <!-- MAIN CONTENT-->
-      <br> <br><br><br>
+      <br><br><br><br>
       <!-- Page Content -->
       <div class="container rounded col-md-10">
         <!-- header Page  -->
@@ -325,28 +323,32 @@
                 <th scope="col">หน่วยกิต</th>
                 <th scope="col">ผู้สอน</th>
               </tr>
-            </thead>
+            </thead><?php
+              $query = "SELECT * FROM planCourse";
+					  	$result = mysqli_query($connect, $query) or die(mysql_error());
+
+						  while ($row = mysqli_fetch_assoc($result)) {
+            ?>
+
             <tbody>
               <tr>
-                <td>วิชาบังคับ</td>
-                <td>แผน ก2 และแผน ข</td>
-                <td>บังคับ</td>
-                <td>976-501</td>
-                <td>Management Information System ระบบสารสนเทศเพื่อการจัดการ</td>
-                <td>3(3-0-6)</td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>วิชาบังคับ</td>
-                <td>แผน ก2 และแผน ข</td>
-                <td>บังคับ</td>
-                <td>976-502</td>
-                <td>Research Methodology in Information Technology ระเบียบวิธีวิจัยทางเทคโนโลยีสารสนเทศ
-                </td>
-                <td>3(3-0-6)</td>
-                <td></td>
+
+                <?php 
+                  echo "<td>".$row['planCourse_category']."<td>"; 
+                  echo "<td>".$row['planCourse_group']."<td>"; 
+                  echo "<td>".$row['planCourse_forceSelect']."<td>"; 
+                  echo "<td>".$row['planCourse_courseCode']."<td>"; 
+                  echo "<td>".$row['planCourse_listSubjects']."<td>"; 
+                  echo "<td>".$row['planCourse_credit']."<td>"; 
+                  echo "<td>".$row['course_instructor']."<td>"; 
+                ?>
+
               </tr>
             </tbody>
+            <?php
+              }
+            ?>
+            
           </table>
 
         </div>
@@ -365,13 +367,13 @@
       </div>
     </div>
   </div>
-  </div>
-  </div>
+
+  <?php
+    }
+  ?>
+
   <!-- END MAIN CONTENT-->
   <!-- END PAGE CONTAINER-->
-  </div>
-
-  </div>
 
   <!-- Jquery JS-->
   <script src="vendor/jquery-3.2.1.min.js"></script>

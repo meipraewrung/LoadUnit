@@ -209,7 +209,7 @@
           <!-- header Page  -->
           <div class="form-group fromTE-form">
             <center>
-              <h1>ข้อมูลรายวิชาตามเล่มหลักสูตร</h1>
+              <h1>เเผนการเปิดรายวิชาในเเต่ละภาคการศึกษา</h1>
               <h4>ปริญญาตรี (BACHRLOR DEGREE PROGRAM)</h4>
             </center>
           </div>
