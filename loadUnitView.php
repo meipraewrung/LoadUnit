@@ -1,11 +1,3 @@
-<?php
-  session_start();
-  require('db.php');
-
-  $username = $_SESSION['staff_nameSur'];
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -44,6 +36,15 @@
 </head>
 
 <body class="animsition">
+
+  <?php
+  session_start();
+  require('db.php');
+
+  if (isset($_SESSION['staff_nameSur'])) {
+
+    $username = $_SESSION['staff_nameSur'];
+  ?>
   <div class="page-wrapper">
     <!-- HEADER MOBILE-->
     <header class="header-mobile d-block d-lg-none">
@@ -325,12 +326,12 @@
       </div>
     </div>
   </div>
-  </div>
   <!-- END MAIN CONTENT-->
   <!-- END PAGE CONTAINER-->
-  </div>
-
-  </div>
+  
+  <?php
+  }
+  ?>
 
   <!-- Jquery JS-->
   <script src="vendor/jquery-3.2.1.min.js"></script>
