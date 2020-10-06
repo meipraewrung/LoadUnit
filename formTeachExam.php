@@ -201,7 +201,7 @@
           <!-- header Page  -->
           <div class="form-group fromTE-form">
             <center>
-              <h1>กรอกข้อมูลตารางสอน-สอบ</h1>
+              <h1>แบบฟอร์มจัดตารางสอน-สอบ</h1>
             </center>
 
           </div>
