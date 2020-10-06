@@ -38,332 +38,305 @@
 <body class="animsition">
 
   <?php
-    session_start();
-    require('db.php');
+  session_start();
+  require('db.php');
 
-    if (isset($_SESSION['staff_nameSur'])) {
+  if (isset($_SESSION['staff_nameSur'])) {
 
     $username = $_SESSION['staff_nameSur'];
   ?>
 
-  <div class="page-wrapper">
-    <!-- HEADER MOBILE-->
-    <header class="header-mobile d-block d-lg-none">
-      <div class="header-mobile__bar">
-        <div class="container-fluid">
-          <div class="header-mobile-inner">
-            <a class="logo" href="index.html">
-              <img src="images/LogoProject-removebg-preview.png" alt="LoadUnitPlanningAndManagementSystem" />
-            </a>
-            <button class="hamburger hamburger--slider" type="button">
-              <span class="hamburger-box">
-                <span class="hamburger-inner"></span>
-              </span>
-            </button>
+    <div class="page-wrapper">
+      <!-- HEADER MOBILE-->
+      <header class="header-mobile d-block d-lg-none">
+        <div class="header-mobile__bar">
+          <div class="container-fluid">
+            <div class="header-mobile-inner">
+              <a class="logo" href="index.html">
+                <img src="images/LogoProject-removebg-preview.png" alt="LoadUnitPlanningAndManagementSystem" />
+              </a>
+              <button class="hamburger hamburger--slider" type="button">
+                <span class="hamburger-box">
+                  <span class="hamburger-inner"></span>
+                </span>
+              </button>
+            </div>
           </div>
         </div>
-      </div>
-      <nav class="navbar-mobile">
-        <div class="container-fluid">
-          <ul class="navbar-mobile__list list-unstyled">
-
-            <li>
-              <a href="home.php">
-                <i class="fas fa-home"></i>หน้าหลัก</a>
-            </li>
-            <li>
-              <a href="planCourse.php">
-                <i class="fab fa-wpforms"></i>เล่มหลักสูตร</a>
-            </li>
-            <li>
-              <a href="openCourse.php">
-                <i class="fab fa-wpforms"></i>วางเเผนการเปิดรายวิชา</a>
-            </li>
-
-            <li>
-              <a href="residualSubjects.php">
-                <i class="fab fa-wpforms"></i>รายวิชาตกค้าง</a>
-            </li>
-            <li>
-              <a href="loadUnit.php">
-                <i class="fas fa-table"></i>Load Unit</a>
-            </li>
-
-            <li class="has-sub">
-              <a class="js-arrow" href="#">
-                <i class="fas fa-address-card"></i>จัดตารางสอน-สอบ</a>
-              <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
-                <li>
-                  <a href="formTeachExam.php">แบบฟอร์มจัดตารางสอน-สอบ</a>
-                </li>
-                <li>
-                  <a href="approve.php">การตรวจสอบApprove</a>
-                </li>
-
-              </ul>
-            </li>
-            <li>
-              <a href="login.php">
-                <i class="fas fa-sign-out-alt"></i>ออกจากระบบ</a>
-            </li>
-
-          </ul>
-        </div>
-      </nav>
-    </header>
-    <!-- END HEADER MOBILE-->
-
-    <!-- MENU SIDEBAR-->
-    <aside class="menu-sidebar d-none d-lg-block">
-      <div class="logo">
-        <a href="#">
-          <img src="images/LogoProject-removebg-preview.png" alt="LoadUnitPlanningAndManagementSystem" />
-        </a>
-      </div>
-      <div class="menu-sidebar__content js-scrollbar1">
-        <nav class="navbar-sidebar">
-          <ul class="list-unstyled navbar__list">
-
-            <li>
-              <a href="home.php">
-                <i class="fas fa-home"></i>หน้าหลัก</a>
-            </li>
-            <li>
-              <a href="planCourse.php">
-              <i class="fas fa-book"></i>เล่มหลักสูตร</a>
-            </li>
-            <li>
-              <a href="openCourse.php">
-              <i class="fas fa-book"></i>วางเเผนการเปิดรายวิชา</a>
-            </li>
-
-            <li>
-              <a href="residualSubjects.php">
-                <i class="fab fa-wpforms"></i>รายวิชาตกค้าง</a>
-            </li>
-            <li>
-              <a href="loadUnit.php">
-                <i class="fas fa-table"></i>Load Unit</a>
-            </li>
-            <li class="has-sub">
-              <a class="js-arrow" href="#">
-                <i class="fas fa-address-card"></i>จัดตารางสอน-สอบ</a>
-              <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
-                <li>
-                  <a href="formTeachExam.php">แบบฟอร์มจัดตารางสอน-สอบ</a>
-                </li>
-                <li>
-                  <a href="approve.php">การตรวจสอบApprove</a>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <a href="login.php">
-                <i class="fas fa-sign-out-alt"></i>ออกจากระบบ</a>
-            </li>
-          </ul>
-          </li>
-          </ul>
-        </nav>
-      </div>
-    </aside>
-    <!-- END MENU SIDEBAR-->
-
-    <!-- PAGE CONTAINER-->
-    <div class="page-container">
-      <!-- HEADER DESKTOP-->
-      <header class="header-desktop">
-        <div class="section__content section__content--p30">
+        <nav class="navbar-mobile">
           <div class="container-fluid">
-            <div class="header-wrap">
-              <form class="form-header" action="" method="POST">
-              </form>
-              <div class="header-button">
-                <div class="account-wrap">
-                  <div class="content">
-                    <i class="fas fa-user"></i>
-                    <a class="js-acc-btn" href="#" style="color: black;">
-                      <?php echo $username; ?>
-                    </a>
+            <ul class="navbar-mobile__list list-unstyled">
+
+              <li>
+                <a href="home.php">
+                  <i class="fas fa-home"></i>หน้าหลัก</a>
+              </li>
+              <li>
+                <a href="planCourse.php">
+                  <i class="fab fa-wpforms"></i>เล่มหลักสูตร</a>
+              </li>
+              <li>
+                <a href="openCourse.php">
+                  <i class="fab fa-wpforms"></i>วางเเผนการเปิดรายวิชา</a>
+              </li>
+
+              <li>
+                <a href="residualSubjects.php">
+                  <i class="fab fa-wpforms"></i>รายวิชาตกค้าง</a>
+              </li>
+              <li>
+                <a href="loadUnit.php">
+                  <i class="fas fa-table"></i>Load Unit</a>
+              </li>
+
+              <li class="has-sub">
+                <a class="js-arrow" href="#">
+                  <i class="fas fa-address-card"></i>จัดตารางสอน-สอบ</a>
+                <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
+                  <li>
+                    <a href="formTeachExam.php">แบบฟอร์มจัดตารางสอน-สอบ</a>
+                  </li>
+                  <li>
+                    <a href="approve.php">การตรวจสอบApprove</a>
+                  </li>
+
+                </ul>
+              </li>
+              <li>
+                <a href="login.php">
+                  <i class="fas fa-sign-out-alt"></i>ออกจากระบบ</a>
+              </li>
+
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <!-- END HEADER MOBILE-->
+
+      <!-- MENU SIDEBAR-->
+      <aside class="menu-sidebar d-none d-lg-block">
+        <div class="logo">
+          <a href="#">
+            <img src="images/LogoProject-removebg-preview.png" alt="LoadUnitPlanningAndManagementSystem" />
+          </a>
+        </div>
+        <div class="menu-sidebar__content js-scrollbar1">
+          <nav class="navbar-sidebar">
+            <ul class="list-unstyled navbar__list">
+
+              <li>
+                <a href="home.php">
+                  <i class="fas fa-home"></i>หน้าหลัก</a>
+              </li>
+              <li>
+                <a href="planCourse.php">
+                  <i class="fas fa-book"></i>เล่มหลักสูตร</a>
+              </li>
+              <li>
+                <a href="openCourse.php">
+                  <i class="fas fa-book"></i>วางเเผนการเปิดรายวิชา</a>
+              </li>
+
+              <li>
+                <a href="residualSubjects.php">
+                  <i class="fab fa-wpforms"></i>รายวิชาตกค้าง</a>
+              </li>
+              <li>
+                <a href="loadUnit.php">
+                  <i class="fas fa-table"></i>Load Unit</a>
+              </li>
+              <li class="has-sub">
+                <a class="js-arrow" href="#">
+                  <i class="fas fa-address-card"></i>จัดตารางสอน-สอบ</a>
+                <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
+                  <li>
+                    <a href="formTeachExam.php">แบบฟอร์มจัดตารางสอน-สอบ</a>
+                  </li>
+                  <li>
+                    <a href="approve.php">การตรวจสอบApprove</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="login.php">
+                  <i class="fas fa-sign-out-alt"></i>ออกจากระบบ</a>
+              </li>
+            </ul>
+            </li>
+            </ul>
+          </nav>
+        </div>
+      </aside>
+      <!-- END MENU SIDEBAR-->
+
+      <!-- PAGE CONTAINER-->
+      <div class="page-container">
+        <!-- HEADER DESKTOP-->
+        <header class="header-desktop">
+          <div class="section__content section__content--p30">
+            <div class="container-fluid">
+              <div class="header-wrap">
+                <form class="form-header" action="" method="POST">
+                </form>
+                <div class="header-button">
+                  <div class="account-wrap">
+                    <div class="content">
+                      <i class="fas fa-user"></i>
+                      <a class="js-acc-btn" href="#" style="color: black;">
+                        <?php echo $username; ?>
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </header>
-      <!-- HEADER DESKTOP-->
+        </header>
+        <!-- HEADER DESKTOP-->
 
-      <!-- MAIN CONTENT-->
-      <br> <br><br><br>
-      <!-- Page Content -->
-      <div class="container rounded col-md-10">
-        <!-- header Page  -->
-        <div class="form-group fromTE-form">
-          <center>
-            <h1>ข้อมูลรายวิชาตามเล่มหลักสูตร</h1>
-            <h4>ปริญญาตรี (BACHRLOR DEGREE PROGRAM)</h4>
-          </center>
-        </div>
-        <!-- fromAll -->
-        <!-- <div class="rounded col-md-offset-2 " id="page-content-wrapper " style="border: 4px solid #b8b8be;
+        <!-- MAIN CONTENT-->
+        <br> <br><br><br>
+        <!-- Page Content -->
+        <div class="container rounded col-md-10">
+          <!-- header Page  -->
+          <div class="form-group fromTE-form">
+            <center>
+              <h1>ข้อมูลรายวิชาตามเล่มหลักสูตร</h1>
+              <h4>ปริญญาตรี (BACHRLOR DEGREE PROGRAM)</h4>
+            </center>
+          </div>
+          <!-- fromAll -->
+          <!-- <div class="rounded col-md-offset-2 " id="page-content-wrapper " style="border: 4px solid #b8b8be;
          background: #e7e4e2; width: 80%; height:auto; text-align: center;"> -->
-        <div class="form-group fromTE-form" style="background: #e7e4e2;">
-          <br><br>
-          <div class=" btn-group-toggle  offset-md-2">
-            <label class="btn btn-danger active">
-              <input type="radio" name="options" id="option1" autocomplete="off" checked>
-              <a href="planCourse.php" style="color:  #ffffff"> ปริญญาตรี (BACHRLOR DEGREE PROGRAM)
-              </a>
-            </label>
-            <label class="btn btn-danger">
+          <div class="form-group fromTE-form" style="background: #e7e4e2;">
+            <br><br>
+            <div class=" btn-group-toggle  offset-md-2">
+              <label class="btn btn-danger active">
+                <input type="radio" name="options" id="option1" autocomplete="off" checked>
+                <a href="planCourse.php" style="color:  #ffffff"> ปริญญาตรี (BACHRLOR DEGREE PROGRAM)
+                </a>
+              </label>
+              <label class="btn btn-danger">
 
-              <input type="radio" name="options" id="option2" autocomplete="off">
-              <a href="planCourseMDP.php" style="color:  #ffffff">
-                ปริญญาโท (MASTER DEGREE PROGRAM)
-              </a>
-            </label>
-          </div>
-          <div class="row col-md-10 offset-md-1">
-            <br>
-            <div class="major">
-              <br>
-
-              <label class="col-md-3">สาขา</label>
-              <select class="custom-select custom-select-sm mb-2 col-md-8">
-                <option value="1">Information Technology</option>
-                <option value="2">Electronic Business</option>
-                <option value="3" selected>Software Engineering</option>
-                <option value="4">Engineering Computer</option>
-                <option value="5">Computing</option>
-                <option value="6">Digital Business</option>
-                <option value="7">Digital Engineering</option>
-              </select>
+                <input type="radio" name="options" id="option2" autocomplete="off">
+                <a href="planCourseMDP.php" style="color:  #ffffff">
+                  ปริญญาโท (MASTER DEGREE PROGRAM)
+                </a>
+              </label>
             </div>
-            <div class="cousrse">
+            <div class="row col-md-10 offset-md-1">
               <br>
-              <label class="col-md-3">เล่มหลักสูตร</label>
-              <select class="custom-select custom-select-sm  col-md-8">
-                <option selected>หลักสูตรวิทยาศาสตรบัณฑิต หลักสูตรปรับปรุง พ.ศ.2557(59-61)</option>
-              </select>
+              <div class="major">
+                <br>
 
+                <label class="col-md-3">สาขา</label>
+                <select class="custom-select custom-select-sm mb-2 col-md-8">
+                  <option value="1">Information Technology</option>
+                  <option value="2">Electronic Business</option>
+                  <option value="3" selected>Software Engineering</option>
+                  <option value="4">Engineering Computer</option>
+                  <option value="5">Computing</option>
+                  <option value="6">Digital Business</option>
+                  <option value="7">Digital Engineering</option>
+                </select>
+              </div>
+              <div class="cousrse">
+                <br>
+                <label class="col-md-3">เล่มหลักสูตร</label>
+                <select class="custom-select custom-select-sm  col-md-8">
+                  <option selected>หลักสูตรวิทยาศาสตรบัณฑิต หลักสูตรปรับปรุง พ.ศ.2557(59-61)</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="row col-md-12 offset-md-1">
+              <label class="col-md-2">ชั้นปั</label>
+              <select class="custom-select custom-select-sm col-md-1">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4" selected>4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+              </select>
+              <label class="col-md-3">ภาคการศึกษา/ปีการศึกษา</label>
+              <select class="custom-select custom-select-sm col-md-2">
+                <option selected>1/2560</option>
+                <option>2/2560</option>
+                <option>1/2561</option>
+                <option>2/2561</option>
+              </select> &nbsp;&nbsp;&nbsp;
+              <button type="button" class="btn btn-primary">แสดง</button>
             </div>
 
           </div>
 
-          <div class="row col-md-12 offset-md-1">
+          <!-- search -->
+          <div class="row">
 
-            <label class="col-md-2">ชั้นปี</label>
-            <select class="custom-select custom-select-sm col-md-1">
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4" selected>4</option>
-             
-            </select>
-
-            <label class="col-md-3">ภาคการศึกษา/ปีการศึกษา</label>
-            <select class="custom-select custom-select-sm col-md-2">
-              <option selected>1/2560</option>
-              <option>2/2560</option>
-              <option>1/2561</option>
-              <option>2/2561</option>
-            </select> &nbsp;&nbsp;&nbsp;
-            <button type="button" class="btn btn-primary">แสดง</button>
+            <div class="col-md-5 offset-md-1">
+              <input type="text" class="form-control" name="hostname2" placeholder="ค้นหารายละเอียด" value="" />
+            </div>
+            <div class="col-sm-2">
+              <button type="button" class="btn btn-info">ค้นหา</button>
+            </div>
+            <div class="col-sm-3 ">
+              <button type="button" class="btn btn-success">Export</button>
+            </div>
           </div>
-        </div>
+          <!-- End search -->
+          <br>
+          <!-- table -->
+          <div class="container-fluid">
+            <table class="table table-dark">
+              <colgroup>
+                <col span="4" width="60">
+                <col width="120">
+                <col span="5" width="60">
+              </colgroup>
 
-        <!-- search -->
-        <div class="row">
-
-          <div class="col-md-5 offset-md-1">
-            <input type="text" class="form-control" name="hostname2" placeholder="ค้นหารายละเอียด" value="" />
-          </div>
-          <div class="col-sm-2">
-            <button type="button" class="btn btn-info">ค้นหา</button>
-          </div>
-          <div class="col-sm-3 ">
-            <button type="button" class="btn btn-success">Export</button>
-          </div>
-        </div>
-        <!-- End search -->
-        <br>
-        <!-- table -->
-        <div class="container-fluid">
-          <table class="table table-dark">
-            <colgroup>
-              <!-- col1 -->
-              <col width="5%">
-              <!-- col2 -->
-              <col width="10%">
-              <!-- col3 -->
-              <col width="5%">
-              <!-- col4 -->
-              <col width="5%">
-              <!-- col5 -->
-              <col width="15%">
-              <!-- col6 -->
-              <col width="5%">
-              <!-- col7 -->
-              <col width="10%">
-            </colgroup>
-            <thead>
-              <tr>
-                <th scope="col">หมวด</th>
-                <th scope="col">กลุ่ม</th>
-                <th scope="col">บังคับ/เลือก</th>
-                <th scope="col">รหัสวิชา</th>
-                <th scope="col">รายชื่อวิชา</th>
-                <th scope="col">หน่วยกิต</th>
-                
-              </tr>
-            </thead>
-
-            <?php
+              <?php
               $query = "SELECT * FROM planCourse";
-					  	$result = mysqli_query($connect, $query) or die(mysql_error());
+              $result = mysqli_query($connect, $query) or die(mysql_error());
 
-						  while ($row = mysqli_fetch_assoc($result)) {
-            ?>
-
-            <tbody>
-              <tr>
-
-                <?php 
-                  echo "<td>".$row['planCourse_category']."<td>"; 
-                  echo "<td>".$row['planCourse_group']."<td>"; 
-                  echo "<td>".$row['planCourse_forceSelect']."<td>"; 
-                  echo "<td>".$row['planCourse_courseCode']."<td>"; 
-                  echo "<td>".$row['planCourse_listSubjects']."<td>"; 
-                  echo "<td>".$row['planCourse_credit']."<td>"; 
-                  
-                ?>
-
-              </tr>
-            </tbody>
-            <?php
+              echo "<tr><center>
+                      <td>หมวด</td>
+                      <td>กลุ่ม</td>
+                      <td>บังคับ/เลือก</td>
+                      <td>รหัสวิชา</td>
+                      <td>รายชื่อวิชา</td>
+                      <td>หน่วยกิต</td>
+                      </center>
+                      </tr>";
+              while ($row = mysqli_fetch_assoc($result)) {
+                echo "<tr><td>" . $row['planCourse_category'] . "</td>";
+                echo "<td>" . $row['planCourse_group'] . "</td>";
+                echo "<td>" . $row['planCourse_forceSelect'] . "</td>";
+                echo "<td>" . $row['planCourse_courseCode'] . "</td>";
+                echo "<td>" . $row['planCourse_listSubjects'] . "</td>";
+                echo "<td>" . $row['planCourse_credit'] . "</td></tr>";
               }
-            ?>
+              ?>
 
-          </table>
-
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="copyright">
+            <p>Copyright © 2020 Load Unit Planing Management System <a href="https://www.computing.psu.ac.th/th/">Collage
+                Of computing</a>.</p>
+          </div>
         </div>
       </div>
     </div>
-    <div class="row">
-      <div class="col-md-12">
-        <div class="copyright">
-          <p>Copyright © 2020 Load Unit Planing Management System <a href="https://www.computing.psu.ac.th/th/">Collage
-              Of computing</a>.</p>
-        </div>
-      </div>
-    </div>
-  </div>
 
   <?php
-    }
+  }
   ?>
-  
+
   <!-- END MAIN CONTENT-->
   <!-- END PAGE CONTAINER-->
 
