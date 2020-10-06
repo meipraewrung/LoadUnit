@@ -273,17 +273,11 @@
 
           <!-- search -->
           <div class="row">
-            <div class="col-md-5 offset-md-1">
-              <input type="text" class="form-control" name="hostname2" placeholder="ค้นหารายละเอียด" value="" />
-            </div>
-            <div class="col-sm-3">
-              <button type="button" class="btn btn-info">ค้นหา</button>
-            </div>
-            <div class="col-sm-1">
+            <div class="col-md-1 offset-md-5">
               <button type="button" class="btn btn-success">Export</button>
             </div>
             <div class="col-sm-2">
-              <button type="button" class="btn btn-warning" onclick="window.location.href='planCourseInsert.php'">Insert</button>
+              <button type="button" class="btn btn-warning">Insert</button>
             </div>
           </div>
           <!-- End search -->
