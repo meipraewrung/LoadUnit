@@ -334,7 +334,7 @@
               echo "<td>".$row['openCourse_category']."<td>"; 
               echo "<td>".$row['openCourse_group']."<td>"; 
               echo "<td>".$row['openCourse_forceSelect']."<td>"; 
-              echo "<td>".$row['openCourse_courseCodee']."<td>"; 
+              echo "<td>".$row['openCourse_courseCode']."<td>"; 
               echo "<td>".$row['openCourse_listSubjects']."<td>"; 
               echo "<td>".$row['openCourse_credit']."<td>"; 
               echo "<td>".$row['openCourse_instructor']."<td>"; 
