@@ -128,11 +128,11 @@
             </li>
             <li>
               <a href="planCourse.php">
-                <i class="fab fa-wpforms"></i>เล่มหลักสูตร</a>
+              <i class="fas fa-book"></i>เล่มหลักสูตร</a>
             </li>
             <li>
               <a href="openCourse.php">
-                <i class="fab fa-wpforms"></i>วางเเผนการเปิดรายวิชา</a>
+              <i class="fas fa-book"></i>วางเเผนการเปิดรายวิชา</a>
             </li>
 
             <li>
