@@ -52,7 +52,7 @@
         <div class="container-fluid">
           <div class="header-mobile-inner">
             <a class="logo" href="index.html">
-              <img src="images/LogoProject-removebg-preview.png" alt="LoadUnitPlanningAndManagementSystem" />
+              <img src="images/Home.png" alt="LoadUnitPlanningAndManagementSystem" />
             </a>
             <button class="hamburger hamburger--slider" type="button">
               <span class="hamburger-box">
@@ -117,7 +117,7 @@
     <aside class="menu-sidebar d-none d-lg-block">
       <div class="logo">
         <a href="#">
-          <img src="images/LogoProject-removebg-preview.png" alt="LoadUnitPlanningAndManagementSystem" />
+          <img src="images/Home.png" alt="LoadUnitPlanningAndManagementSystem" />
         </a>
       </div>
       <div class="menu-sidebar__content js-scrollbar1">
