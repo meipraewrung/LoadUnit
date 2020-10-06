@@ -194,8 +194,6 @@
         </header>
         <!-- HEADER DESKTOP-->
 
-
-
         <!-- MAIN CONTENT-->
         <br> <br><br><br>
         <!-- Page Content -->
@@ -207,49 +205,25 @@
               <h4>ปริญญาตรี (BACHRLOR DEGREE PROGRAM)</h4>
             </center>
           </div>
-
-  <?php
-    $connect = mysqli_connect('localhost','root','','LoadUnitPlan');
-                mysqli_query($connect,"set character set utf8");
-
-    if(mysqli_connect_error()) {
-        echo "Failed to connect to MySQL :".mysqli_connect_error();
-    }
-
-    $query = "SELECT * FROM major";
-    $result = mysqli_query($connect, $query) or die(mysql_error());
-    
-?>
-
-<select name = "test" id = "test">
-    <?php foreach ($result as $row): ?>
-      <option> <?=$row['major_name'] ?> </option>
-    <?php endforeach ?>
-</select>
-
-
           <!-- fromAll -->
           <!-- <div class="rounded col-md-offset-2 " id="page-content-wrapper " style="border: 4px solid #b8b8be;
          background: #e7e4e2; width: 80%; height:auto; text-align: center;"> -->
           <div class="form-group fromTE-form" style="background: #e7e4e2;">
-            <br><br>
-            <div class=" btn-group-toggle  offset-md-2">
-              <label class="btn btn-danger active">
-                <input type="radio" name="options" id="option1" autocomplete="off" checked>
-                <a href="openCourse.php" style="color:  #ffffff"> ปริญญาตรี (BACHRLOR DEGREE PROGRAM)
-                </a>
-              </label>
-              <label class="btn btn-danger">
-
-                <input type="radio" name="options" id="option2" autocomplete="off">
-                <a href="openCourseMDP.php" style="color:  #ffffff">
-                  ปริญญาโท (MASTER DEGREE PROGRAM)
-                </a>
-              </label>
-            </div>
+            <br>
+            
 
             <div class="row col-md-10 offset-md-1">
               <br>
+              <div class="Degree">
+                <br>
+
+                <label class="col-md-5">ปริญญา</label>
+                <select class="custom-select custom-select-sm mb-2 col-md-6">
+                  <option value="1">ปริญญาตรี</option>
+                  <option value="2">ปริญญาโท</option>
+                  
+                </select>
+              </div>
               <div class="major">
                 <br>
 
@@ -273,15 +247,13 @@
               </div>
             </div>
             <div class="row col-md-12 offset-md-1">
-              <label class="col-md-2">รหัสนักศึกษา</label>
+              <label class="col-md-2">ชั้นปี</label>
               <select class="custom-select custom-select-sm col-md-1">
-                <option value="1">57</option>
-                <option value="2">58</option>
-                <option value="3">59</option>
-                <option value="4" selected>60</option>
-                <option value="5">61</option>
-                <option value="6">62</option>
-                <option value="7">63</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4" selected>4</option>
+            
               </select>
 
               <label class="col-md-3">ภาคการศึกษา/ปีการศึกษา</label>
@@ -291,120 +263,57 @@
                 <option>1/2561</option>
                 <option>2/2561</option>
               </select> &nbsp;&nbsp;&nbsp;
-              <button type="button" class="btn btn-primary">แสดง</button>
+              
             </div>
           </div>
         </div>
 
-        <!-- search -->
-        <div class="row">
-
-          <!--<div class="col-md-5 offset-md-1">
-            <input type="text" class="form-control" name="hostname2" placeholder="ค้นหารายละเอียด" value="" />
-          </div>
-          <div class="col-sm-2">
-            <button type="button" class="btn btn-info">ค้นหา</button>
-          </div>-->
-          <div class="col-md-3 offset-md-3">
-            <button type="button" class="btn btn-success">Export</button>
-          </div>
-          
-          <div class="col-sm-3 ">
-          <form action="insertopenCourse.php" method="post">
-            <button type="button" class="btn btn-info" onclick="window.location.href='insertopenCourse.php'">Insert</button>
-          </form>
-          </div>
-        </div>
         
-
-        <!-- End search -->
+        
         <br>
-        <!-- table -->
+        <!-- เพิ่มรายวิชาใหม่ -->
+
+
+
+
+
+
         <div class="container-fluid">
-          <table class="table table-dark">
-            <colgroup>
-              <!-- col1 -->
-              <col width="7%">
-              <!-- col2 -->
-              <col width="15%">
-              <!-- col3 -->
-              <col width="10%">
-              <!-- col4 -->
-              <col width="7%">
-              <!-- col5 -->
-              <col width="20%">
-              <!-- col6 -->
-              <col width="5%">
-              <!-- col7 -->
-              <col width="10%">
-              <!-- col8 -->
-              <col width="15%">
-            </colgroup>
-            <thead>
-              <tr>
-                <th scope="col">หมวด</th>
-                <th scope="col">กลุ่ม</th>
-                <th scope="col">บังคับ/เลือก</th>
-                <th scope="col">รหัสวิชา</th>
-                <th scope="col">รายชื่อวิชา</th>
-                <th scope="col">หน่วยกิต</th>
-                <th scope="col">ผู้สอน</th>
-                <th scope="col">Action</th>
-              </tr>
-            </thead>
-            
-            <tbody>
-            
+        <form action="openCourse.php" method="post" >
+  
+                <label for="InputCatagory">หมวด</label>
+                <input type="text" class="form-control" name="InputCatagory"  id="InputCatagory"  placeholder="วิชาเเกน">
+     
+                <label for="InputGroup">กลุ่ม</label>
+                <input type="text" class="form-control" name="InputGroup"  id="InputGroup" placeholder="วิชาเเกน">
 
-            
+                <label for="InputfoorceSelect">บังคับ/เลือก</label>
+                <input type="text" class="form-control" name="InputfoorceSelect"  id="InputfoorceSelect" placeholder="บังคับ">
 
-            <?php 
-            
-            $query = "SELECT * FROM openCourse";
-            $result = mysqli_query($connect, $query) or die(mysql_error());
+                <label for="InputCourseCode">รหัสวิชา</label>
+                <input type="text" class="form-control" name="InputCourseCode"  id="InputCourseCode" placeholder="977-120">
 
-            while ($row = mysqli_fetch_assoc($result)) {
-            $OC_category = $row['openCourse_category'];
-            $OC_group = $row['openCourse_group'];
-            $OC_forceSelect = $row['openCourse_forceSelect'];
-            $OC_courseCode = $row['openCourse_courseCode'];
-            $OC_listSubjects = $row['openCourse_listSubjects'];
-            $OC_credit = $row['openCourse_credit'];
-            $OC_instructor = $row['openCourse_instructor'];
-            
-              echo "<tr>
-              <td> $OC_group</td>              
-              <td> $OC_group</td>
-              <td>$OC_forceSelect</td>
-              <td>$OC_courseCode</td> 
-              <td>$OC_listSubjects</td> 
-              <td>$OC_credit</td> 
-              <td>$OC_instructor</td>
+                <label for="InputlistSubject">รายชื่อวิชา</label>
+                <input type="text" class="form-control" name="InputlistSubject"  id="InputlistSubject" placeholder="Mathematics (คณิตศาสตร์ )">
 
+                <label for="InputCredit">หน่วยกิต</label>
+                <input type="text" class="form-control" name="InputCredit" id="InputCredit" placeholder="3(3-0-6)">
 
-              <td><input type='submit' name='edit' value='EDIT' id='openCourse_ID'>
-              <input type='submit' name='delete' value='DELETE' id=''></td>
+                <label for="Inputinstrutor">ผู้สอน</label>
+                <input type="text" class="form-control" name="Inputinstrutor" id="Inputinstrutor" placeholder="วันจิตรา โต๊ะหวันหลง">
 
-              
-              
-              
-              </tr>";
-              
-            }
-            ?>
-            </tbody>
-            
+                <div class="form-group col-md-8 offset-md-5" id="form-check form-check-inline">
+                    <br>
+                        <div class="col-md-5">
+                            <button type="button" class="btn btn-success">SAVE</button>
+                            <button type="button" class="btn btn-danger">CANCEL</button>
+                        </div>
+                </div>
+        </form>
 
-          </table>
-
-        </div>
+        
         <br>
-        <div class="form-group col-md-8 offset-md-5" id="form-check form-check-inline">
-          <br>
-          <div class="col-md-5">
-            <button type="button" class="btn btn-success">Save</button>
-            <!--<button type="button" class="btn btn-warning">เพิ่มรายวิชา</button>-->
-          </div>
+        
         </div>
       </div>
     </div>
