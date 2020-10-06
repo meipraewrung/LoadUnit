@@ -69,17 +69,13 @@
               <a href="home.php">
                 <i class="fas fa-home"></i>หน้าหลัก</a>
             </li>
-            <li class="has-sub">
-              <a class="js-arrow" href="#">
-                <i class="fas fa-graduation-cap"></i>หลักสูตรการศึกษา</a>
-              <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
-                <li>
-                  <a href="planCourse.php">เล่มหลักสูตร</a>
-                </li>
-                <li>
-                  <a href="openCourse.php">วางเเผนการเปิดรายวิชา</a>
-                </li>
-              </ul>
+            <li>
+              <a href="planCourse.php">
+                <i class="fab fa-wpforms"></i>เล่มหลักสูตร</a>
+            </li>
+            <li>
+              <a href="openCourse.php">
+                <i class="fab fa-wpforms"></i>วางเเผนการเปิดรายวิชา</a>
             </li>
 
             <li>
@@ -130,17 +126,13 @@
               <a href="home.php">
                 <i class="fas fa-home"></i>หน้าหลัก</a>
             </li>
-            <li class="has-sub">
-              <a class="js-arrow" href="#">
-                <i class="fas fa-graduation-cap"></i>หลักสูตรการศึกษา</a>
-              <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
-                <li>
-                  <a href="planCourse.php">เล่มหลักสูตร</a>
-                </li>
-                <li>
-                  <a href="openCourse.php">วางเเผนการเปิดรายวิชา</a>
-                </li>
-              </ul>
+            <li>
+              <a href="planCourse.php">
+                <i class="fab fa-wpforms"></i>เล่มหลักสูตร</a>
+            </li>
+            <li>
+              <a href="openCourse.php">
+                <i class="fab fa-wpforms"></i>วางเเผนการเปิดรายวิชา</a>
             </li>
 
             <li>
