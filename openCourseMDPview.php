@@ -168,85 +168,88 @@
     <!-- END MENU SIDEBAR-->
 
     <!-- PAGE CONTAINER-->
-    <div class="page-container">
-      <!-- HEADER DESKTOP-->
-      <header class="header-desktop">
-        <div class="section__content section__content--p30">
-          <div class="container-fluid">
-            <div class="header-wrap">
-              <form class="form-header" action="" method="POST">
-              </form>
-              <div class="header-button">
-                <div class="account-wrap">
-                  <div class="content">
-                    <i class="fas fa-user"></i>
-                    <a class="js-acc-btn" href="#" style="color: black;">
-                      <?php echo $username; ?>
-                    </a>
+    <div class="page-container" style="padding-left:20px;">
+      <!-- PAGE CONTAINER-->
+      <div class="page-container">
+        <!-- HEADER DESKTOP-->
+        <header class="header-desktop">
+          <div class="section__content section__content--p30">
+            <div class="container-fluid">
+              <div class="header-wrap">
+                <form class="form-header" action="" method="POST">
+                </form>
+                <div class="header-button">
+                  <div class="account-wrap">
+                    <div class="content">
+                      <i class="fas fa-user"></i>
+                      <a class="js-acc-btn" href="#" style="color: black;">
+                        <?php echo $username; ?>
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </header>
-      <!-- HEADER DESKTOP-->
+        </header>
+        <!-- HEADER DESKTOP-->
 
-      <!-- MAIN CONTENT-->
-      <br> <br><br><br>
-      <!-- Page Content -->
-      <div class="container rounded col-md-10">
-        <!-- header Page  -->
-        <div class="form-group">
-          <center>
-            <h2>เเผนการเปิดรายวิชาในเเต่ละภาคการศึกษา</h2>
-            <h4>ปริญญาโท (MASTER DEGREE PROGRAM)</h4>
-          </center>
-        </div>
-        <!-- fromAll -->
-        <!-- <div class="rounded col-md-offset-2 " id="page-content-wrapper " style="border: 4px solid #b8b8be;
-         background: #e7e4e2; width: 80%; height:auto; text-align: center;"> -->
-        <div class="form-group fromTE-form" style="background: #e7e4e2;">
-          <br>
-
-          <div class="btn-group col-md-offset-2" data-toggle="buttons">
-            <label class="btn btn-danger">
-              <a href="openCourse.php">
-                <input type="radio" name="options[]" checked="checked" value="1"> ปริญญาตรี (BACHRLOR DEGREE
-                PROGRAM)
-              </a>
-            </label>
-            <label class="btn btn-danger active">
-              <a href="openCourseMDP.php">
-                <input type="radio" name="options[]" value="2"> ปริญญาโท (MASTER DEGREE PROGRAM)
-              </a>
-            </label>
+        <!-- MAIN CONTENT-->
+        <br> <br><br><br>
+        <!-- Page Content -->
+        <div class="container rounded col-md-10">
+          <!-- header Page  -->
+          <div class="form-group fromTE-form">
+            <center>
+              <h1>เเผนการเปิดรายวิชาในเเต่ละภาคการศึกษา</h1>
+              <h4>ปริญญาโท (MASTER DEGREE PROGRAM)</h4>
+            </center>
           </div>
-          <div class="form-group " id="form-check form-check-inline">
-            <br>
-            <div class="col-md-3">
-              <label>สาขา</label>
-              <select class="custom-select custom-select-lg mb-3">
-                <option value="1" selected>Information Technology</option>
-                <option value="2">Electronic Business</option>
-                <option value="3">Software Engineering</option>
-                <option value="4">Engineering Computer</option>
-                <option value="5">Computing</option>
-                <option value="6">Digital Business</option>
-                <option value="7">Digital Engineering</option>
-              </select>
+          <!-- fromAll -->
+          <!-- <div class="rounded col-md-offset-2 " id="page-content-wrapper " style="border: 4px solid #b8b8be;
+         background: #e7e4e2; width: 80%; height:auto; text-align: center;"> -->
+          <div class="form-group fromTE-form" style="background: #e7e4e2;">
+            <br><br>
+            <div class=" btn-group-toggle  offset-md-2">
+              <label class="btn btn-danger ">
+                <input type="radio" name="options" id="option1" autocomplete="off">
+                <a href="openCourse.php" style="color:  #ffffff"> ปริญญาตรี (BACHRLOR DEGREE PROGRAM)
+                </a>
+              </label>
+              <label class="btn btn-danger active">
 
+                <input type="radio" name="options" id="option2" autocomplete="off" checked>
+                <a href="openCourseMDP.php" style="color:  #ffffff">
+                  ปริญญาโท (MASTER DEGREE PROGRAM)
+                </a>
+              </label>
             </div>
-            <div class="col-md-6">
-              <label>เล่มหลักสูตร</label>
-              <select class="custom-select custom-select-lg mb-3">
-                <option selected>หลักสูตรวิทยาศาสตรมหาบัณฑิต หลักสูตรใหม่ พ.ศ.2557 (ก่อน 62)</option>
-              </select>
-
+            <div class="row col-md-10 offset-md-1">
+              <br>
+              <div class="major">
+                <br>
+                <label class="col-md-3">สาขา</label>
+                <select class="custom-select custom-select-sm mb-2 col-md-8">
+                  <option value="1" selected>Information Technology</option>
+                  <option value="2">Electronic Business</option>
+                  <option value="3">Software Engineering</option>
+                  <option value="4">Engineering Computer</option>
+                  <option value="5">Computing</option>
+                  <option value="6">Digital Business</option>
+                  <option value="7">Digital Engineering</option>
+                </select>
+              </div>
+              <div class="cousrse">
+                <br>
+                <label class="col-md-3">เล่มหลักสูตร</label>
+                <select class="custom-select custom-select-sm  col-md-8">
+                  <option selected>หลักสูตรวิทยาศาสตรมหาบัณฑิต หลักสูตรใหม่ พ.ศ.2557 (ก่อน 62)</option>
+                </select>
+              </div>
             </div>
-            <div class="col-md-2">
-              <label>ชั้นปี</label>
-              <select class="custom-select custom-select-lg mb-3">
+            <div class="row col-md-12 offset-md-1">
+              <label class="col-md-2">รหัสนักศึกษา</label>
+              <select class="custom-select custom-select-sm col-md-1">
                 <option value="1">57</option>
                 <option value="2">58</option>
                 <option value="3">59</option>
@@ -256,113 +259,132 @@
                 <option value="7">63</option>
               </select>
 
-            </div>
-          </div>
-          <div class="form-group col-md-offset-3" id="form-check form-check-inline">
-            <div class="col-md-4">
-              <label>ภาคการศึกษา/ปีการศึกษา</label>
-              <select class="custom-select custom-select-lg mb-3">
+              <label class="col-md-3">ภาคการศึกษา/ปีการศึกษา</label>
+              <select class="custom-select custom-select-sm col-md-2">
                 <option selected>1/2560</option>
-              </select>
-
-            </div>
-            <div class="col-md-1">
+                <option>2/2560</option>
+                <option>1/2561</option>
+                <option>2/2561</option>
+              </select> &nbsp;&nbsp;&nbsp;
               <button type="button" class="btn btn-primary">แสดง</button>
-
             </div>
-            <br>
-          </div>
-
-          <div class="form-group col-md-offset-2" id="form-check form-check-inline">
-            <br>
-            <div class="col-md-5">
-              <input type="text" class="form-control col-md-1" name="hostname2" placeholder="ค้นหารายละเอียด" value="" />
-
-            </div>
-            <div class="col-md-1">
-              <button type="button" class="btn btn-info">ค้นหา</button>
-
-            </div>
-            <div class="col-md-1">
-              <button type="button" class="btn btn-success">Export</button>
-
-            </div>
-            <br>
-          </div>
-          <div class="container-fluid">
-
-            <table class="table table-dark">
-              <colgroup>
-                <!-- col1 -->
-                <col width="5%">
-                <!-- col2 -->
-                <col width="10%">
-                <!-- col3 -->
-                <col width="5%">
-                <!-- col4 -->
-                <col width="5%">
-                <!-- col5 -->
-                <col width="10%">
-                <!-- col6 -->
-                <col width="5%">
-                <!-- col7 -->
-                <col width="10%">
-              </colgroup>
-              <thead>
-                <tr>
-                  <th scope="col">หมวด</th>
-                  <th scope="col">กลุ่ม</th>
-                  <th scope="col">บังคับ/เลือก</th>
-                  <th scope="col">รหัสวิชา</th>
-                  <th scope="col">รายชื่อวิชา</th>
-                  <th scope="col">หน่วยกิต</th>
-                  <th scope="col">ผู้สอน</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>วิชาบังคับ</td>
-                  <td>แผน ก2 และแผน ข</td>
-                  <td>บังคับ</td>
-                  <td>976-501</td>
-                  <td>Management Information System ระบบสารสนเทศเพื่อการจัดการ</td>
-                  <td>3(3-0-6)</td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td>วิชาบังคับ</td>
-                  <td>แผน ก2 และแผน ข</td>
-                  <td>บังคับ</td>
-                  <td>976-502</td>
-                  <td>Research Methodology in Information Technology ระเบียบวิธีวิจัยทางเทคโนโลยีสารสนเทศ
-                  </td>
-                  <td>3(3-0-6)</td>
-                  <td></td>
-                </tr>
-              </tbody>
-            </table>
-
           </div>
         </div>
+        <!-- search -->
+        <div class="row">
 
+          <div class="col-md-5 offset-md-1">
+            <input type="text" class="form-control" name="hostname2" placeholder="ค้นหารายละเอียด" value="" />
+          </div>
+          <div class="col-sm-2">
+            <button type="button" class="btn btn-info">ค้นหา</button>
+          </div>
+          <div class="col-sm-3 ">
+            <button type="button" class="btn btn-success">Export</button>
+          </div>
+        </div>
+        <!-- End search -->
+        <br>
+        <!-- table -->
+        <div class="container-fluid">
+          <table class="table table-dark">
+            <colgroup>
+              <!-- col1 -->
+              <col width="5%">
+              <!-- col2 -->
+              <col width="10%">
+              <!-- col3 -->
+              <col width="5%">
+              <!-- col4 -->
+              <col width="5%">
+              <!-- col5 -->
+              <col width="10%">
+              <!-- col6 -->
+              <col width="5%">
+              <!-- col7 -->
+              <col width="10%">
+              <!-- col8 -->
+              <col width="15%">
+            </colgroup>
+            <thead>
+              <tr>
+                <th scope="col">หมวด</th>
+                <th scope="col">กลุ่ม</th>
+                <th scope="col">บังคับ/เลือก</th>
+                <th scope="col">รหัสวิชา</th>
+                <th scope="col">รายชื่อวิชา</th>
+                <th scope="col">หน่วยกิต</th>
+                <th scope="col">ผู้สอน</th>
+                <th scope="col"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>วิชาบังคับ</td>
+                <td>แผน ก2 และแผน ข</td>
+                <td>บังคับ</td>
+                <td>976-501</td>
+                <td>Management Information System ระบบสารสนเทศเพื่อการจัดการ</td>
+                <td>3(3-0-6)</td>
+                <td></td>
+                <td>
+                  <a href="#" class="btn btn-primary a-btn-slide-text">
+                    <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                    <span><strong>Edit</strong></span>
+                  </a>
+                  <a href="#" class="btn btn-primary a-btn-slide-text">
+                    <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                    <span><strong>Delete</strong></span>
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td>วิชาบังคับ</td>
+                <td>แผน ก2 และแผน ข</td>
+                <td>บังคับ</td>
+                <td>976-502</td>
+                <td>Research Methodology in Information Technology
+                  ระเบียบวิธีวิจัยทางเทคโนโลยีสารสนเทศ
+                </td>
+                <td>3(3-0-6)</td>
+                <td></td>
+                <td>
+                  <a href="#" class="btn btn-primary a-btn-slide-text">
+                    <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                    <span><strong>Edit</strong></span>
+                  </a>
+                  <a href="#" class="btn btn-primary a-btn-slide-text">
+                    <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                    <span><strong>Delete</strong></span>
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
 
-
-      </div>
-      <div class="row">
-        <div class="col-md-12">
-          <div class="copyright">
-            <p>Copyright © 2020 Load Unit Planing Management System <a href="https://www.computing.psu.ac.th/th/">Collage Of computing</a>.</p>
+        </div>
+        <br>
+        <div class="form-group col-md-8 offset-md-5" id="form-check form-check-inline">
+          <br>
+          <div class="col-md-5">
+            <button type="button" class="btn btn-success">Save</button>
+            <button type="button" class="btn btn-info">เพิ่มรายวิชา</button>
           </div>
         </div>
       </div>
     </div>
-  </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="copyright">
+          <p>Copyright © 2020 Load Unit Planing Management System
+            <a href="https://www.computing.psu.ac.th/th/">Collage
+              Of computing</a>.</p>
+        </div>
+      </div>
+    </div>
   </div>
   <!-- END MAIN CONTENT-->
   <!-- END PAGE CONTAINER-->
-  </div>
-
-  </div>
 
   <!-- Jquery JS-->
   <script src="vendor/jquery-3.2.1.min.js"></script>

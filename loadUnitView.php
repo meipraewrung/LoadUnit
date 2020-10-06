@@ -191,32 +191,39 @@
         </div>
       </header>
       <!-- HEADER DESKTOP-->
+
+      <!-- MAIN CONTENT-->
+
       <br> <br><br><br>
       <!-- Page Content -->
       <div class="container rounded col-md-10">
         <!-- header Page  -->
-        <div class="form-group">
+        <div class="form-group fromTE-form">
           <center>
-            <h2>ตารางเเสดงหน่วยภาระงานสอนของอาจารย์ผู้สอน</h2>
+            <h1>ตารางเเสดงหน่วยภาระงานสอนอาจารย์</h1>
           </center>
         </div>
-        <!-- fromAll -->
-        <!-- <div class="rounded col-md-offset-2 " id="page-content-wrapper " style="border: 4px solid #b8b8be;
-         background: #e7e4e2; width: 80%; height:auto; text-align: center;"> -->
         <div class="form-group fromTE-form" style="background: #e7e4e2;">
           <div class="form-group col-md-offset-7" id="form-check form-check-inline">
-            <br>
-            <div class="col-md-5">
-              <input type="text" class="form-control col-md-1" name="hostname2" placeholder="ค้นหารายละเอียด" value="" />
 
+
+
+            <div class="row m-t-25">
+              <br>
+              <div class="col-md-5 offset-md-1">
+                <br>
+
+                <input type="text" class="form-control" name="hostname2" placeholder="ค้นหารายละเอียด" value="" />
+              </div>
+              <div class="col-sm-2">
+                <br>
+                <button type="button" class="btn btn-info">ค้นหา</button>
+              </div>
+              <div class="col-sm-3 ">
+                <br>
+                <button type="button" class="btn btn-success">Export</button>
+              </div>
             </div>
-            <div class="col-md-2">
-              <button type="button" class="btn btn-info">ค้นหา</button>
-            </div>
-            <div class="col-md-2">
-              <button type="button" class="btn btn-success">Export</button>
-            </div>
-            <br>
           </div>
           <br>
           <div class="container-fluid">
@@ -294,20 +301,29 @@
                 </tr>
               </tbody>
             </table>
+            <div class="form-group col-md-8 offset-md-5" id="form-check form-check-inline">
+              <br>
+              <div class="col-md-5">
+                <button type="button" class="btn btn-warning">Edit</button>
+                <button type="button" class="btn btn-success">Save</button>
+
+              </div>
+
+            </div>
           </div>
           <br>
         </div>
-      </div>
-    </div>
 
-    <div class="row">
-      <div class="col-md-12">
-        <div class="copyright">
-          <p>Copyright © 2020 Load Unit Planing Management System <a href="https://www.computing.psu.ac.th/th/">Collage Of computing</a>.</p>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="copyright">
+            <p>Copyright © 2020 Load Unit Planing Management System <a href="https://www.computing.psu.ac.th/th/">Collage Of computing</a>.</p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
   </div>
   </div>
   <!-- END MAIN CONTENT-->
@@ -339,8 +355,6 @@
 
   <!-- Main JS-->
   <script src="js/main.js"></script>
-
-
 
 </body>
 
