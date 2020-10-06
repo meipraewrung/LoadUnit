@@ -253,15 +253,13 @@
 
           <div class="row col-md-12 offset-md-1">
 
-            <label class="col-md-2">รหัสนักศึกษา</label>
+            <label class="col-md-2">ชั้นปี</label>
             <select class="custom-select custom-select-sm col-md-1">
-              <option value="1">57</option>
-              <option value="2">58</option>
-              <option value="3">59</option>
-              <option value="4" selected>60</option>
-              <option value="5">61</option>
-              <option value="6">62</option>
-              <option value="7">63</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4" selected>4</option>
+             
             </select>
 
             <label class="col-md-3">ภาคการศึกษา/ปีการศึกษา</label>
@@ -317,7 +315,7 @@
                 <th scope="col">รหัสวิชา</th>
                 <th scope="col">รายชื่อวิชา</th>
                 <th scope="col">หน่วยกิต</th>
-                <th scope="col">ผู้สอน</th>
+                
               </tr>
             </thead>
 
@@ -338,7 +336,7 @@
                   echo "<td>".$row['planCourse_courseCode']."<td>"; 
                   echo "<td>".$row['planCourse_listSubjects']."<td>"; 
                   echo "<td>".$row['planCourse_credit']."<td>"; 
-                  echo "<td>".$row['course_instructor']."<td>"; 
+                  
                 ?>
 
               </tr>
