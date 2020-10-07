@@ -1,8 +1,8 @@
-<?php 
-  session_start(); 
-  require('db.php');
+<?php
+session_start();
+require('db.php');
 
-  $username = $_SESSION['staff_nameSur'];
+$username = $_SESSION['staff_nameSur'];
 
 ?>
 
@@ -128,11 +128,11 @@
             </li>
             <li>
               <a href="planCourse.php">
-              <i class="fas fa-book"></i>เล่มหลักสูตร</a>
+                <i class="fas fa-book"></i>เล่มหลักสูตร</a>
             </li>
             <li>
               <a href="openCourse.php">
-              <i class="fas fa-book"></i>วางเเผนการเปิดรายวิชา</a>
+                <i class="fas fa-book"></i>วางเเผนการเปิดรายวิชา</a>
             </li>
 
             <li>
@@ -181,10 +181,10 @@
                 <div class="header-button">
                   <div class="account-wrap">
                     <div class="content">
-                      <i class="fas fa-user"></i>    
-                    <a class="js-acc-btn" href="#" style="color: black;">
-                      <?php echo $username; ?>
-                    </a>
+                      <i class="fas fa-user"></i>
+                      <a class="js-acc-btn" href="#" style="color: black;">
+                        <?php echo $username; ?>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -205,200 +205,191 @@
               <h4>ปริญญาตรี (BACHRLOR DEGREE PROGRAM)</h4>
             </center>
             <?php
-    $connect = mysqli_connect('localhost','root','','loadunitplan');
-                mysqli_query($connect,"set character set utf8");
+            $connect = mysqli_connect('localhost', 'root', '', 'loadunitplan');
+            mysqli_query($connect, "set character set utf8");
 
-    if(mysqli_connect_error()) {
-        echo "Failed to connect to MySQL :".mysqli_connect_error();
-    }
-
-    $querydegree = "SELECT * FROM degree";
-    $resultdegree = mysqli_query($connect, $querydegree) or die(mysql_error());
-    $querymajor = "SELECT * FROM major";
-    $resultmajor = mysqli_query($connect, $querymajor) or die(mysql_error());
-    $querycourse = "SELECT * FROM course";
-    $resultcourse = mysqli_query($connect, $querycourse) or die(mysql_error());
-    $queryyear = "SELECT * FROM years";
-    $resultyear = mysqli_query($connect, $queryyear) or die(mysql_error());
-    $querysemesteryear = "SELECT * FROM semesteryear";
-    $resultsemesteryear = mysqli_query($connect, $querysemesteryear) or die(mysql_error());
-?>
-
-          <!-- fromAll -->
-          <!-- <div class="rounded col-md-offset-2 " id="page-content-wrapper " style="border: 4px solid #b8b8be;
-         background: #e7e4e2; width: 80%; height:auto; text-align: center;"> -->
-       
-
-
-        
-        
-        <br>
-        <!-- เพิ่มรายวิชาใหม่ -->
-
-
-
-        
-
-
-        <form  action="" method="post" >
-        
-  
-        <div class="container-fluid">
-
-        
-        <div class="form-group fromTE-form" style="background: #e7e4e2;">
-            <br>
-
-            <div class="row col-md-10 offset-md-1">
-
-              <br>
-              <div class="Degree">
-                <br>
-
-                <label class="col-md-5">ปริญญา</label>
-                <select class="custom-select custom-select-sm mb-2 col-md-6"  name = "Degree" id = "Degree">
-                <?php foreach ($resultdegree as $row): ?>
-                    <option> <?=$row['degree_name'] ?> </option>
-                    <?php endforeach ?>
-                  
-                </select>
-              </div>
-
-              <div class="major">
-                <br>
-
-                <label class="col-md-3">สาขา</label>
-                <select class="custom-select custom-select-sm mb-2 col-md-8" name = "major" id = "major">
-                    <?php foreach ($resultmajor as $row): ?>
-                    <option> <?=$row['major_name'] ?> </option>
-                    <?php endforeach ?>
-                </select>
-              </div>
-              <div class="cousrse">
-                <br>
-                <label class="col-md-3">เล่มหลักสูตร</label>
-                <select class="custom-select custom-select-sm  col-md-8" name = "course" id = "course">
-                <?php foreach ($resultcourse as $row): ?>
-                    <option value = <?=$row['course_name'] ?> > <?=$row['course_name'] ?> </option>
-                    <?php endforeach ?>
-                </select>
-              </div>
-            </div>
-            <div class="row col-md-12 offset-md-1">
-            <label class="col-md-2">ชั้นปี</label>
-              <select class="custom-select custom-select-sm col-md-1" name = "Year" id = "Year">
-              <?php foreach ($resultyear as $row): ?>
-                    <option> <?=$row['year_num'] ?> </option>
-                    <?php endforeach ?>
-                
-              </select>
-
-              <label class="col-md-3">ภาคการศึกษา/ปีการศึกษา</label>
-              <select class="custom-select custom-select-sm col-md-2" name = "semesterYear" id = "semesterYear">
-              <?php foreach ($resultsemesteryear as $row): ?>
-                    <option> <?=$row['semesterYear_num'] ?> </option>
-                    <?php endforeach ?>
-              </select> &nbsp;&nbsp;&nbsp;
-            </div>
-          </div>
-        </div>
-
-
-
-                <label for="InputCatagory">หมวด</label>
-                <input type="text" class="form-control" name="InputCatagory"  id="InputCatagory"  placeholder="วิชาเเกน" readonly>
-     
-                <label for="InputGroup">กลุ่ม</label>
-                <input type="text" class="form-control" name="InputGroup"  id="InputGroup" placeholder="วิชาเเกน" readonly>
-
-                <label for="InputfoorceSelect">บังคับ/เลือก</label>
-                <input type="text" class="form-control" name="InputfoorceSelect"  id="InputfoorceSelect" placeholder="บังคับ" readonly>
-
-                <label for="InputCourseCode">รหัสวิชา</label>
-                <input type="text" class="form-control" name="InputCourseCode"  id="InputCourseCode" placeholder="977-120" readonly>
-
-                <label for="InputlistSubject">รายชื่อวิชา</label>
-                <input type="text" class="form-control" name="InputlistSubject"  id="InputlistSubject" placeholder="Mathematics (คณิตศาสตร์ )"readonly>
-
-                <label for="InputCredit">หน่วยกิต</label>
-                <input type="text" class="form-control" name="InputCredit" id="InputCredit" placeholder="3(3-0-6)"readonly>
-
-                <label for="Inputinstrutor">ผู้สอน</label>
-                <input type="text" class="form-control" name="Inputinstrutor" id="Inputinstrutor" placeholder="วันจิตรา โต๊ะหวันหลง">
-
-                <div class="form-group col-md-8 offset-md-5" id="form-check form-check-inline">
-                    <br>
-                        <div class="col-md-5">
-                            <button type="submit" name="save1" class="btn btn-success">SAVE</button>
-                            <!-- <button type="button" class="btn btn-danger">CANCEL</button> -->
-                        </div>
-                </div>
-        </form>
-
-        
-        <br>
-        
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-12">
-        <div class="copyright">
-          <p>Copyright © 2020 Load Unit Planing Management System
-            <a href="https://www.computing.psu.ac.th/th/">Collage
-              Of computing</a>.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <?php
-        
-       
-
-        if(isset($_POST['save1'])){
-          $course = $_POST["course"];
-          $catagory = $_POST["InputCatagory"];
-          $group = $_POST["InputGroup"];
-          $forceSelect = $_POST["InputfoorceSelect"];
-          $courseCode = $_POST["InputCourseCode"];
-          $listSubjects = $_POST["InputlistSubject"];
-          $credit = $_POST["InputCredit"];
-          $Inputinstrutor  =$_POST["Inputinstrutor"];
-            $sql = "INSERT INTO opencourse(openCourse_ID,openCourse_name,openCourse_category,openCourse_group,openCourse_forceSelect,openCourse_courseCode,openCourse_listSubjects,openCourse_credit,openCourse_instructor,executivePosition_ID)
-              VALUES ('','$course','$catagory','$group','$forceSelect',' $courseCode','$listSubjects','$credit',' $Inputinstrutor ','1')";
-
-            // echo $sql;
-            $result = mysqli_query($connect,$sql);
+            if (mysqli_connect_error()) {
+              echo "Failed to connect to MySQL :" . mysqli_connect_error();
             }
 
-        ?>
-  <!-- END MAIN CONTENT-->
-  <!-- END PAGE CONTAINER-->
- 
-  <!-- Jquery JS-->
-  <script src="vendor/jquery-3.2.1.min.js"></script>
-  <!-- Bootstrap JS-->
-  <script src="vendor/bootstrap-4.1/popper.min.js"></script>
-  <script src="vendor/bootstrap-4.1/bootstrap.min.js"></script>
-  <!-- Vendor JS       -->
-  <script src="vendor/slick/slick.min.js">
-  </script>
-  <script src="vendor/wow/wow.min.js"></script>
-  <script src="vendor/animsition/animsition.min.js"></script>
-  <script src="vendor/bootstrap-progressbar/bootstrap-progressbar.min.js">
-  </script>
-  <script src="vendor/counter-up/jquery.waypoints.min.js"></script>
-  <script src="vendor/counter-up/jquery.counterup.min.js">
-  </script>
-  <script src="vendor/circle-progress/circle-progress.min.js"></script>
-  <script src="vendor/perfect-scrollbar/perfect-scrollbar.js"></script>
-  <script src="vendor/chartjs/Chart.bundle.min.js"></script>
-  <script src="vendor/select2/select2.min.js">
-  </script>
+            $querydegree = "SELECT * FROM degree";
+            $resultdegree = mysqli_query($connect, $querydegree) or die(mysql_error());
+            $querymajor = "SELECT * FROM major";
+            $resultmajor = mysqli_query($connect, $querymajor) or die(mysql_error());
+            $querycourse = "SELECT * FROM course";
+            $resultcourse = mysqli_query($connect, $querycourse) or die(mysql_error());
+            $queryyear = "SELECT * FROM years";
+            $resultyear = mysqli_query($connect, $queryyear) or die(mysql_error());
+            $querysemesteryear = "SELECT * FROM semesteryear";
+            $resultsemesteryear = mysqli_query($connect, $querysemesteryear) or die(mysql_error());
+            ?>
 
-  <!-- Main JS-->
-  <script src="js/main.js"></script>
+            <!-- fromAll -->
+            <!-- <div class="rounded col-md-offset-2 " id="page-content-wrapper " style="border: 4px solid #b8b8be;
+         background: #e7e4e2; width: 80%; height:auto; text-align: center;"> -->
+
+
+
+
+
+            <br>
+            <!-- เพิ่มรายวิชาใหม่ -->
+
+
+
+
+
+
+            <form action="" method="post">
+              <div class="container-fluid">
+                <div class="form-group fromTE-form" style="background: #e7e4e2;">
+                  <br>
+                  <div class="row col-md-10 offset-md-1">
+                    <br>
+                    <div class="Degree">
+                      <br>
+                      <label class="col-md-5">ปริญญา</label>
+                      <select class="custom-select custom-select-sm mb-2 col-md-6" name="Degree" id="Degree">
+                        <?php foreach ($resultdegree as $row) : ?>
+                          <option> <?= $row['degree_name'] ?> </option>
+                        <?php endforeach ?>
+
+                      </select>
+                    </div>
+                    <div class="major">
+                      <br>
+                      <label class="col-md-3">สาขา</label>
+                      <select class="custom-select custom-select-sm mb-2 col-md-8" name="major" id="major">
+                        <?php foreach ($resultmajor as $row) : ?>
+                          <option> <?= $row['major_name'] ?> </option>
+                        <?php endforeach ?>
+                      </select>
+                    </div>
+                    <div class="cousrse">
+                      <br>
+                      <label class="col-md-3">เล่มหลักสูตร</label>
+                      <select class="custom-select custom-select-sm  col-md-8" name="course" id="course">
+                        <?php foreach ($resultcourse as $row) : ?>
+                          <option value=<?= $row['course_name'] ?>> <?= $row['course_name'] ?> </option>
+                        <?php endforeach ?>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="row col-md-12 offset-md-1">
+                    <label class="col-md-2">ชั้นปี</label>
+                    <select class="custom-select custom-select-sm col-md-1" name="Year" id="Year">
+                      <?php foreach ($resultyear as $row) : ?>
+                        <option> <?= $row['year_num'] ?> </option>
+                      <?php endforeach ?>
+
+                    </select>
+
+                    <label class="col-md-3">ภาคการศึกษา/ปีการศึกษา</label>
+                    <select class="custom-select custom-select-sm col-md-2" name="semesterYear" id="semesterYear">
+                      <?php foreach ($resultsemesteryear as $row) : ?>
+                        <option> <?= $row['semesterYear_num'] ?> </option>
+                      <?php endforeach ?>
+                    </select> &nbsp;&nbsp;&nbsp;
+                  </div>
+                </div>
+              </div>
+
+
+
+              <label for="InputCatagory">หมวด</label>
+              <input type="text" class="form-control" name="InputCatagory" id="InputCatagory" placeholder="วิชาเฉพาะ" readonly>
+
+              <label for="InputGroup">กลุ่ม</label>
+              <input type="text" class="form-control" name="InputGroup" id="InputGroup" placeholder="วิชาเเกน" readonly>
+
+              <label for="InputfoorceSelect">บังคับ/เลือก</label>
+              <input type="text" class="form-control" name="InputfoorceSelect" id="InputfoorceSelect" placeholder="บังคับ" readonly>
+
+              <label for="InputCourseCode">รหัสวิชา</label>
+              <input type="text" class="form-control" name="InputCourseCode" id="InputCourseCode" placeholder="977-120" readonly>
+
+              <label for="InputlistSubject">รายชื่อวิชา</label>
+              <input type="text" class="form-control" name="InputlistSubject" id="InputlistSubject" placeholder="Mathematics (คณิตศาสตร์ )" readonly>
+
+              <label for="InputCredit">หน่วยกิต</label>
+              <input type="text" class="form-control" name="InputCredit" id="InputCredit" placeholder="3(3-0-6)" readonly>
+
+              <label for="Inputinstrutor">ผู้สอน</label>
+              <input type="text" class="form-control" name="Inputinstrutor" id="Inputinstrutor" placeholder="วันจิตรา โต๊ะหวันหลง">
+
+              <div class="form-group col-md-8 offset-md-5" id="form-check form-check-inline">
+                <br>
+                <div class="col-md-5">
+                  <button type="submit" name="save1" class="btn btn-success">SAVE</button>
+                  <!-- <button type="button" class="btn btn-danger">CANCEL</button> -->
+                </div>
+              </div>
+            </form>
+
+
+            <br>
+
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="copyright">
+            <p>Copyright © 2020 Load Unit Planing Management System
+              <a href="https://www.computing.psu.ac.th/th/">Collage
+                Of computing</a>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <?php
+
+
+
+    if (isset($_POST['save1'])) {
+      $course = $_POST["course"];
+      $catagory = $_POST["InputCatagory"];
+      $group = $_POST["InputGroup"];
+      $forceSelect = $_POST["InputfoorceSelect"];
+      $courseCode = $_POST["InputCourseCode"];
+      $listSubjects = $_POST["InputlistSubject"];
+      $credit = $_POST["InputCredit"];
+      $Inputinstrutor  = $_POST["Inputinstrutor"];
+      $sql = "UPDATE openCourse set (openCourse_ID,openCourse_name,openCourse_category,openCourse_group,openCourse_forceSelect,openCourse_courseCode,openCourse_listSubjects,openCourse_credit,openCourse_instructor,executivePosition_ID)
+              VALUES ('','$course','$catagory','$group','$forceSelect',' $courseCode','$listSubjects','$credit',' $Inputinstrutor ','1')";
+
+      // echo $sql;
+      $result = mysqli_query($connect, $sql);
+    }
+
+    ?>
+    <!-- END MAIN CONTENT-->
+    <!-- END PAGE CONTAINER-->
+
+    <!-- Jquery JS-->
+    <script src="vendor/jquery-3.2.1.min.js"></script>
+    <!-- Bootstrap JS-->
+    <script src="vendor/bootstrap-4.1/popper.min.js"></script>
+    <script src="vendor/bootstrap-4.1/bootstrap.min.js"></script>
+    <!-- Vendor JS       -->
+    <script src="vendor/slick/slick.min.js">
+    </script>
+    <script src="vendor/wow/wow.min.js"></script>
+    <script src="vendor/animsition/animsition.min.js"></script>
+    <script src="vendor/bootstrap-progressbar/bootstrap-progressbar.min.js">
+    </script>
+    <script src="vendor/counter-up/jquery.waypoints.min.js"></script>
+    <script src="vendor/counter-up/jquery.counterup.min.js">
+    </script>
+    <script src="vendor/circle-progress/circle-progress.min.js"></script>
+    <script src="vendor/perfect-scrollbar/perfect-scrollbar.js"></script>
+    <script src="vendor/chartjs/Chart.bundle.min.js"></script>
+    <script src="vendor/select2/select2.min.js">
+    </script>
+
+    <!-- Main JS-->
+    <script src="js/main.js"></script>
 
 </body>
 

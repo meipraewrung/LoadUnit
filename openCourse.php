@@ -321,25 +321,16 @@ $username = $_SESSION['staff_nameSur'];
         <!-- table -->
 
         <div class="container-fluid">
+          
+        <form action="" method="post">
           <table class="table table-dark">
-            <colgroup>
-              <!-- col1 -->
-              <col width="7%">
-              <!-- col2 -->
-              <col width="15%">
-              <!-- col3 -->
-              <col width="10%">
-              <!-- col4 -->
-              <col width="7%">
-              <!-- col5 -->
-              <col width="20%">
-              <!-- col6 -->
-              <col width="5%">
-              <!-- col7 -->
-              <col width="10%">
-              <!-- col8 -->
-              <col width="15%">
-            </colgroup>
+              <colgroup>
+                <col span="4" width="60">
+                <col width="100">
+                <col width="30">
+                <col width="30">
+                <col width="80">
+              </colgroup>
             <thead>
               <tr>
                 <th scope="col">หมวด</th>
@@ -382,10 +373,12 @@ $username = $_SESSION['staff_nameSur'];
               <td>$OC_credit</td> 
               <td>$OC_instructor</td>
               <td>
-              <input type='submit' name='edit' value='EDIT' id='openCourse_ID'>
+
+              <a href=openCourseEdit.php?openCourse_ID=" . $OC_id . " >  
+              <button type='button' name ='edit.$OC_id' class='btn btn-warning' >Edit</button></a>
 
               <a onClick=\"javascript: return confirm('Please confirm deletion');\" href=openCourseDelete.php?openCourse_ID=" . $OC_id . " >  
-              <button type='button' name ='delete' class='btn btn-danger' >Delete</button></a></td>
+              <button type='button' name ='delete.$OC_id' class='btn btn-danger' >Delete</button></a></td>
 
               
               
@@ -397,7 +390,7 @@ $username = $_SESSION['staff_nameSur'];
 
 
           </table>
-
+        </form>
         </div>
         <br>
       </div>
