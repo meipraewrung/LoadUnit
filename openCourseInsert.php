@@ -194,8 +194,6 @@
         </header>
         <!-- HEADER DESKTOP-->
 
-
-
         <!-- MAIN CONTENT-->
         <br> <br><br><br>
         <!-- Page Content -->
@@ -206,15 +204,14 @@
               <h1>เเผนการเปิดรายวิชาในเเต่ละภาคการศึกษา</h1>
               <h4>ปริญญาตรี (BACHRLOR DEGREE PROGRAM)</h4>
             </center>
-          </div>
-
-  <?php
+            <?php
     $connect = mysqli_connect('localhost','root','','loadunitplan');
                 mysqli_query($connect,"set character set utf8");
 
     if(mysqli_connect_error()) {
         echo "Failed to connect to MySQL :".mysqli_connect_error();
     }
+
     $querydegree = "SELECT * FROM degree";
     $resultdegree = mysqli_query($connect, $querydegree) or die(mysql_error());
     $querymajor = "SELECT * FROM major";
@@ -225,18 +222,31 @@
     $resultyear = mysqli_query($connect, $queryyear) or die(mysql_error());
     $querysemesteryear = "SELECT * FROM semesteryear";
     $resultsemesteryear = mysqli_query($connect, $querysemesteryear) or die(mysql_error());
-
-
-    
 ?>
-
-
-
 
           <!-- fromAll -->
           <!-- <div class="rounded col-md-offset-2 " id="page-content-wrapper " style="border: 4px solid #b8b8be;
          background: #e7e4e2; width: 80%; height:auto; text-align: center;"> -->
-          <div class="form-group fromTE-form" style="background: #e7e4e2;">
+       
+
+
+        
+        
+        <br>
+        <!-- เพิ่มรายวิชาใหม่ -->
+
+
+
+        
+
+
+        <form  action="" method="post" >
+        
+  
+        <div class="container-fluid">
+
+        
+        <div class="form-group fromTE-form" style="background: #e7e4e2;">
             <br>
 
             <div class="row col-md-10 offset-md-1">
@@ -269,7 +279,7 @@
                 <label class="col-md-3">เล่มหลักสูตร</label>
                 <select class="custom-select custom-select-sm  col-md-8" name = "course" id = "course">
                 <?php foreach ($resultcourse as $row): ?>
-                    <option value=<?=$row['course_name'] ?> > <?=$row['course_name'] ?> </option>
+                    <option value = <?=$row['course_name'] ?> > <?=$row['course_name'] ?> </option>
                     <?php endforeach ?>
                 </select>
               </div>
@@ -289,127 +299,46 @@
                     <option> <?=$row['semesterYear_num'] ?> </option>
                     <?php endforeach ?>
               </select> &nbsp;&nbsp;&nbsp;
-
-              <button type="button" class="btn btn-primary">แสดง</button>
             </div>
           </div>
         </div>
 
-        <!-- search -->
 
-        <div class="row">
 
-          <!--<div class="col-md-5 offset-md-1">
-            <input type="text" class="form-control" name="hostname2" placeholder="ค้นหารายละเอียด" value="" />
-          </div>
-          <div class="col-sm-2">
-            <button type="button" class="btn btn-info">ค้นหา</button>
-          </div>-->
-          <div class="col-md-3 offset-md-3">
-            <button type="button" class="btn btn-success">Export</button>
-          </div>
-          
-          <div class="col-sm-3 ">
-          <form action="openCourseInsert.php" method="post">
-            <button type="button" class="btn btn-info" onclick="window.location.href='openCourseInsert.php'">Insert</button>
-          </form>
-          </div>
-        </div>
+                <label for="InputCatagory">หมวด</label>
+                <input type="text" class="form-control" name="InputCatagory"  id="InputCatagory"  placeholder="วิชาเเกน">
+     
+                <label for="InputGroup">กลุ่ม</label>
+                <input type="text" class="form-control" name="InputGroup"  id="InputGroup" placeholder="วิชาเเกน">
+
+                <label for="InputfoorceSelect">บังคับ/เลือก</label>
+                <input type="text" class="form-control" name="InputfoorceSelect"  id="InputfoorceSelect" placeholder="บังคับ">
+
+                <label for="InputCourseCode">รหัสวิชา</label>
+                <input type="text" class="form-control" name="InputCourseCode"  id="InputCourseCode" placeholder="977-120">
+
+                <label for="InputlistSubject">รายชื่อวิชา</label>
+                <input type="text" class="form-control" name="InputlistSubject"  id="InputlistSubject" placeholder="Mathematics (คณิตศาสตร์ )">
+
+                <label for="InputCredit">หน่วยกิต</label>
+                <input type="text" class="form-control" name="InputCredit" id="InputCredit" placeholder="3(3-0-6)">
+
+                <label for="Inputinstrutor">ผู้สอน</label>
+                <input type="text" class="form-control" name="Inputinstrutor" id="Inputinstrutor" placeholder="วันจิตรา โต๊ะหวันหลง">
+
+                <div class="form-group col-md-8 offset-md-5" id="form-check form-check-inline">
+                    <br>
+                        <div class="col-md-5">
+                            <button type="submit" name="save1" class="btn btn-success">SAVE</button>
+                            <!-- <button type="button" class="btn btn-danger">CANCEL</button> -->
+                        </div>
+                </div>
+        </form>
+
         
-
-          <div class="row">
-            <div class="col-md-1 offset-md-5">
-              <button type="button" class="btn btn-success">Export</button>
-            </div>
-          </div>
-
-        <!-- End search -->
         <br>
-        <!-- table -->
         
-        <div class="container-fluid">
-          <table class="table table-dark">
-            <colgroup>
-              <!-- col1 -->
-              <col width="7%">
-              <!-- col2 -->
-              <col width="15%">
-              <!-- col3 -->
-              <col width="10%">
-              <!-- col4 -->
-              <col width="7%">
-              <!-- col5 -->
-              <col width="20%">
-              <!-- col6 -->
-              <col width="5%">
-              <!-- col7 -->
-              <col width="10%">
-              <!-- col8 -->
-              <col width="15%">
-            </colgroup>
-            <thead>
-              <tr>
-                <th scope="col">หมวด</th>
-                <th scope="col">กลุ่ม</th>
-                <th scope="col">บังคับ/เลือก</th>
-                <th scope="col">รหัสวิชา</th>
-                <th scope="col">รายชื่อวิชา</th>
-                <th scope="col">หน่วยกิต</th>
-                <th scope="col">ผู้สอน</th>
-                <th scope="col">Action</th>
-              </tr>
-            </thead>
-            
-            <tbody>
-            
-
-            
-
-            <?php 
-            
-            $query = "SELECT * FROM opencourse";
-            $result = mysqli_query($connect, $query) or die(mysql_error());
-
-            while ($row = mysqli_fetch_assoc($result)) {
-            $OC_category = $row['openCourse_category'];
-            $OC_group = $row['openCourse_group'];
-            $OC_forceSelect = $row['openCourse_forceSelect'];
-            $OC_courseCode = $row['openCourse_courseCode'];
-            $OC_listSubjects = $row['openCourse_listSubjects'];
-            $OC_credit = $row['openCourse_credit'];
-            $OC_instructor = $row['openCourse_instructor'];
-
-            // $_SESSION['openCourse_ID'] = $row['openCourse_ID'];
-            
-              echo "<tr>
-              <td> $OC_group</td>              
-              <td> $OC_group</td>
-              <td>$OC_forceSelect</td>
-              <td>$OC_courseCode</td> 
-              <td>$OC_listSubjects</td> 
-              <td>$OC_credit</td> 
-              <td>$OC_instructor</td>
-              <td>
-              <input type='submit' name='edit' value='EDIT' id='openCourse_ID'>
-              
-              <form action='action.php' method='POST'>
-              <input type='submit' name='delete' value='DELETE' id=''></form></td>
-
-
-              
-              
-              
-              </tr>";
-              
-            }
-            ?>
-            </tbody>
-            
-
-          </table>
-
         </div>
-        <br>
       </div>
     </div>
     <div class="row">
@@ -422,9 +351,31 @@
       </div>
     </div>
   </div>
+
+  <?php
+        
+       
+
+        if(isset($_POST['save1'])){
+          $course = $_POST["course"];
+          $catagory = $_POST["InputCatagory"];
+          $group = $_POST["InputGroup"];
+          $forceSelect = $_POST["InputfoorceSelect"];
+          $courseCode = $_POST["InputCourseCode"];
+          $listSubjects = $_POST["InputlistSubject"];
+          $credit = $_POST["InputCredit"];
+          $Inputinstrutor  =$_POST["Inputinstrutor"];
+            $sql = "INSERT INTO opencourse(openCourse_ID,openCourse_name,openCourse_category,openCourse_group,openCourse_forceSelect,openCourse_courseCode,openCourse_listSubjects,openCourse_credit,openCourse_instructor,executivePosition_ID)
+              VALUES ('','$course','$catagory','$group','$forceSelect',' $courseCode','$listSubjects','$credit',' $Inputinstrutor ','1')";
+
+            // echo $sql;
+            $result = mysqli_query($connect,$sql);
+            }
+
+        ?>
   <!-- END MAIN CONTENT-->
   <!-- END PAGE CONTAINER-->
-
+ 
   <!-- Jquery JS-->
   <script src="vendor/jquery-3.2.1.min.js"></script>
   <!-- Bootstrap JS-->
