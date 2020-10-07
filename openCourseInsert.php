@@ -306,7 +306,7 @@
 
 
                 <label for="InputCatagory">หมวด</label>
-                <input type="text" class="form-control" name="InputCatagory"  id="InputCatagory"  placeholder="วิชาเเกน">
+                <input type="text" class="form-control" name="InputCatagory"  id="InputCatagory"  placeholder="วิชาเฉพาะ">
      
                 <label for="InputGroup">กลุ่ม</label>
                 <input type="text" class="form-control" name="InputGroup"  id="InputGroup" placeholder="วิชาเเกน">
@@ -352,9 +352,7 @@
     </div>
   </div>
 
-  <?php
-        
-       
+  <?php  
 
         if(isset($_POST['save1'])){
           $course = $_POST["course"];
