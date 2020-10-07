@@ -372,12 +372,12 @@ $username = $_SESSION['staff_nameSur'];
               <td>$OC_listSubjects</td> 
               <td>$OC_credit</td> 
               <td>$OC_instructor</td>
-              <td>
 
+              <td>
               <a href=openCourseEdit.php?openCourse_ID=" . $OC_id . " >  
               <button type='button' name ='edit.$OC_id' class='btn btn-warning' >Edit</button></a>
 
-              <a onClick=\"javascript: return confirm('Please confirm deletion');\" href=openCourseDelete.php?openCourse_ID=" . $OC_id . " >  
+              <a onClick=\"javascript: return confirm('Are you sure you want to delete this?');\" href=openCourseDelete.php?openCourse_ID=" . $OC_id . " >  
               <button type='button' name ='delete.$OC_id' class='btn btn-danger' >Delete</button></a></td>
 
               
