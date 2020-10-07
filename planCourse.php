@@ -217,7 +217,6 @@
                 </a>
               </label>
               <label class="btn btn-danger">
-
                 <input type="radio" name="options" id="option2" autocomplete="off">
                 <a href="planCourseMDP.php" style="color:  #ffffff">
                   ปริญญาโท (MASTER DEGREE PROGRAM)
@@ -250,7 +249,7 @@
             </div>
 
             <div class="row col-md-12 offset-md-1">
-              <label class="col-md-2">ชั้นปั</label>
+              <label class="col-md-2">ชั้นปี</label>
               <select class="custom-select custom-select-sm col-md-1">
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -274,14 +273,7 @@
 
           <!-- search -->
           <div class="row">
-
-            <div class="col-md-5 offset-md-1">
-              <input type="text" class="form-control" name="hostname2" placeholder="ค้นหารายละเอียด" value="" />
-            </div>
-            <div class="col-sm-2">
-              <button type="button" class="btn btn-info">ค้นหา</button>
-            </div>
-            <div class="col-sm-3 ">
+            <div class="col-md-1 offset-md-5">
               <button type="button" class="btn btn-success">Export</button>
             </div>
           </div>

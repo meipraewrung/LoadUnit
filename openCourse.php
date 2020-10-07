@@ -296,6 +296,7 @@
         </div>
 
         <!-- search -->
+
         <div class="row">
 
           <!--<div class="col-md-5 offset-md-1">
@@ -315,6 +316,12 @@
           </div>
         </div>
         
+
+          <div class="row">
+            <div class="col-md-1 offset-md-5">
+              <button type="button" class="btn btn-success">Export</button>
+            </div>
+          </div>
 
         <!-- End search -->
         <br>
