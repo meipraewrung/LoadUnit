@@ -1,8 +1,8 @@
-<?php 
-  session_start(); 
-  require('db.php');
+<?php
+session_start();
+require('db.php');
 
-  $username = $_SESSION['staff_nameSur'];
+$username = $_SESSION['staff_nameSur'];
 
 ?>
 
@@ -128,11 +128,11 @@
             </li>
             <li>
               <a href="planCourse.php">
-              <i class="fas fa-book"></i>เล่มหลักสูตร</a>
+                <i class="fas fa-book"></i>เล่มหลักสูตร</a>
             </li>
             <li>
               <a href="openCourse.php">
-              <i class="fas fa-book"></i>วางเเผนการเปิดรายวิชา</a>
+                <i class="fas fa-book"></i>วางเเผนการเปิดรายวิชา</a>
             </li>
 
             <li>
@@ -181,10 +181,10 @@
                 <div class="header-button">
                   <div class="account-wrap">
                     <div class="content">
-                      <i class="fas fa-user"></i>    
-                    <a class="js-acc-btn" href="#" style="color: black;">
-                      <?php echo $username; ?>
-                    </a>
+                      <i class="fas fa-user"></i>
+                      <a class="js-acc-btn" href="#" style="color: black;">
+                        <?php echo $username; ?>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -208,27 +208,27 @@
             </center>
           </div>
 
-  <?php
-    $connect = mysqli_connect('localhost','root','','loadunitplan');
-                mysqli_query($connect,"set character set utf8");
+          <?php
+          $connect = mysqli_connect('localhost', 'root', '', 'loadunitplan');
+          mysqli_query($connect, "set character set utf8");
 
-    if(mysqli_connect_error()) {
-        echo "Failed to connect to MySQL :".mysqli_connect_error();
-    }
-    $querydegree = "SELECT * FROM degree";
-    $resultdegree = mysqli_query($connect, $querydegree) or die(mysql_error());
-    $querymajor = "SELECT * FROM major";
-    $resultmajor = mysqli_query($connect, $querymajor) or die(mysql_error());
-    $querycourse = "SELECT * FROM course";
-    $resultcourse = mysqli_query($connect, $querycourse) or die(mysql_error());
-    $queryyear = "SELECT * FROM years";
-    $resultyear = mysqli_query($connect, $queryyear) or die(mysql_error());
-    $querysemesteryear = "SELECT * FROM semesteryear";
-    $resultsemesteryear = mysqli_query($connect, $querysemesteryear) or die(mysql_error());
+          if (mysqli_connect_error()) {
+            echo "Failed to connect to MySQL :" . mysqli_connect_error();
+          }
+          $querydegree = "SELECT * FROM degree";
+          $resultdegree = mysqli_query($connect, $querydegree) or die(mysql_error());
+          $querymajor = "SELECT * FROM major";
+          $resultmajor = mysqli_query($connect, $querymajor) or die(mysql_error());
+          $querycourse = "SELECT * FROM course";
+          $resultcourse = mysqli_query($connect, $querycourse) or die(mysql_error());
+          $queryyear = "SELECT * FROM years";
+          $resultyear = mysqli_query($connect, $queryyear) or die(mysql_error());
+          $querysemesteryear = "SELECT * FROM semesteryear";
+          $resultsemesteryear = mysqli_query($connect, $querysemesteryear) or die(mysql_error());
 
 
-    
-?>
+
+          ?>
 
 
 
@@ -246,11 +246,11 @@
                 <br>
 
                 <label class="col-md-5">ปริญญา</label>
-                <select class="custom-select custom-select-sm mb-2 col-md-6"  name = "Degree" id = "Degree">
-                <?php foreach ($resultdegree as $row): ?>
-                    <option> <?=$row['degree_name'] ?> </option>
-                    <?php endforeach ?>
-                  
+                <select class="custom-select custom-select-sm mb-2 col-md-6" name="Degree" id="Degree">
+                  <?php foreach ($resultdegree as $row) : ?>
+                    <option> <?= $row['degree_name'] ?> </option>
+                  <?php endforeach ?>
+
                 </select>
               </div>
 
@@ -258,36 +258,36 @@
                 <br>
 
                 <label class="col-md-3">สาขา</label>
-                <select class="custom-select custom-select-sm mb-2 col-md-8" name = "major" id = "major">
-                    <?php foreach ($resultmajor as $row): ?>
-                    <option> <?=$row['major_name'] ?> </option>
-                    <?php endforeach ?>
+                <select class="custom-select custom-select-sm mb-2 col-md-8" name="major" id="major">
+                  <?php foreach ($resultmajor as $row) : ?>
+                    <option> <?= $row['major_name'] ?> </option>
+                  <?php endforeach ?>
                 </select>
               </div>
               <div class="cousrse">
                 <br>
                 <label class="col-md-3">เล่มหลักสูตร</label>
-                <select class="custom-select custom-select-sm  col-md-8" name = "course" id = "course">
-                <?php foreach ($resultcourse as $row): ?>
-                    <option value=<?=$row['course_name'] ?> > <?=$row['course_name'] ?> </option>
-                    <?php endforeach ?>
+                <select class="custom-select custom-select-sm  col-md-8" name="course" id="course">
+                  <?php foreach ($resultcourse as $row) : ?>
+                    <option value=<?= $row['course_name'] ?>> <?= $row['course_name'] ?> </option>
+                  <?php endforeach ?>
                 </select>
               </div>
             </div>
             <div class="row col-md-12 offset-md-1">
-            <label class="col-md-2">ชั้นปี</label>
-              <select class="custom-select custom-select-sm col-md-1" name = "Year" id = "Year">
-              <?php foreach ($resultyear as $row): ?>
-                    <option> <?=$row['year_num'] ?> </option>
-                    <?php endforeach ?>
-                
+              <label class="col-md-2">ชั้นปี</label>
+              <select class="custom-select custom-select-sm col-md-1" name="Year" id="Year">
+                <?php foreach ($resultyear as $row) : ?>
+                  <option> <?= $row['year_num'] ?> </option>
+                <?php endforeach ?>
+
               </select>
 
               <label class="col-md-3">ภาคการศึกษา/ปีการศึกษา</label>
-              <select class="custom-select custom-select-sm col-md-2" name = "semesterYear" id = "semesterYear">
-              <?php foreach ($resultsemesteryear as $row): ?>
-                    <option> <?=$row['semesterYear_num'] ?> </option>
-                    <?php endforeach ?>
+              <select class="custom-select custom-select-sm col-md-2" name="semesterYear" id="semesterYear">
+                <?php foreach ($resultsemesteryear as $row) : ?>
+                  <option> <?= $row['semesterYear_num'] ?> </option>
+                <?php endforeach ?>
               </select> &nbsp;&nbsp;&nbsp;
 
               <button type="button" class="btn btn-primary">แสดง</button>
@@ -308,25 +308,18 @@
           <div class="col-md-3 offset-md-3">
             <button type="button" class="btn btn-success">Export</button>
           </div>
-          
+
           <div class="col-sm-3 ">
-          <form action="openCourseInsert.php" method="post">
-            <button type="button" class="btn btn-info" onclick="window.location.href='openCourseInsert.php'">Insert</button>
-          </form>
+            <form action="openCourseInsert.php" method="post">
+              <button type="button" class="btn btn-info" onclick="window.location.href='openCourseInsert.php'">Insert</button>
+            </form>
           </div>
         </div>
-        
-
-          <div class="row">
-            <div class="col-md-1 offset-md-5">
-              <button type="button" class="btn btn-success">Export</button>
-            </div>
-          </div>
 
         <!-- End search -->
         <br>
         <!-- table -->
-        
+
         <div class="container-fluid">
           <table class="table table-dark">
             <colgroup>
@@ -359,29 +352,28 @@
                 <th scope="col">Action</th>
               </tr>
             </thead>
-            
+
             <tbody>
-            
 
-            
 
-            <?php 
-            
-            $query = "SELECT * FROM opencourse";
-            $result = mysqli_query($connect, $query) or die(mysql_error());
 
-            while ($row = mysqli_fetch_assoc($result)) {
-            $OC_category = $row['openCourse_category'];
-            $OC_group = $row['openCourse_group'];
-            $OC_forceSelect = $row['openCourse_forceSelect'];
-            $OC_courseCode = $row['openCourse_courseCode'];
-            $OC_listSubjects = $row['openCourse_listSubjects'];
-            $OC_credit = $row['openCourse_credit'];
-            $OC_instructor = $row['openCourse_instructor'];
 
-            // $_SESSION['openCourse_ID'] = $row['openCourse_ID'];
-            
-              echo "<tr>
+              <?php
+
+              $query = "SELECT * FROM openCourse";
+              $result = mysqli_query($connect, $query) or die(mysql_error());
+
+              while ($row = mysqli_fetch_assoc($result)) {
+                $OC_category = $row['openCourse_category'];
+                $OC_group = $row['openCourse_group'];
+                $OC_forceSelect = $row['openCourse_forceSelect'];
+                $OC_courseCode = $row['openCourse_courseCode'];
+                $OC_listSubjects = $row['openCourse_listSubjects'];
+                $OC_credit = $row['openCourse_credit'];
+                $OC_instructor = $row['openCourse_instructor'];
+                $OC_id = $row['openCourse_ID'];
+
+                echo "<tr>
               <td> $OC_group</td>              
               <td> $OC_group</td>
               <td>$OC_forceSelect</td>
@@ -391,20 +383,18 @@
               <td>$OC_instructor</td>
               <td>
               <input type='submit' name='edit' value='EDIT' id='openCourse_ID'>
-              
-              <form action='action.php' method='POST'>
-              <input type='submit' name='delete' value='DELETE' id=''></form></td>
 
+              <a onClick=\"javascript: return confirm('Please confirm deletion');\" href=openCourseDelete.php?openCourse_ID=" . $OC_id . " >  
+              <button type='button' name ='delete' class='btn btn-danger' >Delete</button></a></td>
 
               
               
               
               </tr>";
-              
-            }
-            ?>
+              }
+              ?>
             </tbody>
-            
+
 
           </table>
 
