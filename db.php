@@ -1,5 +1,5 @@
 <?php
-    $connect = mysqli_connect('localhost','root','','LoadUnitPlan');
+    $connect = mysqli_connect('localhost','root','','loadunitplan');
                 mysqli_query($connect,"set character set utf8");
  
     // if(!$connect) {
