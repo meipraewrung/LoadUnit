@@ -374,8 +374,8 @@ $username = $_SESSION['staff_nameSur'];
                 $OC_id = $row['openCourse_ID'];
 
                 echo "<tr>
-              <td> $OC_group</td>              
-              <td> $OC_group</td>
+              <td>$OC_group</td>              
+              <td>$OC_group</td>
               <td>$OC_forceSelect</td>
               <td>$OC_courseCode</td> 
               <td>$OC_listSubjects</td> 
