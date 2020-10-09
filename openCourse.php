@@ -265,7 +265,7 @@ $username = $_SESSION['staff_nameSur'];
                 </select>
               </div>
               <div class="cousrse">
-                <br>
+                
                 <label class="col-md-3">เล่มหลักสูตร</label>
                 <select class="custom-select custom-select-sm  col-md-8" name="course" id="course">
                   <?php foreach ($resultcourse as $row) : ?>
